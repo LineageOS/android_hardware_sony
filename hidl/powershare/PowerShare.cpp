@@ -23,12 +23,6 @@
 using ::android::base::ReadFileToString;
 using ::android::base::WriteStringToFile;
 
-namespace {
-
-#define WIRELESS_TX_ENABLE_PATH "/proc/wireless/enable_tx"
-
-}  // anonymous namespace
-
 namespace vendor {
 namespace lineage {
 namespace powershare {
