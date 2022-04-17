@@ -17,8 +17,8 @@
 #define LOG_TAG "HighTouchPollingRateService"
 
 #include <android-base/logging.h>
-#include <fstream>
 #include <touch/sony/HighTouchPollingRate.h>
+#include <fstream>
 
 namespace vendor {
 namespace lineage {
@@ -26,8 +26,8 @@ namespace touch {
 namespace V1_0 {
 namespace implementation {
 
-static constexpr const char *kPanelCmdPath = "/sys/devices/virtual/sec/tsp/cmd";
-static constexpr const char *kPanelCmdResultPath = "/sys/devices/virtual/sec/tsp/cmd_result";
+static constexpr const char* kPanelCmdPath = "/sys/devices/virtual/sec/tsp/cmd";
+static constexpr const char* kPanelCmdResultPath = "/sys/devices/virtual/sec/tsp/cmd_result";
 
 #define SET_STAMINA_CMD(status) "stamina_enable," status
 
@@ -44,7 +44,7 @@ Return<bool> HighTouchPollingRate::isEnabled() {
     std::ifstream file_result(kPanelCmdResultPath);
     file_result >> i;
     for (auto c : i) {
-        if (c >= '0' && c <= '9'){
+        if (c >= '0' && c <= '9') {
             result = c - '0';
             break;
         }
@@ -62,8 +62,8 @@ Return<bool> HighTouchPollingRate::setEnabled(bool enabled) {
     return !file.fail();
 }
 
-} // namespace implementation
-} // namespace V1_0
-} // namespace touch
-} // namespace lineage
-} // namespace vendor
+}  // namespace implementation
+}  // namespace V1_0
+}  // namespace touch
+}  // namespace lineage
+}  // namespace vendor

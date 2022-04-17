@@ -26,17 +26,16 @@ namespace touch {
 namespace V1_0 {
 namespace implementation {
 
+using ::android::sp;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
-using ::android::sp;
 
 class HighTouchPollingRate : public IHighTouchPollingRate {
-public:
+  public:
     // Methods from ::vendor::lineage::touch::V1_0::IHighTouchPollingRate follow
     Return<bool> isEnabled() override;
     Return<bool> setEnabled(bool enabled) override;
 };
-
 
 }  // namespace implementation
 }  // namespace V1_0
