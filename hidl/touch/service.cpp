@@ -25,19 +25,19 @@ using ::vendor::lineage::touch::V1_0::IHighTouchPollingRate;
 using ::vendor::lineage::touch::V1_0::implementation::HighTouchPollingRate;
 
 int main() {
-    android::sp<IHighTouchPollingRate> htprService = new HighTouchPollingRate();
+  android::sp<IHighTouchPollingRate> htprService = new HighTouchPollingRate();
 
-    android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
+  android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    if (htprService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register high touch polling rate HAL service.";
-        return 1;
-    }
-
-    LOG(INFO) << "Touchscreen HAL service ready.";
-
-    android::hardware::joinRpcThreadpool();
-
-    LOG(ERROR) << "Touchscreen HAL service failed to join thread pool.";
+  if (htprService->registerAsService() != android::OK) {
+    LOG(ERROR) << "Cannot register high touch polling rate HAL service.";
     return 1;
+  }
+
+  LOG(INFO) << "Touchscreen HAL service ready.";
+
+  android::hardware::joinRpcThreadpool();
+
+  LOG(ERROR) << "Touchscreen HAL service failed to join thread pool.";
+  return 1;
 }

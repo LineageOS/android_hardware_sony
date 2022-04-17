@@ -27,7 +27,8 @@ namespace V1_0 {
 namespace implementation {
 
 static constexpr const char *kPanelCmdPath = "/sys/devices/virtual/sec/tsp/cmd";
-static constexpr const char *kPanelCmdResultPath = "/sys/devices/virtual/sec/tsp/cmd_result";
+static constexpr const char *kPanelCmdResultPath =
+    "/sys/devices/virtual/sec/tsp/cmd_result";
 
 #define SET_STAMINA_CMD(status) "stamina_enable," status
 
@@ -36,30 +37,30 @@ static constexpr const char *kPanelCmdResultPath = "/sys/devices/virtual/sec/tsp
 #define STAMINA_GET_STATUS_CMD "get_stamina_mode"
 
 Return<bool> HighTouchPollingRate::isEnabled() {
-    std::ofstream file(kPanelCmdPath);
-    int result = -1;
-    file << STAMINA_GET_STATUS_CMD;
+  std::ofstream file(kPanelCmdPath);
+  int result = -1;
+  file << STAMINA_GET_STATUS_CMD;
 
-    std::string i;
-    std::ifstream file_result(kPanelCmdResultPath);
-    file_result >> i;
-    for (auto c : i) {
-        if (c >= '0' && c <= '9'){
-            result = c - '0';
-            break;
-        }
+  std::string i;
+  std::ifstream file_result(kPanelCmdResultPath);
+  file_result >> i;
+  for (auto c : i) {
+    if (c >= '0' && c <= '9') {
+      result = c - '0';
+      break;
     }
-    LOG(DEBUG) << "Got result: " << result << " fail " << file_result.fail();
-    return !file.fail() && result > 0;
+  }
+  LOG(DEBUG) << "Got result: " << result << " fail " << file_result.fail();
+  return !file.fail() && result > 0;
 }
 
 Return<bool> HighTouchPollingRate::setEnabled(bool enabled) {
-    std::ofstream file(kPanelCmdPath);
+  std::ofstream file(kPanelCmdPath);
 
-    // Enable high touch polling rate = disable stamina
-    file << (enabled ? STAMINA_DISABLE_CMD : STAMINA_ENABLE_CMD);
-    LOG(DEBUG) << "setEnabled fail " << file.fail();
-    return !file.fail();
+  // Enable high touch polling rate = disable stamina
+  file << (enabled ? STAMINA_DISABLE_CMD : STAMINA_ENABLE_CMD);
+  LOG(DEBUG) << "setEnabled fail " << file.fail();
+  return !file.fail();
 }
 
 } // namespace implementation
