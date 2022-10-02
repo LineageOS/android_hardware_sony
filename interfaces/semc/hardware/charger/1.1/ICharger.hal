@@ -1,0 +1,14 @@
+/*
+ * Copyright (C) 2022 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.semc.hardware.charger@1.1;
+
+import vendor.semc.hardware.charger@1.0::ICharger;
+
+interface ICharger extends @1.0::ICharger {
+    setWirelessReverseChargeAction(int32_t i);
+    getWirelessReverseChargeAction() generates (int32_t status);
+};
