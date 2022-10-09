@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" translatable="false">XperiaParts</string>
+
+    <!-- Display Related Settings -->
+    <string name="display_setting_header">Advanced Display Setting</string>
+    <string name="display_setting_summary">Adjust various display settings</string>
+
+    <!-- Creator Mode Related Settings -->
+    <string name="cm_display_header">Creator Mode Settings</string>
+    <string name="cm_switch_title">Enable/Disable Creator Mode</string>
+    <string name="cm_switch_description">Enables the BT.2020 Color Gamut and 10-bit Color</string>
+
+    <string name="cm_dashboard_summary">Creator Mode setting</string>
+</resources>
