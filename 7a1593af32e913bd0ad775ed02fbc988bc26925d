@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee137a3e_d3763506",
+        "filename": "XperiaParts/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "unused",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb80d3d1_ec62a54e",
+        "filename": "XperiaParts/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "no?\nshould be fine without since you already optin for Priv APIs",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9812d6ef_6cbe538e",
+        "filename": "XperiaParts/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7442d7af_19ed8a36",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/BootCompletedReceiver.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "why no context?\nI don\u0027t really see any benefit in having different constructors...",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea534abe_aa0270e1",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "if it\u0027s really nullable check for that, otherwise drop the ? in the argument",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1070f066_f49e2da8",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "class CMUtils(context: Context)\n\ncontext will be available only in init {}",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1289fe7_c598f1a4",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "can likely make val as they\u0027ll be initialized only once now",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da6ced8c_027822f1",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "lateinit?",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a0ff394_c1cb3694",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "with the new class accepting only context you can avoid overriding the ctor and use init {} instead",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba249c39_b44e8b74",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "can drop this. to make code leaner across the class",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c669861d_7f842656",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "just enforce class to have Context",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dcf1cdba_a6bb82c4",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-25T16:47:51Z",
+      "side": 1,
+      "message": "is there any reason you initialize the callback outside of CMUtils?",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
