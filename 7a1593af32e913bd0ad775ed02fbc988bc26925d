@@ -71,6 +71,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1c2ab6c6_91da8043",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "Move everything out of setup() and use:\n class CMCallback(private val context: Context)",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 16
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ea534abe_aa0270e1",
         "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
         "patchSetId": 5
@@ -82,6 +105,29 @@
       "writtenOn": "2022-10-25T16:47:51Z",
       "side": 1,
       "message": "if it\u0027s really nullable check for that, otherwise drop the ? in the argument",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35220194_0b8af176",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "nit: I don\u0027t know how many times this callback gets called but it might be worth storing the instance somewhere instead of getting it every time",
+      "range": {
+        "startLine": 42,
+        "startChar": 47,
+        "endLine": 42,
+        "endChar": 87
+      },
       "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -105,6 +151,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9fb6bdc8_056816a9",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "I would rename it to CreatorModeUtils, might be confused with CyanogenMod",
+      "range": {
+        "startLine": 51,
+        "startChar": 6,
+        "endLine": 51,
+        "endChar": 13
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f1289fe7_c598f1a4",
         "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
         "patchSetId": 5
@@ -122,6 +191,52 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ecd865a1_6c33796e",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "colorDisplayManager",
+      "range": {
+        "startLine": 52,
+        "startChar": 16,
+        "endLine": 52,
+        "endChar": 20
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3bc9d733_819bd4a0",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "hidl (I would change it to semcDisplayService)",
+      "range": {
+        "startLine": 53,
+        "startChar": 16,
+        "endLine": 53,
+        "endChar": 21
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "da6ced8c_027822f1",
         "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
         "patchSetId": 5
@@ -133,6 +248,29 @@
       "writtenOn": "2022-10-25T16:47:51Z",
       "side": 1,
       "message": "lateinit?",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb498110_6c7db5e5",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "cmCallback",
+      "range": {
+        "startLine": 54,
+        "startChar": 16,
+        "endLine": 54,
+        "endChar": 27
+      },
       "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -190,6 +328,98 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6a2d3abc_2a2f4fa4",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "You can do:\n cdm \u003d context.getSystemService(ColorDisplayManager::class.java) ?: throw Exception(\"Display manager NULL\")",
+      "range": {
+        "startLine": 66,
+        "startChar": 8,
+        "endLine": 70,
+        "endChar": 9
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b9f6e36_f903d202",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "You can do:\n hidl \u003d IDisplay.getService() ?: throw Exception(\"SEMC HIDL not found\")",
+      "range": {
+        "startLine": 72,
+        "startChar": 8,
+        "endLine": 76,
+        "endChar": 9
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "337cada5_38565f46",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "You can do:\n hidl?.let {",
+      "range": {
+        "startLine": 80,
+        "startChar": 8,
+        "endLine": 80,
+        "endChar": 33
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47a65740_d7659ea5",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 89,
+        "startChar": 8,
+        "endLine": 89,
+        "endChar": 33
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dcf1cdba_a6bb82c4",
         "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
         "patchSetId": 5
@@ -201,6 +431,52 @@
       "writtenOn": "2022-10-25T16:47:51Z",
       "side": 1,
       "message": "is there any reason you initialize the callback outside of CMUtils?",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb8b1c38_e749703a",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "private lateinit var cmUtils: CMUtils",
+      "range": {
+        "startLine": 16,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d85e7442_6eae41c2",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-25T18:06:36Z",
+      "side": 1,
+      "message": "private lateinit var creatorModePreference: SwitchPreference",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 17,
+        "endChar": 63
+      },
       "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
