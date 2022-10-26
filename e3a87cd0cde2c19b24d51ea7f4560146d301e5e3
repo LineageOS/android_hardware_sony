@@ -35,6 +35,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa8894ad_e0f2f935",
+        "filename": "XperiaParts/res/values/arrays.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:19:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "97712504_6b9d1a5a",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3e1336da_0463a655",
@@ -48,6 +66,24 @@
       "writtenOn": "2022-10-26T10:07:34Z",
       "side": 1,
       "message": "translatable\u003d\"false\"",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cebcf76_f39cf607",
+        "filename": "XperiaParts/res/values/strings.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:19:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e1336da_0463a655",
       "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -69,6 +105,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e6ef0df_4796255e",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/BootCompletedReceiver.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:19:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a51a7b49_1095d08d",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc753064_25e936d1",
@@ -82,6 +136,24 @@
       "writtenOn": "2022-10-26T10:07:34Z",
       "side": 1,
       "message": "\"Display manager is NULL\"",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1caab32_f462a9cb",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:19:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc753064_25e936d1",
       "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -103,6 +175,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "df7b5666_36a4492c",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:19:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e6a653b9_ee668bce",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "216939a1_d407802c",
@@ -116,6 +206,24 @@
       "writtenOn": "2022-10-26T10:07:34Z",
       "side": 1,
       "message": "\"New white balance: ${matrix.red}, ${matrix.green}, ${matrix.blue}\"",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "940f9119_e4e9a2e3",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:19:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "216939a1_d407802c",
       "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -137,6 +245,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "91cdf660_3ade5b34",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:19:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "48db0d93_62ff7f48",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3a5bb231_7a7d79d2",
@@ -154,6 +280,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5c47093_830b0782",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:19:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a5bb231_7a7d79d2",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a7e22377_8d615e4c",
@@ -167,6 +311,24 @@
       "writtenOn": "2022-10-26T10:07:34Z",
       "side": 1,
       "message": "would probably use when() here.",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f271f235_40ce0782",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:19:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a7e22377_8d615e4c",
       "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
