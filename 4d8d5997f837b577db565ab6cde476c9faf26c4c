@@ -16,6 +16,121 @@
       "message": "I have removed the dedicated callback class and use `CreatorModeUtils` class to register callback for the HIDL",
       "revId": "4d8d5997f837b577db565ab6cde476c9faf26c4c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a557badf_45b67108",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-26T08:38:27Z",
+      "side": 1,
+      "message": "Do this:\n private val semcDisplayService: IDisplay \u003d\n            (IDisplay.getService() ?: throw Exception(\"SEMC Display HIDL Not found\")).also {\n     // Register itself as callback for HIDL\n     it.registerCallback(this)\n     it.setup()\n }",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 24,
+        "endChar": 83
+      },
+      "revId": "4d8d5997f837b577db565ab6cde476c9faf26c4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c243415_92b1cb36",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-26T08:38:27Z",
+      "side": 1,
+      "message": "Do this:\n fun setMode(enabled: Boolean) {\n     semcDisplayService.set_sspp_color_mode(if (enabled) 0 else 1)\n     colorDisplayManager.setColorMode(if (enabled) 0 else 3)\n     semcDisplayService.set_color_mode(if (enabled) 0 else 1)\n\n     Settings.Secure.putInt(context.contentResolver, CREATOR_MODE_ENABLE, if (enabled) 1 else 0)\n }",
+      "range": {
+        "startLine": 27,
+        "startChar": 4,
+        "endLine": 41,
+        "endChar": 5
+      },
+      "revId": "4d8d5997f837b577db565ab6cde476c9faf26c4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eccbca93_dfc879da",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-26T08:38:27Z",
+      "side": 1,
+      "message": "Delete",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 5
+      },
+      "revId": "4d8d5997f837b577db565ab6cde476c9faf26c4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "097429df_63b65bb5",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-26T08:38:27Z",
+      "side": 1,
+      "message": "Do this:\n val isEnabled: Boolean\n     get() \u003d Settings.Secure.getInt(context.contentResolver, CREATOR_MODE_ENABLE, 0) !\u003d 0",
+      "range": {
+        "startLine": 63,
+        "startChar": 8,
+        "endLine": 65,
+        "endChar": 9
+      },
+      "revId": "4d8d5997f837b577db565ab6cde476c9faf26c4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ae6c266_d128c8e2",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-26T08:38:27Z",
+      "side": 1,
+      "message": "creatorModeUtils.setMode(newValue as Boolean)",
+      "range": {
+        "startLine": 30,
+        "startChar": 12,
+        "endLine": 34,
+        "endChar": 13
+      },
+      "revId": "4d8d5997f837b577db565ab6cde476c9faf26c4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
