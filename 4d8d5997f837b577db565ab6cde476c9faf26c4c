@@ -136,6 +136,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "91dc4517_f667c82d",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-26T08:50:54Z",
+      "side": 1,
+      "message": "Don\u0027t make it static then, move it out of the companion object",
+      "parentUuid": "2b9c958b_a6957fa7",
+      "range": {
+        "startLine": 63,
+        "startChar": 8,
+        "endLine": 65,
+        "endChar": 9
+      },
+      "revId": "4d8d5997f837b577db565ab6cde476c9faf26c4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6ae6c266_d128c8e2",
         "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
         "patchSetId": 6
