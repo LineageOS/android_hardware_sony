@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b462e2db_2fd977fe",
+        "filename": "XperiaParts/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee137a3e_d3763506",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fb80d3d1_ec62a54e",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-10-25T16:47:51Z",
       "side": 1,
       "message": "no?\nshould be fine without since you already optin for Priv APIs",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee38a1fb_f1513865",
+        "filename": "XperiaParts/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fb80d3d1_ec62a54e",
       "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -52,6 +88,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a117b59_11d97dc9",
+        "filename": "XperiaParts/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9812d6ef_6cbe538e",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7442d7af_19ed8a36",
@@ -65,6 +119,24 @@
       "writtenOn": "2022-10-25T16:47:51Z",
       "side": 1,
       "message": "why no context?\nI don\u0027t really see any benefit in having different constructors...",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e9c1475_2502da53",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/BootCompletedReceiver.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7442d7af_19ed8a36",
       "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -92,6 +164,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "280b4e08_4a2de4df",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c2ab6c6_91da8043",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 16
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ea534abe_aa0270e1",
@@ -109,6 +205,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "501d2f0b_d27b8d74",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ea534abe_aa0270e1",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "35220194_0b8af176",
@@ -122,6 +236,30 @@
       "writtenOn": "2022-10-25T18:06:36Z",
       "side": 1,
       "message": "nit: I don\u0027t know how many times this callback gets called but it might be worth storing the instance somewhere instead of getting it every time",
+      "range": {
+        "startLine": 42,
+        "startChar": 47,
+        "endLine": 42,
+        "endChar": 87
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "776fbc4c_d7bc963d",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "35220194_0b8af176",
       "range": {
         "startLine": 42,
         "startChar": 47,
@@ -172,6 +310,48 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c6d59a5_beffd77d",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9fb6bdc8_056816a9",
+      "range": {
+        "startLine": 51,
+        "startChar": 6,
+        "endLine": 51,
+        "endChar": 13
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "851f9d10_240853aa",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1070f066_f49e2da8",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f1289fe7_c598f1a4",
@@ -212,6 +392,48 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad9c9d00_46a8ddc4",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f1289fe7_c598f1a4",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aff3fc84_6330e332",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ecd865a1_6c33796e",
+      "range": {
+        "startLine": 52,
+        "startChar": 16,
+        "endLine": 52,
+        "endChar": 20
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3bc9d733_819bd4a0",
@@ -225,6 +447,30 @@
       "writtenOn": "2022-10-25T18:06:36Z",
       "side": 1,
       "message": "hidl (I would change it to semcDisplayService)",
+      "range": {
+        "startLine": 53,
+        "startChar": 16,
+        "endLine": 53,
+        "endChar": 21
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be306324_45f362b0",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3bc9d733_819bd4a0",
       "range": {
         "startLine": 53,
         "startChar": 16,
@@ -275,6 +521,48 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b18262c_1becbe44",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fb498110_6c7db5e5",
+      "range": {
+        "startLine": 54,
+        "startChar": 16,
+        "endLine": 54,
+        "endChar": 27
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e5612f2_1eb1b248",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da6ced8c_027822f1",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4a0ff394_c1cb3694",
@@ -288,6 +576,24 @@
       "writtenOn": "2022-10-25T16:47:51Z",
       "side": 1,
       "message": "with the new class accepting only context you can avoid overriding the ctor and use init {} instead",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf8c57e3_c4b28be1",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4a0ff394_c1cb3694",
       "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -309,6 +615,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c25f0d81_9eba4579",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba249c39_b44e8b74",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c669861d_7f842656",
@@ -326,6 +650,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2369f91_11f53fe8",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c669861d_7f842656",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6a2d3abc_2a2f4fa4",
@@ -339,6 +681,30 @@
       "writtenOn": "2022-10-25T18:06:36Z",
       "side": 1,
       "message": "You can do:\n cdm \u003d context.getSystemService(ColorDisplayManager::class.java) ?: throw Exception(\"Display manager NULL\")",
+      "range": {
+        "startLine": 66,
+        "startChar": 8,
+        "endLine": 70,
+        "endChar": 9
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3e7bc3a_c9c70ade",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6a2d3abc_2a2f4fa4",
       "range": {
         "startLine": 66,
         "startChar": 8,
@@ -372,6 +738,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bbabd76_acc8e4a7",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8b9f6e36_f903d202",
+      "range": {
+        "startLine": 72,
+        "startChar": 8,
+        "endLine": 76,
+        "endChar": 9
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "337cada5_38565f46",
@@ -385,6 +775,30 @@
       "writtenOn": "2022-10-25T18:06:36Z",
       "side": 1,
       "message": "You can do:\n hidl?.let {",
+      "range": {
+        "startLine": 80,
+        "startChar": 8,
+        "endLine": 80,
+        "endChar": 33
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c707354_60291cc4",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Now I enforce in the field declaration that those filed should not be null, maybe I can emit those null check",
+      "parentUuid": "337cada5_38565f46",
       "range": {
         "startLine": 80,
         "startChar": 8,
@@ -418,6 +832,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b33d3a35_2aafcedf",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "47a65740_d7659ea5",
+      "range": {
+        "startLine": 89,
+        "startChar": 8,
+        "endLine": 89,
+        "endChar": 33
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dcf1cdba_a6bb82c4",
@@ -431,6 +869,24 @@
       "writtenOn": "2022-10-25T16:47:51Z",
       "side": 1,
       "message": "is there any reason you initialize the callback outside of CMUtils?",
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d0bb968_76f74c16",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CMUtils.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "I have deleted the callback class and use CreatorModeUtils for callbacks too.",
+      "parentUuid": "dcf1cdba_a6bb82c4",
       "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -458,6 +914,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f104a86_db2eed08",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eb8b1c38_e749703a",
+      "range": {
+        "startLine": 16,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d85e7442_6eae41c2",
@@ -471,6 +951,30 @@
       "writtenOn": "2022-10-25T18:06:36Z",
       "side": 1,
       "message": "private lateinit var creatorModePreference: SwitchPreference",
+      "range": {
+        "startLine": 17,
+        "startChar": 4,
+        "endLine": 17,
+        "endChar": 63
+      },
+      "revId": "7a1593af32e913bd0ad775ed02fbc988bc26925d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f76bede3_0f4bd719",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:06:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d85e7442_6eae41c2",
       "range": {
         "startLine": 17,
         "startChar": 4,
