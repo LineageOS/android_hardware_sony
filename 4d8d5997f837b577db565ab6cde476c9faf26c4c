@@ -113,6 +113,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cb0afee0_d1202d8e",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-10-26T09:22:11Z",
+      "side": 1,
+      "message": "The semcDisplayService.also {} block will only be called when the class is instantiated, so it will only be called once as well",
+      "parentUuid": "7f5350c4_febdb605",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 5
+      },
+      "revId": "4d8d5997f837b577db565ab6cde476c9faf26c4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "097429df_63b65bb5",
         "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
         "patchSetId": 6
