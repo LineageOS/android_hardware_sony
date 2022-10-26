@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d090b93_b8cd2b5e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:04:24Z",
+      "side": 1,
+      "message": "I don\u0027t know if the lifecycle of the `CreatorModeUtils` class will be a problem, because it only registers callback to HIDL when instantiated by BootCompletedReceiver, but I don\u0027t know the lifecycle of this initantiated object (Will it be garbage collected in the future so that the callback previously registed is no longer valid?)",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
