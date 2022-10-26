@@ -16,6 +16,159 @@
       "message": "I don\u0027t know if the lifecycle of the `CreatorModeUtils` class will be a problem, because it only registers callback to HIDL when instantiated by BootCompletedReceiver, but I don\u0027t know the lifecycle of this initantiated object (Will it be garbage collected in the future so that the callback previously registed is no longer valid?)",
       "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97712504_6b9d1a5a",
+        "filename": "XperiaParts/res/values/arrays.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-26T10:07:34Z",
+      "side": 1,
+      "message": "empty resources file? what for?",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e1336da_0463a655",
+        "filename": "XperiaParts/res/values/strings.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-26T10:07:34Z",
+      "side": 1,
+      "message": "translatable\u003d\"false\"",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a51a7b49_1095d08d",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/BootCompletedReceiver.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-26T10:07:34Z",
+      "side": 1,
+      "message": "CreatorModeUtils(context).initialize()",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc753064_25e936d1",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-26T10:07:34Z",
+      "side": 1,
+      "message": "\"Display manager is NULL\"",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6a653b9_ee668bce",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-26T10:07:34Z",
+      "side": 1,
+      "message": "\"SEMC Display HIDL not found\"",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "216939a1_d407802c",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-26T10:07:34Z",
+      "side": 1,
+      "message": "\"New white balance: ${matrix.red}, ${matrix.green}, ${matrix.blue}\"",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48db0d93_62ff7f48",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-26T10:07:34Z",
+      "side": 1,
+      "message": "could be a local variable",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a5bb231_7a7d79d2",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-26T10:07:34Z",
+      "side": 1,
+      "message": "`this.` shouldn\u0027t be required here",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7e22377_8d615e4c",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2022-10-26T10:07:34Z",
+      "side": 1,
+      "message": "would probably use when() here.",
+      "revId": "e3a87cd0cde2c19b24d51ea7f4560146d301e5e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
