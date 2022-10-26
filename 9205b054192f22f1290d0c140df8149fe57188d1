@@ -16,6 +16,24 @@
       "message": "findPreference\u003cSwitchPreference\u003e looks nicer",
       "revId": "9205b054192f22f1290d0c140df8149fe57188d1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5708c710_f0d81210",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:25:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8401e194_8fea30ce",
+      "revId": "9205b054192f22f1290d0c140df8149fe57188d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
