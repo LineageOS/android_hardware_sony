@@ -3,6 +3,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "babc86ae_8e733bb6",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-26T10:25:40Z",
+      "side": 1,
+      "message": "for these 0/1/3 hardcoded values, do you know what they are? if so define them in with a name to ease readability.",
+      "revId": "9205b054192f22f1290d0c140df8149fe57188d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f023271_d1043afb",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2022-10-26T10:25:40Z",
+      "side": 1,
+      "message": "void?",
+      "revId": "9205b054192f22f1290d0c140df8149fe57188d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8401e194_8fea30ce",
         "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
         "patchSetId": 8
