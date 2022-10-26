@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2485ad34_69a18d50",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:29:55Z",
+      "side": 1,
+      "message": "I don\u0027t know actually. They are values seen in sony\u0027s stock display settings apk.",
+      "parentUuid": "babc86ae_8e733bb6",
+      "revId": "9205b054192f22f1290d0c140df8149fe57188d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7f023271_d1043afb",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-10-26T10:25:40Z",
       "side": 1,
       "message": "void?",
+      "revId": "9205b054192f22f1290d0c140df8149fe57188d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c726f437_ef6fd771",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T10:29:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f023271_d1043afb",
       "revId": "9205b054192f22f1290d0c140df8149fe57188d1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
