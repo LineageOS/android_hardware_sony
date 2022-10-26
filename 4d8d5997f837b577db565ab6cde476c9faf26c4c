@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d49292c4_41b99c38",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2022-10-26T04:07:21Z",
+      "side": 1,
+      "message": "I have removed the dedicated callback class and use `CreatorModeUtils` class to register callback for the HIDL",
+      "revId": "4d8d5997f837b577db565ab6cde476c9faf26c4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
