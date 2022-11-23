@@ -1,0 +1,1 @@
+type hal_sony_charger_service, vendor_service, hal_service_type, service_manager_type;

@@ -1,0 +1,6 @@
+# HwBinder IPC client/server
+binder_call(hal_sony_charger_client, hal_sony_charger_server);
+binder_call(hal_sony_charger_server, hal_sony_charger_client);
+
+add_service(hal_sony_charger_server, hal_sony_charger_service);
+allow hal_sony_charger_client hal_sony_charger_service:service_manager { find };
