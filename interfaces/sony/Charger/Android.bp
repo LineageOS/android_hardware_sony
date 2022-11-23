@@ -1,0 +1,26 @@
+/*
+ * Copyright (C) 2022 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+cc_binary {
+    name: "vendor.sony.charger-service",
+    relative_install_path: "hw",
+    init_rc: ["vendor.sony.charger-service.rc"],
+    vintf_fragments: ["vendor.sony.charger-service.xml"],
+    vendor: true,
+    shared_libs: [
+        "libbase",
+        "libcutils",
+        "liblog",
+        "libutils",
+        "libbinder_ndk",
+        "vendor.sony.charger-V1-ndk",
+    ],
+    srcs: [
+        "service.cpp",
+        "Charger.cpp",
+        "UeventListener.cpp",
+    ]
+}

@@ -1,0 +1,16 @@
+# Sony Charger Service
+type hal_sony_charger_default, domain;
+hal_server_domain(hal_sony_charger_default, hal_sony_charger);
+
+type hal_sony_charger_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_sony_charger_default);
+
+binder_call(hal_sony_charger_default, servicemanager);
+
+allow hal_sony_charger_default vendor_sysfs_battery_supply:file { getattr rw_file_perms };
+allow hal_sony_charger_default vendor_sysfs_battery_supply:dir r_dir_perms;
+allow hal_sony_charger_default hal_sony_charger_default:netlink_kobject_uevent_socket { create setopt getopt bind read };
+allow hal_sony_charger_default sysfs_battchg_ext:file { getattr rw_file_perms };
+allow hal_sony_charger_default sysfs_battchg_ext:dir r_dir_perms;
+
+permissive hal_sony_charger_default;
