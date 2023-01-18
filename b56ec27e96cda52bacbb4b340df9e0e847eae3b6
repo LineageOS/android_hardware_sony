@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ef1b008_d052cb6b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-01-18T02:08:13Z",
+      "side": 1,
+      "message": "Other repositories does not have lineage-20 branch, so they are not added",
+      "revId": "b56ec27e96cda52bacbb4b340df9e0e847eae3b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
