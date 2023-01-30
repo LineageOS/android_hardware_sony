@@ -46,14 +46,6 @@ cc_defaults {
 }
 
 cc_binary {
-    name: "lineage.touch@1.0-service.sony",
-    defaults: ["sony_touch_hal_defaults"],
-    init_rc: ["lineage.touch@1.0-service.sony.rc"],
-    vintf_fragments: ["lineage.touch@1.0-service.sony.xml"],
-    system_ext_specific: true,
-}
-
-cc_binary {
     name: "vendor.lineage.touch@1.0-service.sony",
     defaults: ["sony_touch_hal_defaults"],
     init_rc: ["vendor.lineage.touch@1.0-service.sony.rc"],

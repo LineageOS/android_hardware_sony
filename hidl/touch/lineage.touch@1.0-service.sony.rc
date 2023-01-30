@@ -1,4 +1,0 @@
-service touch-hal-1-0 /system_ext/bin/hw/lineage.touch@1.0-service.sony
-    class hal
-    user system
-    group system
