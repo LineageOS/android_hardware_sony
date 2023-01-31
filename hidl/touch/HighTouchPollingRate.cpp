@@ -16,8 +16,11 @@
 
 #define LOG_TAG "HighTouchPollingRateService"
 
+#include <android-base/file.h>
 #include <android-base/logging.h>
+#include <android-base/properties.h>
 #include <touch/sony/HighTouchPollingRate.h>
+#include <cstdio>
 #include <fstream>
 
 namespace vendor {
@@ -29,37 +32,61 @@ namespace implementation {
 static constexpr const char* kPanelCmdPath = "/sys/devices/virtual/sec/tsp/cmd";
 static constexpr const char* kPanelCmdResultPath = "/sys/devices/virtual/sec/tsp/cmd_result";
 
-#define SET_STAMINA_CMD(status) "stamina_enable," status
+#define SET_STAMINA_CMD "stamina_enable,"
+#define GET_STAMINA_CMD "get_stamina_mode"
 
-#define STAMINA_ENABLE_CMD SET_STAMINA_CMD("1")
-#define STAMINA_DISABLE_CMD SET_STAMINA_CMD("0")
-#define STAMINA_GET_STATUS_CMD "get_stamina_mode"
+#define SET_REPORT_RATE_CMD "doze_mode_change,"
+#define GET_REPORT_RATE_CMD "get_doze_mode"
+
+static inline auto send_cmd(const char* cmd) {
+    return android::base::WriteStringToFile(cmd, kPanelCmdPath);
+}
+
+static inline auto send_cmd_get_result(const char* cmd, std::string& result) {
+    return send_cmd(cmd) && android::base::ReadFileToString(kPanelCmdResultPath, &result);
+}
 
 Return<bool> HighTouchPollingRate::isEnabled() {
-    std::ofstream file(kPanelCmdPath);
-    int result = -1;
-    file << STAMINA_GET_STATUS_CMD;
-
     std::string i;
-    std::ifstream file_result(kPanelCmdResultPath);
-    file_result >> i;
-    for (auto c : i) {
-        if (c >= '0' && c <= '9') {
-            result = c - '0';
-            break;
-        }
-    }
-    LOG(DEBUG) << "Got result: " << result << " fail " << file_result.fail();
-    return !file.fail() && result > 0;
+
+    auto stamina_mode = 0;
+    auto ret = send_cmd_get_result(GET_STAMINA_CMD, i);
+    auto result = sscanf(i.c_str(), GET_STAMINA_CMD ":%d", &stamina_mode);
+    if (!ret || result != 1) return false;
+
+    auto doze_mode = 0, rate_mode = 0;
+    ret = send_cmd_get_result(GET_REPORT_RATE_CMD, i);
+    result = sscanf(i.c_str(), GET_REPORT_RATE_CMD ":%d,%d", &doze_mode, &rate_mode);
+
+    LOG(INFO) << "Got stamina_mode: " << stamina_mode << " doze_mode: " << doze_mode
+              << " rate_mode: " << rate_mode;
+    return ret && result == 2 && stamina_mode == 0 && rate_mode > 0;
 }
 
 Return<bool> HighTouchPollingRate::setEnabled(bool enabled) {
-    std::ofstream file(kPanelCmdPath);
+    auto is_low_rate_device =
+            android::base::GetBoolProperty("ro.vendor.display.low_touch_rate", false);
+    LOG(INFO) << "Current device is low_rate: " << is_low_rate_device;
 
-    // Enable high touch polling rate = disable stamina
-    file << (enabled ? STAMINA_DISABLE_CMD : STAMINA_ENABLE_CMD);
-    LOG(DEBUG) << "setEnabled fail " << file.fail();
-    return !file.fail();
+    bool result;
+    if (is_low_rate_device) {
+        if (enabled)
+            result = send_cmd(SET_STAMINA_CMD "0");
+        else
+            result = send_cmd(SET_STAMINA_CMD "1");
+    } else {
+        result = send_cmd(SET_STAMINA_CMD "0");
+        if (enabled)
+            result &= send_cmd(SET_REPORT_RATE_CMD "2");
+        else
+            result &= send_cmd(SET_REPORT_RATE_CMD "1");
+    }
+
+    if (!result) {
+        LOG(ERROR) << "Failed to write sec_ts cmd!";
+        return false;
+    }
+    return true;
 }
 
 }  // namespace implementation
