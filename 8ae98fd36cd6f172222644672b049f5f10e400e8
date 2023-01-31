@@ -16,6 +16,24 @@
       "message": "Verified on pdx206 with new code.",
       "revId": "8ae98fd36cd6f172222644672b049f5f10e400e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec2cc827_7725c0c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2023-01-31T14:06:42Z",
+      "side": 1,
+      "message": "44  if (file.fail())\n45    return false;\n46  return true;\nshould be:\n  return !file.fail();",
+      "parentUuid": "0c1691a3_fd3d1de0",
+      "revId": "8ae98fd36cd6f172222644672b049f5f10e400e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
