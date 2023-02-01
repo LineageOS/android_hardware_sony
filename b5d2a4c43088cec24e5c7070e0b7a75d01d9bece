@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7399494_94e752ff",
+        "filename": "hidl/touch/HighTouchPollingRate.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2023-02-01T08:37:38Z",
+      "side": 1,
+      "message": "should be: result !\u003d 1\nsscanf returns the number of input items matched and assigned",
+      "range": {
+        "startLine": 55,
+        "startChar": 16,
+        "endLine": 55,
+        "endChar": 26
+      },
+      "revId": "b5d2a4c43088cec24e5c7070e0b7a75d01d9bece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5dc9c49a_b0016a04",
+        "filename": "hidl/touch/HighTouchPollingRate.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2023-02-01T08:37:38Z",
+      "side": 1,
+      "message": "should be: result \u003d\u003d 2",
+      "range": {
+        "startLine": 63,
+        "startChar": 18,
+        "endLine": 63,
+        "endChar": 28
+      },
+      "revId": "b5d2a4c43088cec24e5c7070e0b7a75d01d9bece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
