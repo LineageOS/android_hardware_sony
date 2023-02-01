@@ -24,6 +24,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf4660f4_f6195dec",
+        "filename": "hidl/touch/HighTouchPollingRate.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-02-01T11:08:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c7399494_94e752ff",
+      "range": {
+        "startLine": 55,
+        "startChar": 16,
+        "endLine": 55,
+        "endChar": 26
+      },
+      "revId": "b5d2a4c43088cec24e5c7070e0b7a75d01d9bece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5dc9c49a_b0016a04",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-02-01T08:37:38Z",
       "side": 1,
       "message": "should be: result \u003d\u003d 2",
+      "range": {
+        "startLine": 63,
+        "startChar": 18,
+        "endLine": 63,
+        "endChar": 28
+      },
+      "revId": "b5d2a4c43088cec24e5c7070e0b7a75d01d9bece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74467143_5f324d9b",
+        "filename": "hidl/touch/HighTouchPollingRate.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-02-01T11:08:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5dc9c49a_b0016a04",
       "range": {
         "startLine": 63,
         "startChar": 18,
