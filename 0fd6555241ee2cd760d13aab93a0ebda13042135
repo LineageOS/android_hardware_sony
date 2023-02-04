@@ -69,6 +69,24 @@
       "parentUuid": "677f4299_d46ac6da",
       "revId": "0fd6555241ee2cd760d13aab93a0ebda13042135",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f73c7f74_4303e588",
+        "filename": "hidl/touch/HighTouchPollingRate.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-02-04T16:13:50Z",
+      "side": 1,
+      "message": "Done, it now gets the prop `ro.vendor.display.low_touch_rate`.",
+      "parentUuid": "869f14b7_0add769f",
+      "revId": "0fd6555241ee2cd760d13aab93a0ebda13042135",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
