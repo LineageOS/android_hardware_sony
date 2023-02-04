@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74c052dd_8f575b3f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-02-04T15:10:57Z",
+      "side": 1,
+      "message": "Get device name through vendor prop `ro.product.vendor.device` instead of product prop.\nVerified to work on Xperia 1 II (Xperia 5 II is unaffected).",
+      "revId": "0fd6555241ee2cd760d13aab93a0ebda13042135",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
