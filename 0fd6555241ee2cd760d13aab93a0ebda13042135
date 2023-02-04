@@ -51,6 +51,24 @@
       "parentUuid": "e433fbfd_be68b3a3",
       "revId": "0fd6555241ee2cd760d13aab93a0ebda13042135",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "869f14b7_0add769f",
+        "filename": "hidl/touch/HighTouchPollingRate.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-02-04T15:40:18Z",
+      "side": 1,
+      "message": "yep",
+      "parentUuid": "677f4299_d46ac6da",
+      "revId": "0fd6555241ee2cd760d13aab93a0ebda13042135",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
