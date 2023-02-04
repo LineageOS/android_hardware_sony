@@ -33,6 +33,24 @@
       "message": "instead of using the device name it would be more proper to introduce a specific prop for this use-case, so it can be made dynamic.",
       "revId": "0fd6555241ee2cd760d13aab93a0ebda13042135",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "677f4299_d46ac6da",
+        "filename": "hidl/touch/HighTouchPollingRate.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-02-04T15:33:02Z",
+      "side": 1,
+      "message": "you mean putting something like this to device specific vendor.prop? `ro.vendor.display.low_refresh_rate\u003dtrue`",
+      "parentUuid": "e433fbfd_be68b3a3",
+      "revId": "0fd6555241ee2cd760d13aab93a0ebda13042135",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
