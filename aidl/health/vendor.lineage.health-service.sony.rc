@@ -1,4 +1,8 @@
+on property:vendor.charging_node.ready=1
+    enable vendor.lineage_health
+
 service vendor.lineage_health /vendor/bin/hw/vendor.lineage.health-service.sony
     class hal
     user system
     group system
+    disabled
