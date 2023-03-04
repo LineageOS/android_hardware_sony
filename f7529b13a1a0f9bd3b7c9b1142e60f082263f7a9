@@ -16,6 +16,24 @@
       "message": "Since these are sysfs nodes and I doubt they aren\u0027t available at boot, chown them on boot",
       "revId": "f7529b13a1a0f9bd3b7c9b1142e60f082263f7a9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3c0d0dc_bf00fbc9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-04T08:26:06Z",
+      "side": 1,
+      "message": "if I do this in init.rc and let the HAL start automatically:\n```\non boot\n    wait /sys/class/battchg_ext\n    chown system system /sys/class/battchg_ext/smart_charging_interruption\n```\n\nThe HAL will fail to find the node.",
+      "parentUuid": "6864c4d4_f39ed0bb",
+      "revId": "f7529b13a1a0f9bd3b7c9b1142e60f082263f7a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
