@@ -1,0 +1,18 @@
+/*
+ * Copyright (C) 2022 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.semc.hardware.display@2.5;
+
+import vendor.semc.hardware.display@2.3::IDisplay;
+import vendor.semc.hardware.display@2.1::IDisplay;
+import vendor.semc.hardware.display@2.0::types;
+import vendor.semc.hardware.display@2.0::IDisplayCallback;
+
+interface IDisplay extends @2.3::IDisplay {
+    get_color_config(int32_t state_id, int32_t mode_id) generates (ColorModeConfig config);
+    set_hdr_tm_mode(bool enable) generates (int32_t status);
+    notify_ambientlight_value(double value) generates (int32_t status);
+};
