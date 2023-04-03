@@ -1,0 +1,13 @@
+/*
+ * Copyright (C) 2022 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.semc.hardware.display@2.5;
+
+import vendor.semc.hardware.display@2.4::IFramerateController;
+
+interface IFramerateController extends @2.4::IFramerateController {
+    get_panel_config(int32_t fps_mode) generates (int32_t mode);
+};

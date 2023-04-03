@@ -1,0 +1,16 @@
+/*
+ * Copyright (C) 2022 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.semc.hardware.display@2.5;
+
+struct ColorModeConfig {
+    int32_t state_id;
+    int32_t mode_id;
+    float brightness;
+    float contrast;
+    float saturation;
+    float blue_high;
+};
