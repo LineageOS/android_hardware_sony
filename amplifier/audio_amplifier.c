@@ -1343,8 +1343,6 @@ static void cs35l41_enable_output(UNUSED struct audio_device* adev,
 
     cirrus_set_force_wake(true);
 
-    audio_route_apply_and_update_path(adev->audio_route, platform_get_snd_device_name(snd_device));
-
     if (handle.state == IDLE)
         (void)pthread_create(&handle.failure_detect_thread, (const pthread_attr_t*)NULL,
                              cirrus_failure_detect_thread, &handle);
@@ -1375,8 +1373,6 @@ static void cs35l41_disable_output(UNUSED struct audio_device* adev,
     }
 
     handle.state = IDLE;
-
-    audio_route_reset_and_update_path(adev->audio_route, platform_get_snd_device_name(snd_device));
 
 end:
     pthread_mutex_unlock(&handle.fb_prot_mutex);
