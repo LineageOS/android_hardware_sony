@@ -1306,7 +1306,8 @@ static void* cirrus_failure_detect_thread() {
 
 /* Amplifier funtions */
 
-static void cs35l41_enable_output(struct audio_device* adev, snd_device_t snd_device) {
+static void cs35l41_enable_output(UNUSED struct audio_device* adev,
+                                  UNUSED snd_device_t snd_device) {
     ALOGV("%s: Entry", __func__);
 
     if (!adev) {
@@ -1354,7 +1355,8 @@ end:
     ALOGV("%s: Exit", __func__);
 }
 
-static void cs35l41_disable_output(struct audio_device* adev, snd_device_t snd_device) {
+static void cs35l41_disable_output(UNUSED struct audio_device* adev,
+                                   UNUSED snd_device_t snd_device) {
     ALOGV("%s: Entry", __func__);
 
     pthread_mutex_lock(&handle.fb_prot_mutex);
