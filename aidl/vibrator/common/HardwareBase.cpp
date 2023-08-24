@@ -17,12 +17,46 @@
 #include "HardwareBase.h"
 
 #include <cutils/properties.h>
+#include <dlfcn.h>
 #include <log/log.h>
 
 #include <fstream>
 #include <sstream>
 
 #include "utils.h"
+
+namespace {
+
+// TA functions
+static void* ta_handle = nullptr;
+static int (*miscta_get_unit_size)(uint32_t unit, uint32_t* size) = nullptr;
+static int (*miscta_read_unit)(uint32_t id, void* buf, uint32_t* size) = nullptr;
+
+template <typename T>
+static bool ta_read_unit(T& out, uint32_t unit) {
+    uint32_t size = 0;
+
+    int ret = miscta_get_unit_size(unit, &size);
+    if (ret) {
+        ALOGE("%s: Cannot retrieve TA unit %d size error %d", __func__, unit, ret);
+        return false;
+    }
+
+    if (size != sizeof(T)) {
+        ALOGE("%s: Unexpected TA unit size %d != %lu", __func__, size, sizeof(T));
+        return false;
+    }
+
+    ret = miscta_read_unit(unit, &out, &size);
+    if (ret) {
+        ALOGE("%s: Cannot read TA unit %d of size %u: error %d", __func__, unit, size, ret);
+        return false;
+    }
+
+    return true;
+}
+
+};  // namespace
 
 namespace aidl {
 namespace android {
@@ -79,16 +113,29 @@ HwCalBase::HwCalBase() {
         ALOGE("Failed get property prefix!");
     }
 
-    utils::fileFromEnv("CALIBRATION_FILEPATH", &calfile);
-
-    for (std::string line; std::getline(calfile, line);) {
-        if (line.empty() || line[0] == '#') {
-            continue;
+    ta_handle = dlopen("libmiscta.so", RTLD_NOW);
+    if (ta_handle) {
+        // Load related symbols
+        miscta_get_unit_size = reinterpret_cast<typeof(miscta_get_unit_size)>(
+                dlsym(ta_handle, "miscta_get_unit_size"));
+        if (!miscta_get_unit_size) {
+            ALOGE("%s: Cannot find symbol: miscta_get_unit_size", __func__);
+            return;
         }
-        std::istringstream is_line(line);
-        std::string key, value;
-        if (std::getline(is_line, key, ':') && std::getline(is_line, value)) {
-            mCalData[utils::trim(key)] = utils::trim(value);
+
+        miscta_read_unit =
+                reinterpret_cast<typeof(miscta_read_unit)>(dlsym(ta_handle, "miscta_read_unit"));
+        if (!miscta_read_unit) {
+            ALOGE("%s: Cannot find symbol: miscta_read_unit", __func__);
+            return;
+        }
+
+        int redc_measured = 0;
+        int f0_measured = 0;
+
+        if (ta_read_unit(redc_measured, 4732) && ta_read_unit(f0_measured, 4733)) {
+            mCalData["f0_measured"] = std::to_string(f0_measured);
+            mCalData["redc_measured"] = std::to_string(redc_measured);
         }
     }
 }
