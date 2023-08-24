@@ -17,12 +17,21 @@
 #include "HardwareBase.h"
 
 #include <cutils/properties.h>
+#include <dlfcn.h>
 #include <log/log.h>
+#include <cstdint>
 
 #include <fstream>
 #include <sstream>
 
 #include "utils.h"
+
+#define LIB_MISCTA "libmiscta.so"
+
+// TA functions
+static void* ta_handle = nullptr;
+static int (*miscta_get_unit_size)(uint32_t unit, uint32_t* size) = nullptr;
+static int (*miscta_read_unit)(uint32_t id, void* buf, uint32_t* size) = nullptr;
 
 namespace aidl {
 namespace android {
@@ -69,6 +78,51 @@ void HwApiBase::debug(int fd) {
     mRecordsMutex.unlock();
 }
 
+int ta_read_unit(int32_t* arr, int offset, uint32_t unit) {
+    uint32_t ta_sz;
+
+    int ret = miscta_get_unit_size(unit, &ta_sz);
+    if (ret) {
+        ALOGE("%s: Cannot retrieve TA unit %d size error %d", __func__, unit, ret);
+        return -1;
+    }
+
+    ret = miscta_read_unit(unit, arr + offset, &ta_sz);
+    if (ret) {
+        ALOGE("%s: Cannot read TA unit %d of size %u: error %d", __func__, unit, ta_sz, ret);
+        return -1;
+    }
+
+    return ta_sz;
+}
+
+int cirrusMiscTaRead(int32_t* a1) {
+    uint32_t ta_sz;
+    uint32_t unit = 0;
+
+    if ((ta_sz = ta_read_unit(a1, 0, 4730)) < 0) {
+        return 1;
+    }
+    ALOGI("%s: unit = %d, size = %d, val = %d", __func__, unit, ta_sz, a1[0]);
+
+    if ((ta_sz = ta_read_unit(a1, 2, 4731)) < 0) {
+        return 1;
+    }
+    ALOGI("%s: unit = %d, size = %d, val = %ld", __func__, unit, ta_sz, *(uint64_t*)(a1 + 2));
+
+    if ((ta_sz = ta_read_unit(a1, 4, 4732)) < 0) {
+        return 1;
+    }
+    ALOGI("%s: unit = %d, size = %d, val = 0x%x", __func__, unit, ta_sz, a1[4]);
+
+    if ((ta_sz = ta_read_unit(a1, 5, 4733)) < 0) {
+        return 1;
+    }
+    ALOGI("%s: unit = %d, size = %d, val = 0x%x", __func__, unit, ta_sz, a1[5]);
+
+    return 0;
+}
+
 HwCalBase::HwCalBase() {
     std::ifstream calfile;
     auto propertyPrefix = std::getenv("PROPERTY_PREFIX");
@@ -79,16 +133,31 @@ HwCalBase::HwCalBase() {
         ALOGE("Failed get property prefix!");
     }
 
-    utils::fileFromEnv("CALIBRATION_FILEPATH", &calfile);
-
-    for (std::string line; std::getline(calfile, line);) {
-        if (line.empty() || line[0] == '#') {
-            continue;
+    ALOGI("%s: Starting getting vibrator calibration data from TA partition", __func__);
+    ta_handle = dlopen(LIB_MISCTA, RTLD_NOW);
+    if (ta_handle) {
+        // Load related symbol
+        miscta_get_unit_size = reinterpret_cast<typeof(miscta_get_unit_size)>(
+                dlsym(ta_handle, "miscta_get_unit_size"));
+        if (!miscta_get_unit_size) {
+            ALOGE("%s: Cannot find symbol: miscta_get_unit_size", __func__);
+            return;
         }
-        std::istringstream is_line(line);
-        std::string key, value;
-        if (std::getline(is_line, key, ':') && std::getline(is_line, value)) {
-            mCalData[utils::trim(key)] = utils::trim(value);
+
+        miscta_read_unit =
+                reinterpret_cast<typeof(miscta_read_unit)>(dlsym(ta_handle, "miscta_read_unit"));
+        if (!miscta_read_unit) {
+            ALOGE("%s: Cannot find symbol: miscta_read_unit", __func__);
+            return;
+        }
+
+        int32_t dat[6];
+        if (cirrusMiscTaRead(dat) == 0) {
+            auto f0_measured = std::to_string(dat[5]);
+            auto redc_measured = std::to_string(dat[4]);
+
+            mCalData[utils::trim("f0_measured")] = utils::trim(f0_measured);
+            mCalData[utils::trim("redc_measured")] = utils::trim(redc_measured);
         }
     }
 }
