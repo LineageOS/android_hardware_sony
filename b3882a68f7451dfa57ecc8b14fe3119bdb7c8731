@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "115c0fbd_8b5ade95",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-08-26T17:07:36Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure you can avoid splitting code and use ifdefs",
+      "revId": "b3882a68f7451dfa57ecc8b14fe3119bdb7c8731",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
