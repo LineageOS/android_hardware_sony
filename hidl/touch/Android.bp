@@ -14,8 +14,53 @@
 // limitations under the License.
 
 filegroup {
-    name: "vendor.lineage.touch@1.0-sony-hightouchpollingrates",
-    srcs: ["HighTouchPollingRate.cpp"],
+    name: "vendor.lineage.touch@1.0-sony-hightouchpollingrates_pre",
+    srcs: ["HighTouchPollingRatePre.cpp"],
+}
+
+filegroup {
+    name: "vendor.lineage.touch@1.0-sony-hightouchpollingrates_new",
+    srcs: ["HighTouchPollingRateNew.cpp"],
+}
+
+soong_config_module_type {
+    name: "sony_lineage_touch_hal_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "sony_touch",
+    variables: ["board"],
+    value_variables: ["touch_ctrl_path"],
+    properties: ["cppflags", "srcs"]
+}
+
+soong_config_string_variable {
+    name: "board",
+    values: ["edo", "sagami", "yodo"],
+}
+
+sony_lineage_touch_hal_cc_defaults {
+    name: "sony_touch_hal_path_defaults",
+    soong_config_variables: {
+        touch_ctrl_path: {
+            cppflags: ["-DSONY_PANEL_CTRL_PATH=\"%s\""],
+            conditions_default: {
+                cppflags: ["-DSONY_PANEL_CTRL_PATH=\"/sys/devices/virtual/sec/tsp\""],
+            },
+        },
+        board: {
+            edo: {
+                srcs: [":vendor.lineage.touch@1.0-sony-hightouchpollingrates_pre"]
+            },
+            sagami: {
+                srcs: [":vendor.lineage.touch@1.0-sony-hightouchpollingrates_pre"]
+            },
+            yodo: {
+                srcs: [":vendor.lineage.touch@1.0-sony-hightouchpollingrates_new"]
+            },
+            conditions_default: {
+                srcs: [":vendor.lineage.touch@1.0-sony-hightouchpollingrates_pre"]
+            },
+        }
+    }
 }
 
 cc_library_headers {
@@ -26,10 +71,12 @@ cc_library_headers {
 
 cc_defaults {
     name: "sony_touch_hal_defaults",
-    defaults: ["hidl_defaults"],
+    defaults: [
+        "hidl_defaults",
+        "sony_touch_hal_path_defaults",
+    ],
     relative_install_path: "hw",
     srcs: [
-        ":vendor.lineage.touch@1.0-sony-hightouchpollingrates",
         "service.cpp",
     ],
     shared_libs: [

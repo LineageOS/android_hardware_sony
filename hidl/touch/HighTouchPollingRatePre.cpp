@@ -29,8 +29,13 @@ namespace touch {
 namespace V1_0 {
 namespace implementation {
 
+#ifdef SONY_PANEL_CTRL_PATH
+static constexpr const char* kPanelCmdPath = SONY_PANEL_CTRL_PATH "/cmd";
+static constexpr const char* kPanelCmdResultPath = SONY_PANEL_CTRL_PATH "/cmd_result";
+#else
 static constexpr const char* kPanelCmdPath = "/sys/devices/virtual/sec/tsp/cmd";
 static constexpr const char* kPanelCmdResultPath = "/sys/devices/virtual/sec/tsp/cmd_result";
+#endif
 
 #define SET_STAMINA_CMD "stamina_enable,"
 #define GET_STAMINA_CMD "get_stamina_mode"
