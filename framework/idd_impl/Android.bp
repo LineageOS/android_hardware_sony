@@ -1,0 +1,22 @@
+//
+// Copyright (C) 2023 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+java_library {
+    name: "com.sony.idd_dummy",
+    installable: true,
+    product_specific: true,
+    sdk_version: "current",
+    srcs: ["src/**/*.java"],
+    required: ["com.sony.idd_dummy.xml"]
+}
+
+prebuilt_etc {
+    name: "com.sony.idd_dummy.xml",
+    product_specific: true,
+    sub_dir: "permissions",
+    src: "com.sony.idd_dummy.xml",
+    filename_from_src: true,
+}
