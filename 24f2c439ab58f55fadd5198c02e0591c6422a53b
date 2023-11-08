@@ -16,6 +16,24 @@
       "message": "return not needed.",
       "revId": "24f2c439ab58f55fadd5198c02e0591c6422a53b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58f16e65_04b58335",
+        "filename": "framework/idd_impl/src/com/sonyericsson/idd/api/Idd.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-11-08T19:05:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "065ea710_4f103984",
+      "revId": "24f2c439ab58f55fadd5198c02e0591c6422a53b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
