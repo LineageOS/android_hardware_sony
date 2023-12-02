@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da0fc6d3_5a2dff35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2023-12-02T09:45:20Z",
+      "side": 1,
+      "message": "comment with \"ship\" or something when you want me to merge a chain in this repo ^^",
+      "revId": "8ccb451aa809afdca6ef9eaf93640b01e59572d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
