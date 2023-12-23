@@ -67,6 +67,7 @@ struct __attribute__((__packed__)) cirrus_cal_result_t {
     uint8_t checksum[4];
     uint8_t cal_r[4];
     bool cal_ok;
+    bool cal_valid;
 };
 
 #ifdef CIRRUS_DIAG
@@ -1068,8 +1069,9 @@ static int cirrus_do_fw_stereo_download(int do_reset) {
     }
 
     /* If the calibration is not valid, keep the fw loaded but get out. */
-    if (!handle.spkl.cal_ok || !handle.spkr.cal_ok) {
-        return -EINVAL;
+    if (!handle.spkl.cal_valid || !handle.spkr.cal_valid) {
+        ALOGI("%s: The calibration data is not valid, just return with fw loaded", __func__);
+        return 0;
     }
 
     ret = cirrus_set_force_wake(true);
@@ -1445,37 +1447,37 @@ static int amp_calib(void* adev) {
     handle.state = INIT;
 
     ret = get_ta_array(TA_CIRRUS_CAL_GLOBAL_CAL_AMBIENT, &cal_ambient, true);
-    if (ret) return -EINVAL;
 
 #ifdef GET_SPEAKER_CALIBRATIONS_FROM_TA
     /* Speaker LEFT */
     ret = get_ta_array(TA_CIRRUS_CAL_SPKL_CAL_R, &handle.spkl.cal_r, true);
-    if (ret) return -EINVAL;
-
     ret = get_ta_array(TA_CIRRUS_CAL_SPKL_CAL_STATUS, &handle.spkl.status, true);
-    if (ret) return -EINVAL;
-
     ret = get_ta_array(TA_CIRRUS_CAL_SPKL_CAL_CHECKSUM, &handle.spkl.checksum, true);
-    if (ret) return -EINVAL;
 
     /* Speaker RIGHT */
     ret = get_ta_array(TA_CIRRUS_CAL_SPKR_CAL_R, &handle.spkr.cal_r, true);
-    if (ret) return -EINVAL;
-
     ret = get_ta_array(TA_CIRRUS_CAL_SPKR_CAL_STATUS, &handle.spkr.status, true);
-    if (ret) return -EINVAL;
-
     ret = get_ta_array(TA_CIRRUS_CAL_SPKR_CAL_CHECKSUM, &handle.spkr.checksum, true);
-    if (ret) return -EINVAL;
 
     handle.spkl.cal_ok = true;
     handle.spkr.cal_ok = true;
 
-    int spkl_empty = 0;
+    int spkl_cal_valid = 0;
     for (int i = 0; i < 4; i++) {
-        spkl_empty |= handle.spkl.cal_r[i];
+        spkl_cal_valid |= handle.spkl.cal_r[i];
     }
-    handle.is_stereo = spkl_empty != 0;
+
+    int spkr_cal_valid = 0;
+    for (int i = 0; i < 4; i++) {
+        spkr_cal_valid |= handle.spkr.cal_r[i];
+    }
+
+    // Workaround a empty TA partition: both spkr and spkl's TA data is 0x0
+    handle.spkl.cal_valid = spkl_cal_valid;
+    handle.spkr.cal_valid = spkr_cal_valid;
+    ALOGI("%s: spkl valid: %d, spkr valid: %d", __func__, handle.spkl.cal_valid,
+          handle.spkr.cal_valid);
+    handle.is_stereo = spkl_cal_valid == spkr_cal_valid;
 #else
 
     /* Do we want to load or calibrate? */
