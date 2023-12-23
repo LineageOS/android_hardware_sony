@@ -1476,7 +1476,10 @@ static int amp_calib(void* adev) {
     handle.spkl.cal_valid = spkl_cal_valid;
     handle.spkr.cal_valid = spkr_cal_valid;
     ALOGI("spkl valid: %d, spkr valid: %d\n", handle.spkl.cal_valid, handle.spkr.cal_valid);
-    handle.is_stereo = spkl_cal_valid == spkr_cal_valid;
+
+    ret = cirrus_get_mixer_value_by_name("DSP Booted");
+    ALOGI("%s: %s speaker found", __func__, ret < 0 ? "Stereo" : "Mono");
+    handle.is_stereo = ret < 0;
 #else
 
     /* Do we want to load or calibrate? */
