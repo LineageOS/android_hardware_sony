@@ -16,6 +16,24 @@
       "message": "Name it `spkl_cal_valid`? Then you don\u0027t need the double negation below.",
       "revId": "cf38e2a392d81d1996336e968ad1dc10445f56d3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c61d1a8_94662aa4",
+        "filename": "amplifier/audio_amplifier.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1471,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-12-23T13:16:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c52c9f91_28499cc4",
+      "revId": "cf38e2a392d81d1996336e968ad1dc10445f56d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
