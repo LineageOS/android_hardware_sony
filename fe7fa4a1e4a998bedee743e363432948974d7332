@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5f65c4f_6006de0e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-12-23T12:42:55Z",
+      "side": 1,
+      "message": "See https://xdaforums.com/t/rom-13-pdx206-lineageos-20-for-sony-xperia-5-ii-official.4538567/post-89234315",
+      "revId": "fe7fa4a1e4a998bedee743e363432948974d7332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
