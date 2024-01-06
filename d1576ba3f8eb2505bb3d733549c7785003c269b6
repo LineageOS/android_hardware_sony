@@ -39,6 +39,24 @@
       "message": "your other ALOG* calls don\u0027t have \\n",
       "revId": "d1576ba3f8eb2505bb3d733549c7785003c269b6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c634007_9d694a58",
+        "filename": "amplifier/audio_amplifier.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 1478,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-01-06T10:21:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "58f97483_9f53a131",
+      "revId": "d1576ba3f8eb2505bb3d733549c7785003c269b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
