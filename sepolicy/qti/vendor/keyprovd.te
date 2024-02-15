@@ -1,0 +1,25 @@
+type keyprovd, domain;
+type keyprovd_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(keyprovd)
+
+# Allow keyprovd to use HwBinder IPC
+hwbinder_use(keyprovd)
+
+# Allow keyprovd to read/write tee/ion device
+get_prop(keyprovd, vendor_tee_listener_prop)
+allow keyprovd tee_device:chr_file rw_file_perms;
+allow keyprovd ion_device:chr_file rw_file_perms;
+
+# Allow keyprovd to read hwservicemanager prop
+get_prop(keyprovd, hwservicemanager_prop)
+
+# Allow keyprovd to connect to tad
+unix_socket_connect(keyprovd, tad, tad)
+
+# Allow keyprovd to find secd hwservice
+allow keyprovd hal_secd_hwservice:hwservice_manager find;
+
+# Allow keyprovd to find and call soter HAL
+allow keyprovd vendor_hal_soter_hwservice:hwservice_manager find;
+binder_call(keyprovd, vendor_hal_soter_qti)
