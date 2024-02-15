@@ -1,0 +1,17 @@
+app_domain(devicesetting_app)
+
+allow devicesetting_app {
+    activity_service
+    activity_task_service
+    audio_service
+    autofill_service
+    content_capture_service
+    color_display_service
+    game_service
+    gpu_service
+    netstats_service
+    lineage_livedisplay_service
+    surfaceflinger_service
+    virtual_device_service
+    voiceinteraction_service
+}:service_manager find;
