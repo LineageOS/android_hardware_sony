@@ -1,0 +1,2 @@
+# Allow hal_fingerprint_default to ioctl/read/open vendor_dmabuf_qseecom_heap_device
+allow hal_fingerprint_default vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
