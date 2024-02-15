@@ -1,0 +1,2 @@
+# Allow kernel to read system_data_file
+allow kernel system_data_file:file r_file_perms;
