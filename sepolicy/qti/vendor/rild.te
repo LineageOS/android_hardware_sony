@@ -1,0 +1,8 @@
+add_hwservice(rild, somc_hw_radio_hwservice)
+
+add_service(rild, somc_aidl_radio_service)
+
+allow rild vendor_hal_secd_hwservice:hwservice_manager find;
+binder_call(rild, vendor_hal_secd_default)
+
+unix_socket_connect(rild, tad, tad)

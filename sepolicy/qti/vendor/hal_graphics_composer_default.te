@@ -1,0 +1,16 @@
+set_prop(hal_graphics_composer_default, vendor_display_color_prop)
+
+set_prop(hal_graphics_composer_default, vendor_display_always_on_prop)
+
+get_prop(hal_graphics_composer_default, vendor_somc_gfx_prop)
+
+get_prop(hal_graphics_composer_default, vendor_hal_superstamina_prop)
+
+set_prop(hal_graphics_composer_default, vendor_display_prop)
+
+get_prop(hal_graphics_composer_default, display_brightness_prop)
+
+allow hal_graphics_composer_default sysfs_dp:file rw_file_perms;
+
+allow hal_graphics_composer_default vendor_hal_disp_framerate_hwservice:hwservice_manager find;
+allow hal_graphics_composer_default vendor_hal_disp_default:binder call;

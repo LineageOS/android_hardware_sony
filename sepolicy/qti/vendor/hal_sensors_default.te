@@ -1,0 +1,2 @@
+allow hal_sensors_default vendor_hal_idd_hwservice:hwservice_manager find;
+binder_call(hal_sensors_default, vendor_hal_idd_default)

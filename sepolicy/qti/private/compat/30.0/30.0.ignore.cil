@@ -1,0 +1,8 @@
+;; sony_new_objects - a collection of types that have been introduced that have no
+;;   analogue in older policy.  Thus, we do not need to map these types to
+;;   previous ones.  Add here to pass checkapi tests.
+(type sony_new_objects)
+(typeattribute sony_new_objects)
+(typeattributeset sony_new_objects
+  ( sony_new_objects
+    devicesetting_app))

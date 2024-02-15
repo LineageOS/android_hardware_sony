@@ -1,0 +1,15 @@
+type vendor_hal_miscta_default, domain;
+hal_server_domain(vendor_hal_miscta_default, vendor_hal_miscta)
+
+type vendor_hal_miscta_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_miscta_default)
+
+hal_client_domain(vendor_hal_miscta_default, hal_allocator)
+
+unix_socket_connect(vendor_hal_miscta_default, tad, tad)
+
+allow vendor_hal_miscta_default hidl_memory_hwservice:hwservice_manager find;
+
+binder_use(vendor_hal_miscta_default)
+
+add_service(vendor_hal_miscta_default, vendor_hal_miscta_service)

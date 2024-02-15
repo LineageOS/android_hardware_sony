@@ -1,0 +1,12 @@
+type ext_uim_ctrl, domain;
+type ext_uim_ctrl_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(ext_uim_ctrl)
+
+allow ext_uim_ctrl proc_cmdline:file r_file_perms;
+
+rw_dir_file(ext_uim_ctrl, sysfs_uim_ctrl)
+
+allow ext_uim_ctrl vendor_toolbox_exec:file rx_file_perms;
+
+unix_socket_connect(ext_uim_ctrl, tad, tad)

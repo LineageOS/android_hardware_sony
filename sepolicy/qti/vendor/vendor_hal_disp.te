@@ -1,0 +1,8 @@
+binder_call(vendor_hal_disp_client, vendor_hal_disp_server)
+binder_call(vendor_hal_disp_server, vendor_hal_disp_client)
+
+add_hwservice(vendor_hal_disp_server, vendor_hal_disp_hwservice)
+allow vendor_hal_disp_client vendor_hal_disp_hwservice:hwservice_manager find;
+
+add_hwservice(vendor_hal_disp_server, vendor_hal_disp_framerate_hwservice)
+allow vendor_hal_disp_client vendor_hal_disp_framerate_hwservice:hwservice_manager find;

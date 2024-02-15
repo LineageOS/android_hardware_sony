@@ -1,0 +1,5 @@
+type vendor_sony_euiccmemoryreset_app, domain;
+app_domain(vendor_sony_euiccmemoryreset_app)
+
+allow priv_app vendor_hal_miscta_service:service_manager find;
+binder_call(priv_app, vendor_hal_miscta_default)

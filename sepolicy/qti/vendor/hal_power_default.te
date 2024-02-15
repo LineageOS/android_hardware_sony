@@ -1,0 +1,2 @@
+rw_dir_file(hal_power_default, sysfs_tsp)
+rw_dir_file(hal_power_default, sysfs_dp)

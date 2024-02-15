@@ -1,0 +1,5 @@
+binder_call(vendor_hal_miscta_client, vendor_hal_miscta_server)
+binder_call(vendor_hal_miscta_server, vendor_hal_miscta_client)
+
+add_hwservice(vendor_hal_miscta_server, vendor_hal_miscta_hwservice)
+allow vendor_hal_miscta_client vendor_hal_miscta_hwservice:hwservice_manager find;

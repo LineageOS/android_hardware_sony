@@ -1,0 +1,5 @@
+binder_call(vendor_hal_secd_client, vendor_hal_secd_server)
+binder_call(vendor_hal_secd_server, vendor_hal_secd_client)
+
+add_hwservice(vendor_hal_secd_server, vendor_hal_secd_hwservice)
+allow vendor_hal_secd_client vendor_hal_secd_hwservice:hwservice_manager find;

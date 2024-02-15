@@ -1,0 +1,5 @@
+# HALs
+vendor_hal_attribute(miscta)
+vendor_hal_attribute(idd)
+vendor_hal_attribute(secd)
+vendor_hal_attribute(disp)

@@ -1,0 +1,18 @@
+type vendor_hal_secd_default, domain;
+hal_server_domain(vendor_hal_secd_default, vendor_hal_secd)
+
+type vendor_hal_secd_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_secd_default)
+
+hal_client_domain(vendor_hal_secd_default, hal_allocator)
+
+allow vendor_hal_secd_default hidl_memory_hwservice:hwservice_manager find;
+
+allow vendor_hal_secd_default tee_device:chr_file rw_file_perms;
+allow vendor_hal_secd_default ion_device:chr_file r_file_perms;
+
+get_prop(vendor_hal_secd_default, vendor_tee_listener_prop)
+
+set_prop(vendor_hal_secd_default, vendor_sdm_prop)
+
+unix_socket_connect(vendor_hal_secd_default, tad, tad)

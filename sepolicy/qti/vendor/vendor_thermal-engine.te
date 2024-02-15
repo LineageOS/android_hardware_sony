@@ -1,0 +1,9 @@
+allow vendor_thermal-engine sysfs_battchg_ext:dir r_dir_perms;
+allow vendor_thermal-engine sysfs_battchg_ext:file rw_file_perms;
+
+hwbinder_use(vendor_thermal-engine)
+
+allow vendor_thermal-engine vendor_hal_idd_hwservice:hwservice_manager find;
+binder_call(vendor_thermal-engine, vendor_hal_idd_default)
+
+get_prop(vendor_thermal-engine, hwservicemanager_prop)
