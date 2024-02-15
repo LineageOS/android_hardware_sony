@@ -1,0 +1,11 @@
+type init-qcom-msim-sh, domain;
+type init-qcom-msim-sh_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(init-qcom-msim-sh)
+
+allow init-qcom-msim-sh { vendor_shell_exec vendor_toolbox_exec }:file rx_file_perms;
+
+allow init-qcom-msim-sh block_device:dir search;
+allow init-qcom-msim-sh ltalabel_block_device:blk_file r_file_perms;
+
+set_prop(init-qcom-msim-sh, vendor_radio_prop)

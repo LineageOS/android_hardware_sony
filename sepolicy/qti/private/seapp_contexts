@@ -1,0 +1,1 @@
+user=system isPrivApp=true seinfo=platform name=org.lineageos.settings.device domain=devicesetting_app type=app_data_file levelFrom=all
