@@ -1,0 +1,1 @@
+allow init sysfs_tsp:file rw_file_perms;
