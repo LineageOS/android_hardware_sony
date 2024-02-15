@@ -1,0 +1,3 @@
+allow fsck { idd_rca_dir idd_root_dir }:dir getattr;
+
+allow fsck { appslog_block_device diag_block_device }:blk_file rw_file_perms;
