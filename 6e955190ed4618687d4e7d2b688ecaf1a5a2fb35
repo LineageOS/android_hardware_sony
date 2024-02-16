@@ -16,6 +16,24 @@
       "message": "Derp?",
       "revId": "6e955190ed4618687d4e7d2b688ecaf1a5a2fb35",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4cb8ca69_cccc6e0a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-02-16T11:59:54Z",
+      "side": 1,
+      "message": "yes... it is originally for lineage-20 and I pushed to refs/for/lineage-21, and now it is duplicated...",
+      "parentUuid": "2e1ec3b7_ab872b69",
+      "revId": "6e955190ed4618687d4e7d2b688ecaf1a5a2fb35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
