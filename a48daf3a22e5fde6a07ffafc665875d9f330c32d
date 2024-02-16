@@ -1043,6 +1043,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "12fb08f3_f86aa35d",
+        "filename": "sepolicy/qti/vendor/kernel.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-02-16T15:00:17Z",
+      "side": 1,
+      "message": "```\n02-16 22:59:40.205  3694  3694 W loop36  : type\u003d1400 audit(0.0:11): avc:  denied  { read } for  path\u003d\"/data/per_boot/zram_swap\" dev\u003d\"dm-56\" ino\u003d52304 scontext\u003du:r:kernel:s0 tcontext\u003du:object_r:system_data_file:s0 tclass\u003dfile permissive\u003d0 ppid\u003d2 pcomm\u003d\"kthreadd\" pgid\u003d2 pgcomm\u003d\"kthreadd\"\n02-16 22:59:40.205  3694  3694 W loop36  : type\u003d1400 audit(0.0:12): avc:  denied  { read } for  path\u003d\"/data/per_boot/zram_swap\" dev\u003d\"dm-56\" ino\u003d52304 scontext\u003du:r:kernel:s0 tcontext\u003du:object_r:system_data_file:s0 tclass\u003dfile permissive\u003d0 ppid\u003d2 pcomm\u003d\"kthreadd\" pgid\u003d2 pgcomm\u003d\"kthreadd\"\n```",
+      "parentUuid": "4c357074_110ed3de",
+      "revId": "a48daf3a22e5fde6a07ffafc665875d9f330c32d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c8c0013e_f3f86549",
         "filename": "sepolicy/qti/vendor/keyprovd.te",
         "patchSetId": 3
