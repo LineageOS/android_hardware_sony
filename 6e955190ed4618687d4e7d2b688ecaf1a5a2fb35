@@ -52,6 +52,24 @@
       "parentUuid": "4cb8ca69_cccc6e0a",
       "revId": "6e955190ed4618687d4e7d2b688ecaf1a5a2fb35",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4aa751d3_dd87f317",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-02-16T12:04:47Z",
+      "side": 1,
+      "message": "Up to you, isn\u0027t pdx223 already reasonably working on A13? You could just fast-forward lineage-20 branch to lineage-21, but for that these changes must be deleted.",
+      "parentUuid": "cd85263f_582a5d69",
+      "revId": "6e955190ed4618687d4e7d2b688ecaf1a5a2fb35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
