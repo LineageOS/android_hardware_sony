@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98ebb9f7_a75beeca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-02-16T11:08:25Z",
+      "side": 1,
+      "message": "Considering the difference in the way of getting/setting states, i feel it would be better to have separate implementations for different panels.",
+      "revId": "5edcc62c0694e27848def47132eae9e3ada344b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
