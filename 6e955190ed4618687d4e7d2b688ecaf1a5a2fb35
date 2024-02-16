@@ -70,6 +70,24 @@
       "parentUuid": "cd85263f_582a5d69",
       "revId": "6e955190ed4618687d4e7d2b688ecaf1a5a2fb35",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e0cff28_7d4fdae9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-02-16T12:09:17Z",
+      "side": 1,
+      "message": "In current los hardware_sony, lineage-20 and lineage-21 branch have the same HEAD.\nthose changes are for the support of sony sm8550, which is not shipped on lineage-20. So I think I will just abandon the changes for lineage-20 branch and in favor of this chain.\nIs that correct?",
+      "parentUuid": "4aa751d3_dd87f317",
+      "revId": "6e955190ed4618687d4e7d2b688ecaf1a5a2fb35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
