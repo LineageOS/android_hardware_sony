@@ -34,6 +34,24 @@
       "parentUuid": "84053390_eff77830",
       "revId": "651f0e7d53036447c4db09499ad11a6df45707fd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4403ece7_9fe44009",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2024-02-26T08:29:11Z",
+      "side": 1,
+      "message": "pdx206:\nino\u003d78189 -\u003e /sys/devices/platform/soc/a94000.i2c/i2c-4/4-0048/wakeup/wakeup41\n\npdx214:\nino\u003d88425 -\u003e /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys9/wakeup/wakeup42\nino\u003d93513 -\u003e /sys/devices/platform/soc/aab0000.qcom,venus/subsys10/wakeup/wakeup47",
+      "parentUuid": "3792b066_bdb04b32",
+      "revId": "651f0e7d53036447c4db09499ad11a6df45707fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
