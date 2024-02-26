@@ -52,6 +52,23 @@
       "parentUuid": "3792b066_bdb04b32",
       "revId": "651f0e7d53036447c4db09499ad11a6df45707fd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b33c342c_79c8e043",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-02-26T16:10:42Z",
+      "side": 1,
+      "message": "you can use the command from https://review.lineageos.org/c/LineageOS/android_hardware_oplus/+/350105 to find all wakeup nodes that need to be labeled.",
+      "revId": "651f0e7d53036447c4db09499ad11a6df45707fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
