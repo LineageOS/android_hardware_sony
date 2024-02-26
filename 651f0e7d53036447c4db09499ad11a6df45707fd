@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84053390_eff77830",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2024-02-26T07:01:21Z",
+      "side": 1,
+      "message": "Works on pdx206 and pdx214 with the following minor denials:\n#allow system_server sysfs_leds:file read;\n02-26 14:52:10.961  1691  1691 I auditd  : type\u003d1400 audit(0.0:11): avc:  denied  { read } for  comm\u003d\"InputReader\" name\u003d\"max_brightness\" dev\u003d\"sysfs\" ino\u003d78291 scontext\u003du:r:system_server:s0 tcontext\u003du:object_r:sysfs_leds:s0 tclass\u003dfile permissive\u003d0 ppid\u003d963 pcomm\u003d\"main\" pgid\u003d1691 pgcomm\u003d\"system_server\"\n#allow system_suspend sysfs:dir read;\n02-26 14:52:08.661   723   723 I auditd  : type\u003d1400 audit(0.0:8): avc:  denied  { read } for  comm\u003d\"binder:723_2\" name\u003d\"wakeup41\" dev\u003d\"sysfs\" ino\u003d78189 scontext\u003du:r:system_suspend:s0 tcontext\u003du:object_r:sysfs:s0 tclass\u003ddir permissive\u003d0 ppid\u003d1 pcomm\u003d\"init\" pgid\u003d723 pgcomm\u003d\"suspend-service\"\n#allow hal_audio_default vendor_sysfs_kgsl:file read;\n02-26 14:52:12.237  1086  1086 I auditd  : type\u003d1400 audit(0.0:13): avc:  denied  { read } for  comm\u003d\"HwBinder:1086_1\" name\u003d\"gpu_available_frequencies\" dev\u003d\"sysfs\" ino\u003d85960 scontext\u003du:r:hal_audio_default:s0 tcontext\u003du:object_r:vendor_sysfs_kgsl:s0 tclass\u003dfile permissive\u003d0 ppid\u003d1 pcomm\u003d\"init\" pgid\u003d1086 pgcomm\u003d\"binder:1086_2\"",
+      "revId": "651f0e7d53036447c4db09499ad11a6df45707fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
