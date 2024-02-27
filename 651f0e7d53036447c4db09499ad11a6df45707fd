@@ -69,6 +69,23 @@
       "message": "you can use the command from https://review.lineageos.org/c/LineageOS/android_hardware_oplus/+/350105 to find all wakeup nodes that need to be labeled.",
       "revId": "651f0e7d53036447c4db09499ad11a6df45707fd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13436dd2_9562eda2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2024-02-27T12:18:18Z",
+      "side": 1,
+      "message": "Please add the followings into genfs_contexts:\npdx206:\ngenfscon sysfs /devices/platform/soc/a94000.i2c/i2c-4/4-0048/wakeup u:object_r:sysfs_wakeup:s0\n\npdx214:\ngenfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys10/wakeup u:object_r:sysfs_wakeup:s0\ngenfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys9/wakeup u:object_r:sysfs_wakeup:s0",
+      "revId": "651f0e7d53036447c4db09499ad11a6df45707fd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
