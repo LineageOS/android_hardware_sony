@@ -56,6 +56,30 @@
       },
       "revId": "46ee8c2b05d6976e6da733eeb0ec33b7babc225d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a9abd3d_281ea96f",
+        "filename": "sepolicy/qti/vendor/genfs_contexts",
+        "patchSetId": 15
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-03-03T09:41:11Z",
+      "side": 1,
+      "message": "sm8250 or sm8350?",
+      "parentUuid": "d7460c9a_b8734105",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 131
+      },
+      "revId": "46ee8c2b05d6976e6da733eeb0ec33b7babc225d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
