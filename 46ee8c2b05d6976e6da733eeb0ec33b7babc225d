@@ -80,6 +80,30 @@
       },
       "revId": "46ee8c2b05d6976e6da733eeb0ec33b7babc225d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b07d3c1b_96c8d309",
+        "filename": "sepolicy/qti/vendor/genfs_contexts",
+        "patchSetId": 15
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2024-03-03T14:04:34Z",
+      "side": 1,
+      "message": "both devices",
+      "parentUuid": "2a9abd3d_281ea96f",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 131
+      },
+      "revId": "46ee8c2b05d6976e6da733eeb0ec33b7babc225d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
