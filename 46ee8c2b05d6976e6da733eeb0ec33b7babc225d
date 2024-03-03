@@ -16,6 +16,23 @@
       "message": "This causes duplicate error:\nhardware/sony/sepolicy/qti/vendor/genfs_contexts:93:ERROR \u0027duplicate entry for g\nenfs entry (sysfs, /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink\n:qcom,battery_charger/extcon)\u0027 at token",
       "revId": "46ee8c2b05d6976e6da733eeb0ec33b7babc225d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b0a4c6e_9bae8a52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2024-03-03T08:45:28Z",
+      "side": 1,
+      "message": "This causes duplicate error:\nhardware/sony/sepolicy/qti/vendor/genfs_contexts:93:ERROR \u0027duplicate entry for g\nenfs entry (sysfs, /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink\n:qcom,battery_charger/extcon)\u0027 at token",
+      "revId": "46ee8c2b05d6976e6da733eeb0ec33b7babc225d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
