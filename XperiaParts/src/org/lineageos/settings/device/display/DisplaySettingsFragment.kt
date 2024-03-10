@@ -26,7 +26,7 @@ class DisplaySettingsFragment(private val mContext: Context) : PreferenceFragmen
         addPreferencesFromResource(R.xml.advanced_disp_settings)
         creatorModeUtils = CreatorModeUtils(context)
 
-        val creatorModePreference = findPreference<SwitchPreference>(CREATOR_MODE_KEY)!!
+        val creatorModePreference = findPreference<SwitchPreferenceCompat>(CREATOR_MODE_KEY)!!
         creatorModePreference.isChecked = creatorModeUtils.isEnabled
         creatorModePreference.onPreferenceChangeListener = this
     }
@@ -56,7 +56,7 @@ class DisplaySettingsFragment(private val mContext: Context) : PreferenceFragmen
                                     creatorModeUtils.setMode(true)
                                 }
                                 .setNegativeButton(android.R.string.cancel) { _, _ ->
-                                    preference as SwitchPreference
+                                    preference as SwitchPreferenceCompat
                                     preference.isChecked = !preference.isChecked
 
                                     Settings.Secure.putInt(context.contentResolver,
