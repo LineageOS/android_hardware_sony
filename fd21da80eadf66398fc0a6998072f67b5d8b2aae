@@ -1,0 +1,347 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab6d9add_a2d9dc06",
+        "filename": "sepolicy/qti/vendor/attributes",
+        "patchSetId": 17
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "https://github.com/LineageOS/android_hardware_oplus/blob/lineage-21/sepolicy/qti/public/te_macros; maybe import macro and use it here?",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 26
+      },
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5593cdc5_15afaa77",
+        "filename": "sepolicy/qti/vendor/ext_uim_ctrl_exec.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "rw_dir_file()",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 53
+      },
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f58d3ef8_682bb4be",
+        "filename": "sepolicy/qti/vendor/file_contexts",
+        "patchSetId": 17
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "move to genfscon?",
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a70e133_10824bd8",
+        "filename": "sepolicy/qti/vendor/file_contexts",
+        "patchSetId": 17
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "move to genfscon?",
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca8a6e5e_e07889f3",
+        "filename": "sepolicy/qti/vendor/file_contexts",
+        "patchSetId": 17
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "move to genfscon?",
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "beb6820c_0cb789bb",
+        "filename": "sepolicy/qti/vendor/genfs_contexts",
+        "patchSetId": 17
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "would get rid of any kind of alignment for this whole group.",
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86ac3896_63714317",
+        "filename": "sepolicy/qti/vendor/hal_camera_default.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "rw_dir_file()",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 55
+      },
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4788595e_322cac17",
+        "filename": "sepolicy/qti/vendor/hal_lineage_health_default.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "rw_dir_file()",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 0
+      },
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04ea0691_0c0a58c6",
+        "filename": "sepolicy/qti/vendor/hal_lineage_livedisplay_qti.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "rw_dir_file()",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 0
+      },
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f83c1288_45dd495d",
+        "filename": "sepolicy/qti/vendor/hal_lineage_powershare_default.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "rw_dir_file()",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 84
+      },
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2523c17b_a0fc7dec",
+        "filename": "sepolicy/qti/vendor/hal_lineage_touch_default.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "rw_dir_file()",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 61
+      },
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82604115_4a4fcf12",
+        "filename": "sepolicy/qti/vendor/hal_power_default.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "rw_dir_file()",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 53
+      },
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d11643e0_0cc7f3de",
+        "filename": "sepolicy/qti/vendor/hal_power_default.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "rw_dir_file()",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 52
+      },
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8cbbc05e_df35178c",
+        "filename": "sepolicy/qti/vendor/hal_vibrator_default.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "why",
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ef4c6380_4a1387b7",
+        "filename": "sepolicy/qti/vendor/hal_vibrator_default.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "setprop grants getprop",
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3fb0c3d_30ebbf45",
+        "filename": "sepolicy/qti/vendor/vendor_init.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "get_prop()",
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "679f4c3c_b5045191",
+        "filename": "sepolicy/qti/vendor/vendor_thermal-engine.te",
+        "patchSetId": 17
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-03-14T09:36:38Z",
+      "side": 1,
+      "message": "too many newlines",
+      "revId": "fd21da80eadf66398fc0a6998072f67b5d8b2aae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
