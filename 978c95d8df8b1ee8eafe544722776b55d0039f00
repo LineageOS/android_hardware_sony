@@ -16,6 +16,23 @@
       "message": "Not questioning the authorship at all, but https://review.lineageos.org/q/I0c1bd901429bbe3bf81c1530e156735f8637a96e is more proper.",
       "revId": "978c95d8df8b1ee8eafe544722776b55d0039f00",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e89593a7_a4de75f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2024-03-21T14:20:08Z",
+      "side": 1,
+      "message": "Add proper one:\nhttps://review.lineageos.org/c/LineageOS/android_hardware_sony/+/386908",
+      "revId": "978c95d8df8b1ee8eafe544722776b55d0039f00",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
