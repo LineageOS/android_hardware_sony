@@ -5,7 +5,13 @@
 
 package com.sonyericsson.idd.api;
 
+import org.json.JSONObject;
+
 public final class Idd {
     public static void addEvent(String pkg, String name, byte[] payload) {
+    }
+
+    public static void addAppDataJSON(
+            String packageName, String versionName, int versionCode, JSONObject payload) {
     }
 }
