@@ -1,0 +1,8 @@
+service sim-restart /system_ext/bin/sim-restart
+    class main
+    user root
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1
+    start sim-restart
