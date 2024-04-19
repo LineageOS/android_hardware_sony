@@ -1,0 +1,13 @@
+type sim_restart, domain, coredomain;
+type sim_restart_exec, system_file_type, exec_type, file_type;
+
+init_daemon_domain(sim_restart)
+
+binder_use(sim_restart)
+
+allow sim_restart radio:binder call;
+allow sim_restart radio_service:service_manager find;
+
+allow sim_restart shell_exec:file rx_file_perms;
+allow sim_restart system_file:file execute_no_trans;
+allow sim_restart toolbox_exec:file rx_file_perms;

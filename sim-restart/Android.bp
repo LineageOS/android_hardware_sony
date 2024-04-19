@@ -1,0 +1,11 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+sh_binary {
+    name: "sim-restart",
+    init_rc: ["sim-restart.rc"],
+    src: "sim-restart.sh",
+    system_ext_specific: true,
+}

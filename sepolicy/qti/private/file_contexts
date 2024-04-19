@@ -1,0 +1,2 @@
+# Shell scripts
+/system_ext/bin/sim-restart\.sh    u:object_r:sim_restart_exec:s0
