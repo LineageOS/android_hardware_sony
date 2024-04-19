@@ -1,0 +1,16 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.sony.sim-restart.rc",
+    src: "init.sony.sim-restart.rc",
+    sub_dir: "init",
+    device_specific: true,
+}
+
+sh_binary {
+    name: "init.sim.restart.sh",
+    src: "init.sim.restart.sh",
+}
