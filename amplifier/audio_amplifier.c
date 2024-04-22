@@ -1412,7 +1412,7 @@ static int amp_dev_close(hw_device_t* device) {
     return 0;
 }
 
-static int amp_calib(void* adev) {
+static int amp_calib(UNUSED struct amplifier_device* device, void* adev) {
     int ret = 0;
 
     if (!adev) {
