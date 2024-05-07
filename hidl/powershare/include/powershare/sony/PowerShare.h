@@ -15,6 +15,8 @@
  */
 #pragma once
 
+#include <hidl/MQDescriptor.h>
+#include <hidl/Status.h>
 #include <vendor/lineage/powershare/1.0/IPowerShare.h>
 
 namespace vendor {
@@ -23,9 +25,9 @@ namespace powershare {
 namespace V1_0 {
 namespace implementation {
 
-using ::android::sp;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
+using ::android::sp;
 
 class PowerShare : public IPowerShare {
   public:

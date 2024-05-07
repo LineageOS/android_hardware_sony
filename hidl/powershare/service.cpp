@@ -17,28 +17,43 @@
 #define LOG_TAG "vendor.lineage.powershare@1.0-service.sony"
 
 #include <android-base/logging.h>
+#include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
+#include <powershare/sony/PowerShare.h>
 
-#include "PowerShare.h"
+using ::android::OK;
+using ::android::sp;
+using ::android::status_t;
+using ::android::hardware::configureRpcThreadpool;
+using ::android::hardware::joinRpcThreadpool;
 
-using android::hardware::configureRpcThreadpool;
-using android::hardware::joinRpcThreadpool;
-using android::sp;
-
-using vendor::lineage::powershare::V1_0::IPowerShare;
-using vendor::lineage::powershare::V1_0::implementation::PowerShare;
+using ::vendor::lineage::powershare::V1_0::IPowerShare;
+using ::vendor::lineage::powershare::V1_0::implementation::PowerShare;
 
 int main() {
-    sp<IPowerShare> powerShareService = new PowerShare();
+    status_t status = OK;
+
+    android::ProcessState::initWithDriver("/dev/vndbinder");
+
+    LOG(INFO) << "PowerShare HAL service is starting.";
+
+    sp<IPowerShare> ps = new PowerShare();
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    if (powerShareService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Can't register PowerShare HAL service";
-        return 1;
+    status = ps->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for PowerShare HAL service ("
+                   << status << ")";
+        goto shutdown;
     }
 
+    LOG(INFO) << "PowerShare HAL service is ready.";
     joinRpcThreadpool();
+    // Should not pass this line
 
-    return 0; // should never get here
+shutdown:
+    // In normal operation, we don't expect the thread pool to shutdown
+    LOG(ERROR) << "PowerShare HAL service is shutting down.";
+    return 1;
 }

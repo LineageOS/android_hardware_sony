@@ -16,12 +16,10 @@
 
 #define LOG_TAG "vendor.lineage.powershare@1.0-service.sony"
 
-#include "PowerShare.h"
-
-#include <android-base/file.h>
-
-using ::android::base::ReadFileToString;
-using ::android::base::WriteStringToFile;
+#include <android-base/logging.h>
+#include <android-base/strings.h>
+#include <fstream>
+#include <powershare/sony/PowerShare.h>
 
 namespace vendor {
 namespace lineage {
@@ -29,13 +27,30 @@ namespace powershare {
 namespace V1_0 {
 namespace implementation {
 
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+}
+
+template <typename T>
+static T get(const std::string& path, const T& def) {
+    std::ifstream file(path);
+    T result;
+
+    file >> result;
+    return file.fail() ? def : result;
+}
+
 Return<bool> PowerShare::isEnabled() {
-    std::string value;
-    return ReadFileToString(WIRELESS_TX_ENABLE_PATH, &value) && value != "0\n";
+    const auto value = get<std::string>(WIRELESS_TX_ENABLE_PATH, "0");
+    return !(value == "disable" || value == "0");
 }
 
 Return<bool> PowerShare::setEnabled(bool enable) {
-    return WriteStringToFile(enable ? "1" : "0", WIRELESS_TX_ENABLE_PATH, true);
+    set(WIRELESS_TX_ENABLE_PATH, enable ? 1 : 0);
+
+    return isEnabled();
 }
 
 Return<uint32_t> PowerShare::getMinBattery() {
