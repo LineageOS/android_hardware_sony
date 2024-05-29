@@ -36,6 +36,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e041d096_de40321e",
+        "filename": "XperiaParts/res/layout/cm_checkbox.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-05-29T08:59:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5d579980_bf81709f",
+      "revId": "43b8ad92b8aba70117c86803adaf7f5c3d7e3fe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2ceefd94_381a2af5",
@@ -64,6 +82,24 @@
         "id": 31578
       },
       "writtenOn": "2024-05-29T08:58:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ceefd94_381a2af5",
+      "revId": "43b8ad92b8aba70117c86803adaf7f5c3d7e3fe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3930d4d_fa61bdbb",
+        "filename": "XperiaParts/res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-05-29T08:59:08Z",
       "side": 1,
       "message": "Done",
       "parentUuid": "2ceefd94_381a2af5",
@@ -106,6 +142,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "192bbfa0_370db7e3",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-05-29T08:59:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e3fe0b2b_76779d20",
+      "revId": "43b8ad92b8aba70117c86803adaf7f5c3d7e3fe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "13e3101c_59b03954",
@@ -134,6 +188,24 @@
         "id": 31578
       },
       "writtenOn": "2024-05-29T08:58:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "13e3101c_59b03954",
+      "revId": "43b8ad92b8aba70117c86803adaf7f5c3d7e3fe4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5197d6e_5c2fd67e",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-05-29T08:59:08Z",
       "side": 1,
       "message": "Done",
       "parentUuid": "13e3101c_59b03954",
