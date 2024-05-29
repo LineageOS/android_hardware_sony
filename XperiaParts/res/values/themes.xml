@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.XperiaParts" parent="Theme.Material3.DynamicColors.DayNight">
+        <item name="android:statusBarColor">@color/material_dynamic_primary95</item>
+        <item name="android:windowBackground">@color/material_dynamic_primary95</item>
+    </style>
+</resources>

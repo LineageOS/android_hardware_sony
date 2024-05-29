@@ -12,6 +12,7 @@ import android.provider.Settings
 import android.view.View
 import android.widget.CheckBox
 import androidx.preference.*
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import org.lineageos.settings.device.R
 
@@ -32,7 +33,7 @@ class DisplaySettingsFragment(private val mContext: Context) : PreferenceFragmen
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        val builder: AlertDialog.Builder = AlertDialog.Builder(mContext)
+        val builder = MaterialAlertDialogBuilder(mContext)
         val checkBoxView = View.inflate(mContext, R.layout.cm_checkbox, null);
         val checkbox = checkBoxView.findViewById<CheckBox>(R.id.cm_checkbox_show_once) as CheckBox
         checkbox.setOnCheckedChangeListener { _, isChecked ->
