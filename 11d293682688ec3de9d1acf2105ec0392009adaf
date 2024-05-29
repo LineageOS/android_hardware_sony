@@ -16,6 +16,24 @@
       "message": "maybe?\n\n```\nprivate val semcDisplayService: IDisplay by lazy {\n    val service \u003d IDisplay.getService() ?: throw Exception(\"SEMC Display HIDL not found\")\n    service.setup()\n    service\n}\n```",
       "revId": "11d293682688ec3de9d1acf2105ec0392009adaf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75aadc9c_62e232d0",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-05-29T08:52:39Z",
+      "side": 1,
+      "message": "eh i misunderstood the reasoning behind this change, tho it\u0027s odd that you want to have three states:\n* on\n* off (user did on-\u003eoff in settings while device is running)\n* off (uninitialized)",
+      "parentUuid": "5c959a32_e17c0e66",
+      "revId": "11d293682688ec3de9d1acf2105ec0392009adaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
