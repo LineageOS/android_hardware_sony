@@ -70,6 +70,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c896e537_cf5e9118",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-05-29T08:09:50Z",
+      "side": 1,
+      "message": "Yea ( https://github.com/LineageOS/android_hardware_sony/blob/lineage-21/XperiaParts/Android.bp#L16 ), you can abandon this change.",
+      "parentUuid": "9ed39bc4_563b87ec",
+      "revId": "73aa138433ef757a38b731531fe6d47245523be4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d78317f1_99add3cf",
