@@ -16,6 +16,24 @@
       "message": "Aren\u0027t you using common devicesettings resources?!?",
       "revId": "73aa138433ef757a38b731531fe6d47245523be4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ed39bc4_563b87ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-05-29T07:59:08Z",
+      "side": 1,
+      "message": "\u003e Aren\u0027t you using common devicesettings resources?!?\n\nsorry I just picked those two together. Will try without this one",
+      "parentUuid": "dd272289_00ff9d3e",
+      "revId": "73aa138433ef757a38b731531fe6d47245523be4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
