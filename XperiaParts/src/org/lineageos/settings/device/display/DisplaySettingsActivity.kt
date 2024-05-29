@@ -8,10 +8,12 @@ package org.lineageos.settings.device.display
 import android.os.Bundle
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
+import com.google.android.material.color.DynamicColors
 
 class DisplaySettingsActivity : CollapsingToolbarBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        DynamicColors.applyToActivityIfAvailable(this)
         fragmentManager
             .beginTransaction()
             .replace(
