@@ -34,6 +34,46 @@
       "parentUuid": "dd272289_00ff9d3e",
       "revId": "73aa138433ef757a38b731531fe6d47245523be4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81288656_195698f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-05-29T08:07:22Z",
+      "side": 1,
+      "message": "\"No newline at end of right file.\"",
+      "revId": "73aa138433ef757a38b731531fe6d47245523be4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d78317f1_99add3cf",
+        "filename": "XperiaParts/res/layout-v34/settingslib_main_switch_bar.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-05-29T08:07:22Z",
+      "side": 1,
+      "message": "missing newlines",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 32
+      },
+      "revId": "73aa138433ef757a38b731531fe6d47245523be4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
