@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "093e5059_0550839a",
+        "filename": "framework/idd_impl/src/com/sonyericsson/idd/api/Idd.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-05-29T07:51:46Z",
+      "side": 1,
+      "message": "newline",
+      "revId": "cfe3382e66cbf24523b41726424e1897668d7d03",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
