@@ -34,6 +34,24 @@
       "parentUuid": "5c959a32_e17c0e66",
       "revId": "11d293682688ec3de9d1acf2105ec0392009adaf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d86b62a_8ba8f8d4",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-05-29T08:58:28Z",
+      "side": 1,
+      "message": "\u003e eh i misunderstood the reasoning behind this change, tho it\u0027s odd that you want to have three states:\n\u003e * on\n\u003e * off (user did on-\u003eoff in settings while device is running)\n\u003e * off (uninitialized)\n\nIf the user does on-\u003eoff when the device is running, then it will just go back to the default settings (white balance, display mode etc.) and user can change whatever they wants, and their changes will persist through reboots.\n\nThat is what I am try to achieve",
+      "parentUuid": "75aadc9c_62e232d0",
+      "revId": "11d293682688ec3de9d1acf2105ec0392009adaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
