@@ -28,6 +28,11 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
         get() = Settings.Secure.getInt(context.contentResolver, CREATOR_MODE_ENABLE, 0) != 0
 
     fun setMode(enabled: Boolean) {
+        if (!isInitialized) {
+            semcDisplayService.setup()
+            isInitialized = true
+        }
+
         semcDisplayService.set_sspp_color_mode(if (enabled) 0 else 1)
         colorDisplayManager.setColorMode(if (enabled) 0 else 3)
         semcDisplayService.set_color_mode(if (enabled) 0 else 1)
@@ -40,7 +45,12 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
 
         // Register itself as callback for HIDL
         semcDisplayService.registerCallback(this)
-        semcDisplayService.setup()
+
+        // Don't apply anything if the setting is disabled
+        if (isEnabled) {
+            semcDisplayService.setup()
+            isInitialized = true
+        }
     }
 
     override fun onWhiteBalanceMatrixChanged(matrix: PccMatrix) {
@@ -52,5 +62,7 @@ class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
     companion object {
         private const val TAG = "CreatorModeUtils"
         private const val CREATOR_MODE_ENABLE = "cm_enable"
+
+        private var isInitialized: Boolean = false
     }
 }
