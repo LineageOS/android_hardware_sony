@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "906cc60b_e5615444",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2024-06-01T08:47:58Z",
+      "side": 1,
+      "message": "I too don\u0027t understand the purpose of this change. Is this not enough?\n```\n// Register itself as callback for HIDL\nsemcDisplayService.registerCallback(this)\nsemcDisplayService.setup()\nsetMode(isEnabled)\n```",
+      "revId": "78e1aa84cc0cea05e97691151d1557b7b37b380b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
