@@ -16,6 +16,24 @@
       "message": "Can we commonize the theme?",
       "revId": "da5c8ff6c8607209a45b1a5c00232cc76e9ec464",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d826c586_c29a18b4",
+        "filename": "XperiaParts/res/values/themes.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-06-01T10:40:50Z",
+      "side": 0,
+      "message": "Actually this looked a bit awful at this moment.",
+      "parentUuid": "871383b8_9d5b2e67",
+      "revId": "da5c8ff6c8607209a45b1a5c00232cc76e9ec464",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
