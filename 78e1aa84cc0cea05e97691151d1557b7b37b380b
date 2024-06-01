@@ -16,6 +16,24 @@
       "message": "I too don\u0027t understand the purpose of this change. Is this not enough?\n```\n// Register itself as callback for HIDL\nsemcDisplayService.registerCallback(this)\nsemcDisplayService.setup()\nsetMode(isEnabled)\n```",
       "revId": "78e1aa84cc0cea05e97691151d1557b7b37b380b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0946782d_b5e5cb1d",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-06-01T08:50:20Z",
+      "side": 1,
+      "message": "The call to `setMode` (maybe also `setup()`) will eventually call the `set_color_mode` function in the HAL, which will call the `onWhiteBalanceMatrixChanged` function, and change the whilte balance.",
+      "parentUuid": "906cc60b_e5615444",
+      "revId": "78e1aa84cc0cea05e97691151d1557b7b37b380b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
