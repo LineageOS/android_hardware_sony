@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "871383b8_9d5b2e67",
+        "filename": "XperiaParts/res/values/themes.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-06-01T09:36:49Z",
+      "side": 0,
+      "message": "Can we commonize the theme?",
+      "revId": "da5c8ff6c8607209a45b1a5c00232cc76e9ec464",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
