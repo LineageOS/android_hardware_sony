@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6eda03e0_42e5c310",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2024-06-08T07:06:41Z",
+      "side": 1,
+      "message": "remove this and maybe?\n```\n    private val semcDisplayService: IDisplay by lazy {\n        val service \u003d IDisplay.getService() ?: throw Exception(\"SEMC Display HIDL not found\")\n        // Register itself as callback for HIDL\n        service.registerCallback(this)\n        service.setup()\n        service\n    }\n```",
+      "range": {
+        "startLine": 45,
+        "startChar": 8,
+        "endLine": 45,
+        "endChar": 49
+      },
+      "revId": "78e1aa84cc0cea05e97691151d1557b7b37b380b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "906cc60b_e5615444",
         "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
         "patchSetId": 4
