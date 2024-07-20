@@ -52,6 +52,24 @@
       "parentUuid": "75aadc9c_62e232d0",
       "revId": "11d293682688ec3de9d1acf2105ec0392009adaf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4faba019_09c7dfb2",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/CreatorModeUtils.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2024-07-20T13:22:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9d86b62a_8ba8f8d4",
+      "revId": "11d293682688ec3de9d1acf2105ec0392009adaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
