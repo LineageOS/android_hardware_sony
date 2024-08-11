@@ -1,11 +1,11 @@
 # Executable
-/(vendor|system/vendor|odm|vendor/odm)/bin/iddd                   u:object_r:idd_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/keyprovd               u:object_r:keyprovd_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/mlog_qmi_service       u:object_r:mlog_qmi_service_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/nv_updater             u:object_r:nv_updater_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/sony_ext_uim_ctrl      u:object_r:ext_uim_ctrl_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/tad                    u:object_r:tad_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/ta_qmi_service         u:object_r:ta_qmi_service_exec:s0
+/(vendor|odm|vendor/odm)/bin/iddd                   u:object_r:idd_exec:s0
+/(vendor|odm|vendor/odm)/bin/keyprovd               u:object_r:keyprovd_exec:s0
+/(vendor|odm|vendor/odm)/bin/mlog_qmi_service       u:object_r:mlog_qmi_service_exec:s0
+/(vendor|odm|vendor/odm)/bin/nv_updater             u:object_r:nv_updater_exec:s0
+/(vendor|odm|vendor/odm)/bin/sony_ext_uim_ctrl      u:object_r:ext_uim_ctrl_exec:s0
+/(vendor|odm|vendor/odm)/bin/tad                    u:object_r:tad_exec:s0
+/(vendor|odm|vendor/odm)/bin/ta_qmi_service         u:object_r:ta_qmi_service_exec:s0
 
 # Data files
 /data/vendor/3dra(/.*)?          u:object_r:vendor_audio_data_file:s0
@@ -19,21 +19,21 @@
 /mnt/rca(/.*)?                   u:object_r:idd_rca_file:s0
 
 # HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.nxp                                           u:object_r:hal_nfc_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.sony                                u:object_r:hal_lineage_powershare_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-rbs    u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.lights-service(.*)?                         u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.nfc_snxxx@1\.2-service                      u:object_r:hal_nfc_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.vibrator-sony\.service\.cs40l25             u:object_r:hal_vibrator_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.sony                u:object_r:hal_lineage_livedisplay_qti_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.lineage\.touch@1\.0-service\.sony                      u:object_r:hal_lineage_touch_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.display@(.*)?                          u:object_r:vendor_hal_disp_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.extlight-service\.somc                 u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.secd@1\.[0-9]-service                  u:object_r:vendor_hal_secd_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.system\.idd@1\.[0-9]-service                     u:object_r:vendor_hal_idd_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.aidlmiscta-service\.somc               u:object_r:vendor_hal_miscta_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.camera\.provider@1\.0-service          u:object_r:hal_camera_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.miscta@1\.0-service                    u:object_r:vendor_hal_miscta_default_exec:s0
+/vendor/bin/hw/android\.hardware\.nfc-service\.nxp                                             u:object_r:hal_nfc_default_exec:s0
+/vendor/bin/hw/vendor\.lineage\.powershare@1\.0-service\.sony                                  u:object_r:hal_lineage_powershare_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-rbs    u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/android\.hardware\.lights-service(.*)?                         u:object_r:hal_light_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/android\.hardware\.nfc_snxxx@1\.2-service                      u:object_r:hal_nfc_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/android\.hardware\.vibrator-sony\.service\.cs40l25             u:object_r:hal_vibrator_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.sony                u:object_r:hal_lineage_livedisplay_qti_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor\.lineage\.touch@1\.0-service\.sony                      u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.display@(.*)?                          u:object_r:vendor_hal_disp_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.extlight-service\.somc                 u:object_r:hal_light_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.secd@1\.[0-9]-service                  u:object_r:vendor_hal_secd_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.system\.idd@1\.[0-9]-service                     u:object_r:vendor_hal_idd_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.aidlmiscta-service\.somc               u:object_r:vendor_hal_miscta_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.camera\.provider@1\.0-service          u:object_r:hal_camera_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.miscta@1\.0-service                    u:object_r:vendor_hal_miscta_default_exec:s0
 
 # Devices
 /dev/block/platform/soc/1d84000\.ufshc/by-name/appslog     u:object_r:appslog_block_device:s0
