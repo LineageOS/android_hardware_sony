@@ -16,6 +16,23 @@
       "message": "Does not affect sm8250/sm8350, but sm8550 will need this",
       "revId": "8445815214a4841329e190ef782dbcf51b5f19e0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4867286_ed01ddf4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33840
+      },
+      "writtenOn": "2024-08-25T10:22:59Z",
+      "side": 1,
+      "message": "Confirm that pdx234 (sm8550) builds without error.",
+      "revId": "8445815214a4841329e190ef782dbcf51b5f19e0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
