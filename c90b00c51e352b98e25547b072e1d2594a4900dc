@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21421da8_8b40828d",
+        "filename": "sepolicy/qti/vendor/hal_audio_default.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-11-27T08:17:11Z",
+      "side": 1,
+      "message": "```suggestion\nallow hal_audio_default vendor_hal_miscta_default:binder call;\nallow hal_audio_default vendor_hal_secd_hwservice:binder call;\n\nallow hal_audio_default vendor_hal_miscta_hwservice:hwservice_manager find;\nallow hal_audio_default vendor_hal_secd_hwservice:hwservice_manager find;\n\nallow hal_audio_default gpu_device:chr_file rw_file_perms;\n\nget_prop(hal_audio_default, vendor_tee_listener_prop)\n```",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 62
+      },
+      "revId": "c90b00c51e352b98e25547b072e1d2594a4900dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
