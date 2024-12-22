@@ -5,18 +5,18 @@
 //
 
 java_library {
-    name: "com.sony.idd_dummy",
+    name: "com.sonyericsson.idd_impl",
     installable: true,
     product_specific: true,
     sdk_version: "current",
     srcs: ["src/**/*.java"],
-    required: ["com.sony.idd_dummy.xml"]
+    required: ["com.sonyericsson.idd.xml"]
 }
 
 prebuilt_etc {
-    name: "com.sony.idd_dummy.xml",
+    name: "com.sonyericsson.idd.xml",
     product_specific: true,
     sub_dir: "permissions",
-    src: "com.sony.idd_dummy.xml",
+    src: "com.sonyericsson.idd.xml",
     filename_from_src: true,
 }
