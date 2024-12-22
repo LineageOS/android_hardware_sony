@@ -21,6 +21,17 @@ sony_powershare_hal_cc_defaults {
     },
 }
 
+filegroup {
+    name: "vendor.lineage.powershare@1.0-sony-ps",
+    srcs: ["PowerShare.cpp"],
+}
+
+cc_library_headers {
+    name: "vendor.lineage.powershare@1.0-sony-headers",
+    vendor_available: true,
+    export_include_dirs: ["include"],
+}
+
 cc_binary {
     name: "vendor.lineage.powershare@1.0-service.sony",
     defaults: [
@@ -29,16 +40,20 @@ cc_binary {
     ],
     init_rc: ["vendor.lineage.powershare@1.0-service.sony.rc"],
     vintf_fragments: ["vendor.lineage.powershare@1.0-service.sony.xml"],
-    vendor: true,
     relative_install_path: "hw",
     srcs: [
+        ":vendor.lineage.powershare@1.0-sony-ps",
         "service.cpp",
-        "PowerShare.cpp",
     ],
     shared_libs: [
         "libbase",
+        "libbinder",
         "libhidlbase",
         "libutils",
         "vendor.lineage.powershare@1.0",
     ],
+    header_libs: [
+        "vendor.lineage.powershare@1.0-sony-headers",
+    ],
+    proprietary: true,
 }
