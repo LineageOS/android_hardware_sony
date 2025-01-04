@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4e9e008_6f8807cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-01-04T11:40:52Z",
+      "side": 1,
+      "message": "why rename? hw/oplus also uses device_framework_matrix.xml.",
+      "revId": "4b77fbdf07639254b25067ce26c7bd7d12313e8f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
