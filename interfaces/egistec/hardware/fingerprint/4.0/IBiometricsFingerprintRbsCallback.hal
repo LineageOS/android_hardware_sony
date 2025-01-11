@@ -1,0 +1,11 @@
+/*
+ * Copyright (C) 2025 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.egistec.hardware.fingerprint@4.0;
+
+interface IBiometricsFingerprintRbsCallback {
+    oneway ipc_callback(int32_t a1, int32_t a2, int32_t a3, vec<uint8_t> a4, int32_t a5);
+};
