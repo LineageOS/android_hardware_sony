@@ -4,9 +4,9 @@ hidl_interface {
     root: "vendor.semc",
     system_ext_specific: true,
     srcs: [
+        "types.hal",
         "IDisplay.hal",
         "IDisplayCallback.hal",
-        "types.hal"
     ],
     interfaces: [
         "android.hidl.base@1.0",

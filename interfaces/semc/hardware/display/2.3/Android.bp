@@ -11,7 +11,7 @@ hidl_interface {
         "android.hidl.base@1.0",
         "vendor.semc.hardware.display@2.0",
         "vendor.semc.hardware.display@2.1",
-        "vendor.semc.hardware.display@2.2"
+        "vendor.semc.hardware.display@2.2",
     ],
     gen_java: true,
 }
