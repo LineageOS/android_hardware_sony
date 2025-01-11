@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89f5b0b4_b5fc2f95",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-01-11T18:49:58Z",
+      "side": 1,
+      "message": "(I manually stripped the hidl deprecation warning away)",
+      "revId": "277c476294f59ea372d95814fdf95f8cb94fcc09",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
