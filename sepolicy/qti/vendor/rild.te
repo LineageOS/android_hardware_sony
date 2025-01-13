@@ -4,5 +4,7 @@ add_service(rild, somc_aidl_radio_service)
 unix_socket_connect(rild, tad, tad)
 
 binder_call(rild, vendor_hal_secd_default)
+binder_call(rild, vendor_hal_spc_default)
 
 allow rild vendor_hal_secd_hwservice:hwservice_manager find;
+allow rild vendor_hal_spc_service:service_manager find;
