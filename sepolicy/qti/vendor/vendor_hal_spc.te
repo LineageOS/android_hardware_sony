@@ -1,0 +1,5 @@
+binder_call(vendor_hal_spc_client, vendor_hal_spc_server)
+binder_call(vendor_hal_spc_server, vendor_hal_spc_client)
+
+add_service(vendor_hal_spc_server, vendor_hal_spc_service)
+allow vendor_hal_spc_client vendor_hal_spc_service:service_manager find;
