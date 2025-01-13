@@ -40,6 +40,10 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/diag        u:object_r:diag_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/LTALabel    u:object_r:ltalabel_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/TA          u:object_r:tad_block_device:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/appslog     u:object_r:appslog_block_device:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/diag        u:object_r:diag_block_device:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/LTALabel    u:object_r:ltalabel_block_device:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/TA          u:object_r:tad_block_device:s0
 /dev/pn553                                                 u:object_r:nfc_device:s0
 /dev/socket/idd(/.*)?                                      u:object_r:idd_socket_file:s0
 /dev/socket/tad                                            u:object_r:tad_socket:s0
