@@ -127,4 +127,11 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.semc.hardware.spc</name>
+        <interface>
+            <name>ISpc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
