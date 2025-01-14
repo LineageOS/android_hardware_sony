@@ -90,6 +90,7 @@ genfscon sysfs /devices/virtual/input/lxs_ts_input u:object_r:sysfs_tsp:s0
 genfscon sysfs /devices/virtual/sec/tsp u:object_r:sysfs_tsp:s0
 
 # Vibrator
+genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0058/ u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-7/7-0040/ u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-1/1-0040/ u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-2/2-0040/ u:object_r:sysfs_vibrator:s0
