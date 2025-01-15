@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Configuració avançada de la pantalla</string>
+    <string name="display_setting_summary">Ajusteu diversos paràmetres de visualització</string>
+    <string name="cm_display_header">Configuració del mode de creador</string>
+    <string name="cm_switch_title">Activa/desactiva el mode creador</string>
+    <string name="cm_switch_description">Activa la gamma de colors BT.2020 i el color de 10 bits</string>
+    <string name="cm_footer_string">Les configuracions de calibratge de color del LiveDisplay seran anul·lades pel mode creador.</string>
+    <string name="cm_dialog_title">Mode creador</string>
+    <string name="cm_dialog_message">En activar el mode creador, es sobreescriurà el balanç de blancs i la configuració del color.</string>
+    <string name="cm_checkbox_show_once">No tornis a mostrar aquest missatge</string>
+    <string name="cm_dashboard_summary">Configuració del mode creador</string>
+</resources>

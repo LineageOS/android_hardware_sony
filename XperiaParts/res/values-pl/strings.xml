@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Zaawansowane ustawienia ekranu</string>
+    <string name="display_setting_summary">Dostosuj różne ustawienia ekranu</string>
+    <string name="cm_display_header">Ustawienia trybu kreatora</string>
+    <string name="cm_switch_title">Włącz/Wyłącz tryb kreatora</string>
+    <string name="cm_switch_description">Włącza gamę kolorów BT.2020 i 10-bitowy kolor</string>
+    <string name="cm_footer_string">Konfiguracja kalibracji kolorów LiveDisplay zostanie nadpisana przez tryb kreatora.</string>
+    <string name="cm_dialog_title">Tryb kreatora</string>
+    <string name="cm_dialog_message">Włączenie trybu kreatora spowoduje nadpisanie ustawień balansu bieli i kolorów!</string>
+    <string name="cm_checkbox_show_once">Nie pokazuj więcej tego komunikatu</string>
+    <string name="cm_dashboard_summary">Ustawienie trybu kreatora</string>
+</resources>

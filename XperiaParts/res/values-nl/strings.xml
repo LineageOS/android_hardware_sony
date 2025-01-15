@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Geavanceerde instellingen voor weergave</string>
+    <string name="display_setting_summary">Verschillende weergave-instellingen aanpassen</string>
+    <string name="cm_switch_description">Schakelt de BT.2020 kleurgamut en 10-bit kleur in</string>
+    <string name="cm_checkbox_show_once">Dit bericht niet meer weergeven</string>
+</resources>

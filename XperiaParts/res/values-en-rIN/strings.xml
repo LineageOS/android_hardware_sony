@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Advanced Display Setting</string>
+    <string name="display_setting_summary">Adjust various display settings</string>
+    <string name="cm_display_header">Creator Mode Settings</string>
+    <string name="cm_switch_title">Enable/Disable Creator Mode</string>
+    <string name="cm_switch_description">Enables the BT.2020 Colour Gamut and 10-bit Colour</string>
+    <string name="cm_footer_string">LiveDisplay\'s colour calibration configs will be overridden by Creator Mode.</string>
+    <string name="cm_dialog_title">Creator Mode</string>
+    <string name="cm_dialog_message">Enabling creator mode will overwrite white balance and colour settings!</string>
+    <string name="cm_checkbox_show_once">Don\'t show this message again</string>
+    <string name="cm_dashboard_summary">Creator Mode setting</string>
+</resources>

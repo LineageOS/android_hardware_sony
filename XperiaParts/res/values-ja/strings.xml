@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">詳細なディスプレイ設定</string>
+    <string name="display_setting_summary">さまざまなディスプレイ設定を調整します</string>
+    <string name="cm_display_header">クリエイターモードの設定</string>
+    <string name="cm_switch_title">クリエイターモードを有効/無効化</string>
+    <string name="cm_switch_description">BT.2020 色域と10 bit カラーを有効化します</string>
+    <string name="cm_footer_string">LiveDisplay のカラーキャリブレーション設定はクリエイターモードで上書きされます。</string>
+    <string name="cm_dialog_title">クリエイターモード</string>
+    <string name="cm_dialog_message">クリエイターモードを有効にすると、ホワイトバランスとカラー設定が上書きされます！</string>
+    <string name="cm_checkbox_show_once">今後このメッセージを表示しない</string>
+    <string name="cm_dashboard_summary">クリエイターモードの設定</string>
+</resources>

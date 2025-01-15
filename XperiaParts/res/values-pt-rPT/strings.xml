@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Definições Avançadas do Ecrã</string>
+    <string name="display_setting_summary">Ajuste várias definições do ecrã</string>
+    <string name="cm_display_header">Definições do Modo de Criador</string>
+    <string name="cm_switch_title">Ativar/Desativar o Modo de Criador</string>
+    <string name="cm_switch_description">Ativa a Gama de Cores BT.2020 e a Cor de 10 bits</string>
+    <string name="cm_footer_string">As configurações de calibração de cores do LiveDisplay serão substituídas pelo Modo de Criador.</string>
+    <string name="cm_dialog_title">Modo de Criador</string>
+    <string name="cm_dialog_message">Ativar o Modo de Criador irá substituir as definições de equilíbrio de brancos e de cor!</string>
+    <string name="cm_checkbox_show_once">Não mostrar mais esta mensagem</string>
+    <string name="cm_dashboard_summary">Definições do Modo de Criador</string>
+</resources>

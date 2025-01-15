@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Haladó kijelzőbeállítások</string>
+    <string name="display_setting_summary">A megjelenítési beállítások különböző módosításai</string>
+    <string name="cm_display_header">Az \'Alkotói mód\' beállításai</string>
+    <string name="cm_switch_title">Az \'Alkotói mód\' kikapcsolása/bekapcsolása</string>
+    <string name="cm_switch_description">Engedélyezheti a BT.2020 színskálát és a 10-bites színt</string>
+    <string name="cm_footer_string">Az Alkotói mód felülírja a \'LiveDisplay\' színkalibrációs beállításait.</string>
+    <string name="cm_dialog_title">Alkotói Mód</string>
+    <string name="cm_dialog_message">Az \'Alkotói mód\' bekapcsolása felülírja a fehéregyensúly- és színbeállításokat!</string>
+    <string name="cm_checkbox_show_once">Ne jelenítse meg újra ezt az üzenetet</string>
+    <string name="cm_dashboard_summary">Az \'Alkotói mód\' beállításai</string>
+</resources>

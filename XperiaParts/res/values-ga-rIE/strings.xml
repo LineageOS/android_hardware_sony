@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Ardsocrú Taispeána</string>
+    <string name="display_setting_summary">Coigeartaigh socruithe taispeána éagsúla</string>
+    <string name="cm_display_header">Socruithe Mód Cruthaitheora</string>
+    <string name="cm_switch_title">Cumasaigh/Díchumasaigh Mód an Chruthaitheora</string>
+    <string name="cm_switch_description">Cumasaíonn sé an Gamut Dath BT.2020 agus Dath 10-giotán</string>
+    <string name="cm_footer_string">Sárófar cumraíochtaí calabraithe dath LiveDisplay ag Mód an Chruthaitheora.</string>
+    <string name="cm_dialog_title">Mód Cruthaitheoir</string>
+    <string name="cm_dialog_message">Má chumasaítear mód cruthaitheora, déanfar socruithe cothromaíochta bán agus dath a fhorscríobh!</string>
+    <string name="cm_checkbox_show_once">Ná taispeáin an teachtaireacht seo arís</string>
+    <string name="cm_dashboard_summary">Socrú Mód Cruthaitheora</string>
+</resources>

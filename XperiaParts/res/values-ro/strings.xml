@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Setări Avansate de Afișare</string>
+    <string name="display_setting_summary">Reglaţi diverse setări de afişare</string>
+    <string name="cm_display_header">Setări Mod Creator</string>
+    <string name="cm_switch_title">Activează/Dezactivează Modul Creator</string>
+    <string name="cm_switch_description">Activează Gama de Culoare BT.2020 și Culoare 10-bit</string>
+    <string name="cm_footer_string">Configurările de calibrare a culorilor a LiveDisplay vor fi suprascrise de Modul Creator.</string>
+    <string name="cm_dialog_title">Mod Creator</string>
+    <string name="cm_dialog_message">Activarea modului creator va suprascrie balanța de alb și setările de culoare!</string>
+    <string name="cm_checkbox_show_once">Nu mai arăta acest mesaj</string>
+    <string name="cm_dashboard_summary">Setări Mod Creator</string>
+</resources>

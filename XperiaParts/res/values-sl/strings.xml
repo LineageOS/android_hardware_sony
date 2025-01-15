@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Napredne nastavitve zaslona</string>
+    <string name="display_setting_summary">Prilagodite različne nastavitve zaslona</string>
+    <string name="cm_display_header">Nastavitve ustvarjalniškega načina</string>
+    <string name="cm_switch_title">Omogoči/onemogoči  ustvarjalniški način</string>
+    <string name="cm_switch_description">Omogoči BT.2020 barvni obseg in 10-bitne barve</string>
+    <string name="cm_footer_string">Umerjene barvne nastavitve LiveDisplaya bodo preglašene z ustvarjalniškim načinom.</string>
+    <string name="cm_dialog_title">Ustvarjalniški način</string>
+    <string name="cm_dialog_message">Omogočenje  ustvarjalniškega načina bo preglasilo ravnovesje beline in nastavitve barv!</string>
+    <string name="cm_checkbox_show_once">Ne prikaži več tega sporočila</string>
+    <string name="cm_dashboard_summary">Nastavitev ustvarjalniškega načina</string>
+</resources>

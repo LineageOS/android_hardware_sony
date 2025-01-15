@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">மேம்பட்ட தோற்ற அமைப்பு</string>
+    <string name="display_setting_summary">பல்வேறு தோற்ற அமைப்புகளை ஒழுங்காக்குக</string>
+    <string name="cm_checkbox_show_once">இச்செய்தியை மீண்டும் காட்டாதே</string>
+</resources>
