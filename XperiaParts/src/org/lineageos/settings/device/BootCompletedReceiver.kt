@@ -26,6 +26,7 @@ class BootCompletedReceiver : BroadcastReceiver() {
             MediaVibration.disableActivity(context)
             Log.i(TAG, "Media vibration is not available, removing the activity")
         }
+        VolumeListenerService.onBoot(context)
     }
 
     companion object {
