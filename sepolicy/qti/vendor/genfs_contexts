@@ -25,12 +25,15 @@ genfscon sysfs /devices/platform/soc/2.sony,camera_modules/wakeup u:object_r:sys
 genfscon sysfs /devices/platform/soc/3.sony,camera_modules/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4.sony,camera_modules/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys8/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a80000.i2c/i2c-0/0-0028/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a80000.i2c/i2c-3/3-0049/power_supply/battery/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a80000.i2c/i2c-3/3-0049/power_supply/pc_port/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a80000.i2c/i2c-3/3-0049/power_supply/sm5038-otg/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4a80000.i2c/i2c-3/3-0049/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4c84000.i2c/i2c-0/0-0028/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4c84000.i2c/i2c-0/0-0033/power_supply/usb/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/4c84000.i2c/i2c-0/0-0033/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4c88000.i2c/i2c-1/1-0048/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys7/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-6/6-0028/wakeup u:object_r:sysfs_wakeup:s0
