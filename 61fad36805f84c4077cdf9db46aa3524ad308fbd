@@ -16,6 +16,24 @@
       "message": "Typo in file name",
       "revId": "61fad36805f84c4077cdf9db46aa3524ad308fbd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b586f79_39bbbc08",
+        "filename": "sepolicy/qti/vendor/hal_blueetoth_default.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-01-19T20:37:15Z",
+      "side": 1,
+      "message": "thx",
+      "parentUuid": "d9fdd0ee_de0bb0b8",
+      "revId": "61fad36805f84c4077cdf9db46aa3524ad308fbd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
