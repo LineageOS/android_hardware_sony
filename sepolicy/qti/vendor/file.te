@@ -1,3 +1,5 @@
+type sony_bluetooth_data_file, file_type, data_file_type;
+type sony_wlan_data_file, file_type, data_file_type;
 type idd_crashdata_file, file_type;
 type idd_data_file, file_type;
 type idd_fsck_file, file_type;
