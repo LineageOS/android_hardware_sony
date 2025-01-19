@@ -5,9 +5,12 @@
 /(vendor|odm|vendor/odm)/bin/nv_updater             u:object_r:nv_updater_exec:s0
 /(vendor|odm|vendor/odm)/bin/sony_ext_uim_ctrl      u:object_r:ext_uim_ctrl_exec:s0
 /(vendor|odm|vendor/odm)/bin/tad                    u:object_r:tad_exec:s0
+/(vendor|odm|vendor/odm)/bin/taimport_vendor        u:object_r:taimport_vendor_exec:s0
 /(vendor|odm|vendor/odm)/bin/ta_qmi_service         u:object_r:ta_qmi_service_exec:s0
 
 # Data files
+/data/vendor/etc/bluetooth.*     u:object_r:sony_bluetooth_data_file:s0
+/data/vendor/etc/wlan.*          u:object_r:sony_wlan_data_file:s0
 /data/vendor/3dra(/.*)?          u:object_r:vendor_audio_data_file:s0
 /mnt/idd                         u:object_r:idd_root_dir:s0
 /mnt/idd(/.*)?                   u:object_r:idd_data_file:s0

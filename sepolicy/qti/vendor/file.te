@@ -7,6 +7,8 @@ type idd_rca_file, file_type;
 type idd_root_dir, file_type;
 type idd_socket_file, file_type;
 type nvconfig_file_type, file_type, data_file_type;
+type sony_bluetooth_data_file, file_type, data_file_type;
+type sony_wlan_data_file, file_type, data_file_type;
 type startupprober_file, file_type;
 type sysfs_battchg_ext, fs_type, sysfs_type;
 type sysfs_camera, fs_type, sysfs_type;
