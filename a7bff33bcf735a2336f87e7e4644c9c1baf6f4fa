@@ -52,6 +52,24 @@
       "parentUuid": "d2734d46_0625592b",
       "revId": "a7bff33bcf735a2336f87e7e4644c9c1baf6f4fa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed1fbb37_7fcf5114",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34167
+      },
+      "writtenOn": "2025-01-21T20:50:56Z",
+      "side": 1,
+      "message": "Okay! I will build it again!\nWill abandon this change now.",
+      "parentUuid": "24b9e385_8df868e8",
+      "revId": "a7bff33bcf735a2336f87e7e4644c9c1baf6f4fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
