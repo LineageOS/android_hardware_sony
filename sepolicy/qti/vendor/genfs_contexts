@@ -4,6 +4,7 @@ genfscon sysfs /devices/platform/soc/98c000.i2c/i2c-2/2-003b/power_supply/wirele
 # Battery
 genfscon sysfs /class/battchg_ext u:object_r:sysfs_battchg_ext:s0
 genfscon sysfs /class/battman_dbg u:object_r:sysfs_battchg_ext:s0
+genfscon sysfs /class/qcom-battery/wireless_boost_en u:object_r:vendor_sysfs_battery_supply:s0
 
 # Wakeups
 genfscon sysfs /devices/0306_02.01.00/wakeup u:object_r:sysfs_wakeup:s0
