@@ -16,6 +16,24 @@
       "message": "repo sync?\n\n```\nsepolicy-legacy-um/legacy/vendor/msm8953/genfs_contexts\n81:genfscon sysfs /class/qcom-battery u:object_r:sysfs_battery_supply:s0\n\nsepolicy-legacy-um/legacy/vendor/msm8937/genfs_contexts\n85:genfscon sysfs /class/qcom-battery u:object_r:sysfs_battery_supply:s0\n\nsepolicy_vndr/legacy-um/generic/vendor/common/genfs_contexts\n144:genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_battery_supply:s0\n\nsepolicy_vndr/legacy-um/legacy/vendor/sdm710/genfs_contexts\n67:genfscon sysfs /class/qcom-battery u:object_r:sysfs_battery_supply:s0\n\nsepolicy-legacy-um/legacy/vendor/sdm660/genfs_contexts\n72:genfscon sysfs /class/qcom-battery u:object_r:sysfs_battery_supply:s0\n\nsepolicy_vndr/legacy-um/legacy/vendor/sdm845/genfs_contexts\n57:genfscon sysfs /class/qcom-battery u:object_r:sysfs_battery_supply:s0\n\nsepolicy-legacy-um/legacy/vendor/common/file_contexts\n384:/sys/class/qcom-battery(/.*)?                                       u:object_r:sysfs_battery_supply:s0\n\nsepolicy_vndr/sm8550/generic/vendor/common/genfs_contexts\n189:genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_battery_supply:s0\n\nsepolicy_vndr/legacy-um/legacy/vendor/common/file_contexts\n380:/sys/class/qcom-battery(/.*)?                                       u:object_r:sysfs_battery_supply:s0\n\nsepolicy_vndr/sm8450/generic/vendor/common/genfs_contexts\n200:genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_battery_supply:s0\n```",
       "revId": "a7bff33bcf735a2336f87e7e4644c9c1baf6f4fa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2734d46_0625592b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34167
+      },
+      "writtenOn": "2025-01-21T20:46:27Z",
+      "side": 1,
+      "message": "Oh yes. I repo synced and build it, but the denial still existed. That\u0027s why I uploaded this patch.\nBut I obviously think there\u0027s better solution than this.\nI think add /sys/class/qcom-battery(/.*)? to sm8550 and sm8450\u0027s file_contexts will fix this issue",
+      "parentUuid": "56fc954c_851c17e1",
+      "revId": "a7bff33bcf735a2336f87e7e4644c9c1baf6f4fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
