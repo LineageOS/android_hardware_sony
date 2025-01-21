@@ -34,6 +34,24 @@
       "parentUuid": "56fc954c_851c17e1",
       "revId": "a7bff33bcf735a2336f87e7e4644c9c1baf6f4fa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24b9e385_8df868e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-01-21T20:47:31Z",
+      "side": 1,
+      "message": "no, that makes no sense.\n\nyou probably just have to make a full build and flash it.",
+      "parentUuid": "d2734d46_0625592b",
+      "revId": "a7bff33bcf735a2336f87e7e4644c9c1baf6f4fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
