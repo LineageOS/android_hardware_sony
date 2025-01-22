@@ -17,4 +17,11 @@
     <string name="cm_checkbox_show_once">Don\'t show this message again</string>
 
     <string name="cm_dashboard_summary">Creator Mode setting</string>
+
+    <!-- Media Vibration Related Strings -->
+    <string name="mediavib_title">Dynamic Vibration</string>
+    <string name="mediavib_enable">Enable</string>
+    <string name="mediavib_summary">DSP vibrator function</string>
+    <string name="mediavib_level_title">Level</string>
+    <string name="mediavib_description">Vibrate with music</string>
 </resources>
