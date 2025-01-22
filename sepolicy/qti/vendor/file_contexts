@@ -88,5 +88,8 @@
 /sys/devices/virtual/input/input[0-9]+/tof_power_ctl         u:object_r:sysfs_camera:s0
 /sys/devices/virtual/input/input[0-9]+/tof_ranging_notify    u:object_r:sysfs_camera:s0
 
+# Haptic activate
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm8150b@3:qcom,haptics@c000/activate    u:object_r:sysfs_haptic_activate:s0
+
 # NV config data file
 /data/vendor/misc/nvconfig(/.*)?    u:object_r:nvconfig_file_type:s0
