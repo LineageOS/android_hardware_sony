@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/mediavib_title">
+
+    <com.android.settingslib.widget.MainSwitchPreference
+        android:defaultValue="true"
+        android:key="mediavib_enable"
+        android:title="@string/mediavib_enable" />
+
+    <ListPreference
+        android:key="mediavib_level"
+        android:entries="@array/mediavib_level_values"
+        android:entryValues="@array/mediavib_level_values"
+        android:title="@string/mediavib_level_title"
+        android:summary="%s"
+        android:icon="@drawable/ic_preset" />
+
+    <com.android.settingslib.widget.FooterPreference
+        android:key="footer_preference"
+        android:title="@string/mediavib_description"
+        android:selectable="false" />
+</PreferenceScreen>
