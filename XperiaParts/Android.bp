@@ -22,5 +22,25 @@ android_app {
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
+
+    required: [
+        "privapp-permissions_org.lineageos.settings.device",
+        "config-org.lineageos.settings.device",
+    ],
 }
 
+prebuilt_etc {
+    name: "privapp-permissions_org.lineageos.settings.device",
+    sub_dir: "permissions",
+    src: "privapp-permissions_org.lineageos.settings.device.xml",
+    system_ext_specific: true,
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "config-org.lineageos.settings.device",
+    sub_dir: "sysconfig",
+    src: "config-org.lineageos.settings.device.xml",
+    system_ext_specific: true,
+    filename_from_src: true,
+}
