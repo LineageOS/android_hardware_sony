@@ -1,11 +1,12 @@
 //
-// Copyright (C) 2023 The LineageOS Project
+// Copyright (C) 2023-2025 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
 
 java_library {
     name: "com.sony.idd_dummy",
+    stem: "com.sonyericsson.idd_impl",
     installable: true,
     product_specific: true,
     sdk_version: "current",
@@ -15,8 +16,8 @@ java_library {
 
 prebuilt_etc {
     name: "com.sony.idd_dummy.xml",
+    filename: "com.sonyericsson.idd.xml",
     product_specific: true,
     sub_dir: "permissions",
     src: "com.sony.idd_dummy.xml",
-    filename_from_src: true,
 }
