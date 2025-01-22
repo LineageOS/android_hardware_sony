@@ -4,6 +4,7 @@ allow devicesetting_app {
     activity_service
     activity_task_service
     audio_service
+    audioserver_service
     autofill_service
     color_display_service
     content_capture_service
