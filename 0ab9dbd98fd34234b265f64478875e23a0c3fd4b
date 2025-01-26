@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60f5b65f_779e12aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2025-01-26T06:54:50Z",
+      "side": 1,
+      "message": "To receive SMS after updating to A15 blob on 5V, this patch and the corresponding script patch are required.",
+      "revId": "0ab9dbd98fd34234b265f64478875e23a0c3fd4b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
