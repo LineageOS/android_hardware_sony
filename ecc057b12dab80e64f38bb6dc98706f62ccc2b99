@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c975f266_5b0d3b04",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34167
+      },
+      "writtenOn": "2025-01-29T16:51:17Z",
+      "side": 1,
+      "message": "Confirmed that sim-restart working by sms/mms receiving test",
+      "revId": "ecc057b12dab80e64f38bb6dc98706f62ccc2b99",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
