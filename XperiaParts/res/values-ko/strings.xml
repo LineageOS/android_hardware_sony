@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">고급 디스플레이 설정</string>
+    <string name="display_setting_summary">다양한 디스플레이 설정 조정</string>
+    <string name="cm_display_header">크리에이터 모드 설정</string>
+    <string name="cm_switch_title">크리에이터 모드 켜기/끄기</string>
+    <string name="cm_switch_description">BT.2020 색역 및 10비트 색상 사용</string>
+    <string name="cm_footer_string">크리에이터 모드를 켜면 LiveDisplay의 색상 조정 값이 무시됩니다.</string>
+    <string name="cm_dialog_title">크리에이터 모드</string>
+    <string name="cm_dialog_message">크리에이터 모드를 켜면 다른 화이트 밸런스 및 색상 설정이 무시됩니다!</string>
+    <string name="cm_checkbox_show_once">다시 보지 않기</string>
+    <string name="cm_dashboard_summary">크리에이터 모드 설정</string>
+</resources>

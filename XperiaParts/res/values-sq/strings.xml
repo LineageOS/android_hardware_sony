@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cm_dialog_message">Aktivizimi i modalitetit të krijuesit do të mbishkruajë cilësimet e balancës së bardhë dhe të ngjyrave!</string>
+    <string name="cm_checkbox_show_once">Mos trego këtë mesazh përsëri</string>
+    <string name="cm_dashboard_summary">Cilësime të Modalitetit të Krijuesit</string>
+</resources>

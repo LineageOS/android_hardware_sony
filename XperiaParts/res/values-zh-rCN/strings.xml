@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">高级显示设置</string>
+    <string name="display_setting_summary">调整各种显示设置</string>
+    <string name="cm_display_header">创作者模式设置</string>
+    <string name="cm_switch_title">启用/禁用创作者模式 </string>
+    <string name="cm_switch_description">启用BT.2020色域和10位色深</string>
+    <string name="cm_footer_string">启用创作者模式后，LiveDisplay的色彩校准配置将被覆盖。</string>
+    <string name="cm_dialog_title">创作者模式</string>
+    <string name="cm_dialog_message">启用创作者模式将覆盖白平衡和颜色设置！</string>
+    <string name="cm_checkbox_show_once">不再显示此消息</string>
+    <string name="cm_dashboard_summary">创作者模式设置</string>
+</resources>

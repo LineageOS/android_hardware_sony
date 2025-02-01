@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Допълнителна настройка на дисплея</string>
+    <string name="display_setting_summary">Променяне различни настройки на дисплея</string>
+    <string name="cm_switch_description">Активира BT.2020 цветова гама и 10 битов цвят</string>
+</resources>

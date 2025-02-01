@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Qabaqcıl ekran ayarı</string>
+    <string name="display_setting_summary">Müxtəlif ekran ayarlarını tənzimlə</string>
+    <string name="cm_display_header">Yaradıcı rejimi ayarları</string>
+    <string name="cm_switch_title">Yaradıcı rejimi fəallaşdır/sıradan çıxart</string>
+    <string name="cm_switch_description">Fəallaşdırır: BT.2020 Color Gamut və 10-bit Color</string>
+    <string name="cm_footer_string">LiveDisplay-in rəng kalibrləmə konfiqurasiyaları, Yaradıcı rejim tərəfindən yox sayılacaq.</string>
+    <string name="cm_dialog_title">Yaradıcı rejim</string>
+    <string name="cm_dialog_message">Yaradıcı rejimin fəallaşdırılması, bəyaz balansını və rəng ayarlarını yox sayacaq!</string>
+    <string name="cm_checkbox_show_once">Bu mesajı bir daha göstərmə</string>
+    <string name="cm_dashboard_summary">Yaradıcı rejimi ayarları</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Cài đặt hiển thị nâng cao</string>
+    <string name="display_setting_summary">Điều chỉnh các cài đặt hiển thị khác nhau</string>
+    <string name="cm_display_header">Cài đặt Chế độ Creator</string>
+    <string name="cm_switch_title">Bật/Tắt Chế độ Creator</string>
+    <string name="cm_switch_description">Kích hoạt Gam màu BT.2020 và Màu 10-bit</string>
+    <string name="cm_footer_string">Cấu hình hiệu chỉnh màu của LiveDisplay sẽ bị ghi đè bởi Chế độ Creator.</string>
+    <string name="cm_dialog_title">Chế độ Creator</string>
+    <string name="cm_dialog_message">Bật Chế độ Creator sẽ ghi đè cài đặt cân bằng trắng và màu sắc!</string>
+    <string name="cm_checkbox_show_once">Không hiển thị lại thông báo này</string>
+    <string name="cm_dashboard_summary">Cài đặt Chế độ Creator</string>
+</resources>

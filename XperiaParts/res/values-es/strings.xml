@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Configuración avanzada de la pantalla</string>
+    <string name="display_setting_summary">Ajustar diversas opciones de visualización</string>
+    <string name="cm_display_header">Ajustes del modo Creator</string>
+    <string name="cm_switch_title">Activar/Desactivar modo Creator</string>
+    <string name="cm_switch_description">Activa la gama de colores BT.2020 y el color de 10 bits</string>
+    <string name="cm_footer_string">Los ajustes de calibración de color de LiveDisplay serán anulados por el modo Creator.</string>
+    <string name="cm_dialog_title">Modo Creator</string>
+    <string name="cm_dialog_message">¡Al activar el modo Creator se sobrescribirán los ajustes de balance de blancos y color!</string>
+    <string name="cm_checkbox_show_once">No volver a mostrar este mensaje</string>
+    <string name="cm_dashboard_summary">Ajustes del modo Creator</string>
+</resources>

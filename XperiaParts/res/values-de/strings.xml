@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Erweiterte Anzeigeeinstellungen</string>
+    <string name="display_setting_summary">Anpassen verschiedener Anzeigeeinstellungen</string>
+    <string name="cm_display_header">Einstellungen für den Creator-Modus</string>
+    <string name="cm_switch_title">Creator-Modus aktivieren/deaktivieren</string>
+    <string name="cm_switch_description">BT.2020-Farbraum und 10-Bit-Farbtiefe aktivieren</string>
+    <string name="cm_footer_string">Die LiveDisplay-Farbkalibrierungseinstellungen werden vom Creator-Modus überschrieben.</string>
+    <string name="cm_dialog_title">Creator-Modus</string>
+    <string name="cm_dialog_message">Das Aktivieren des Creator-Modus überschreibt den Weißabgleich und die Farbeinstellungen!</string>
+    <string name="cm_checkbox_show_once">Diese Meldung nicht mehr anzeigen</string>
+    <string name="cm_dashboard_summary">Einstellung Creator-Modus</string>
+</resources>
