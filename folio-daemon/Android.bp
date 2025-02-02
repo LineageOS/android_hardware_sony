@@ -1,6 +1,8 @@
 cc_binary {
     name: "folio_daemon",
 
+    init_rc: ["folio_daemon.rc"],
+
     shared_libs: [
         "libandroid",
         "libcutils",
