@@ -16,6 +16,23 @@
       "message": "Confirmed that sim-restart working by sms/mms receiving test",
       "revId": "ecc057b12dab80e64f38bb6dc98706f62ccc2b99",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b703560_bc4daa42",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2025-02-02T07:22:48Z",
+      "side": 1,
+      "message": "merge?",
+      "revId": "ecc057b12dab80e64f38bb6dc98706f62ccc2b99",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
