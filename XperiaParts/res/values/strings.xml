@@ -24,4 +24,5 @@
     <string name="mediavib_summary">DSP vibrator function</string>
     <string name="mediavib_level_title">Level</string>
     <string name="mediavib_description">Vibrate with music</string>
+    <string name="mediavib_latency_title">Vibration Latency</string>
 </resources>
