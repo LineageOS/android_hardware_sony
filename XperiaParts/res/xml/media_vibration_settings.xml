@@ -16,6 +16,10 @@
         android:summary="%s"
         android:icon="@drawable/ic_preset" />
 
+    <org.lineageos.settings.device.mediavib.MediaVibrationLatencyPreference
+        android:key="mediavib_latency"
+        android:title="@string/mediavib_latency_title" />
+
     <com.android.settingslib.widget.FooterPreference
         android:key="footer_preference"
         android:title="@string/mediavib_description"

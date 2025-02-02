@@ -63,6 +63,18 @@ object MediaVibration {
         )
     }
 
+    fun setMediaVibrationLatency(context: Context, latency: Int) {
+        val am = context.getSystemService(
+            AudioManager::class.java
+        )
+        am!!.setParameters("somc.media_vibration_bt_delay=${500 - latency}")
+        Settings.Secure.putInt(
+            context.contentResolver,
+            MediaVibrationLatencyPreference.PREF_MEDIA_VIB_LATENCY,
+            latency
+        )
+    }
+
     fun getMediaVibrationState(context: Context): Boolean {
         val state =
             Settings.Secure.getInt(
@@ -81,6 +93,16 @@ object MediaVibration {
                 0
             )
         return level
+    }
+
+    fun getMediaVibrationLatency(context: Context): Int {
+        val latency =
+            Settings.Secure.getInt(
+                context.contentResolver,
+                MediaVibrationLatencyPreference.PREF_MEDIA_VIB_LATENCY,
+                0
+            )
+        return latency
     }
 
     fun onBoot(context: Context) {
