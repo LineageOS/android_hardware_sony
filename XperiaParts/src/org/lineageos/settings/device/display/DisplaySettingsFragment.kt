@@ -19,7 +19,7 @@ const val CREATOR_MODE_KEY = "switchCreatorMode"
 
 const val CREATOR_MODE_DIALOG_DISABLE_KEY = "creator_mode_dialog_disable"
 
-class DisplaySettingsFragment(private val mContext: Context) : PreferenceFragment(), Preference.OnPreferenceChangeListener {
+class DisplaySettingsFragment : PreferenceFragment(), Preference.OnPreferenceChangeListener {
     private lateinit var creatorModeUtils: CreatorModeUtils
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -32,8 +32,8 @@ class DisplaySettingsFragment(private val mContext: Context) : PreferenceFragmen
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        val builder: AlertDialog.Builder = AlertDialog.Builder(mContext)
-        val checkBoxView = View.inflate(mContext, R.layout.cm_checkbox, null);
+        val builder: AlertDialog.Builder = AlertDialog.Builder(context)
+        val checkBoxView = View.inflate(context, R.layout.cm_checkbox, null);
         val checkbox = checkBoxView.findViewById<CheckBox>(R.id.cm_checkbox_show_once) as CheckBox
         checkbox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
