@@ -16,6 +16,24 @@
       "message": "might as well remove `;`",
       "revId": "6f4504b7e0597a0930c7d93a2c8a04b3da86ab4e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7f74ed7_57445544",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsFragment.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2025-02-02T11:43:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36bab74e_064e6979",
+      "revId": "6f4504b7e0597a0930c7d93a2c8a04b3da86ab4e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
