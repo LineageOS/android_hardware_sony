@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f912b647_5582bb34",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-02-04T15:01:36Z",
+      "side": 1,
+      "message": "Can\u0027t you switch to common lineage powershare HAL?",
+      "revId": "9d798fcf6479770b0a441eca49a69777b967fc9e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
