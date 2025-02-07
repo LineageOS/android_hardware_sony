@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "488d0c1b_5b2c8575",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34167
+      },
+      "writtenOn": "2025-02-07T00:17:29Z",
+      "side": 1,
+      "message": "Tested and work as intended on Xperia 1 V by enable tile and put wireless chargeable earbuds (qcy) on the back side of device.",
+      "revId": "c79e229532341dff8a71c90aa196e8c876da78fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
