@@ -26,12 +26,12 @@ constexpr char SW_COMPONENT_ID[] = "matchingAlgorithm";
 constexpr char SW_VERSION[] = "vendor/version/revision";
 
 typedef struct fingerprint_hal {
+    const char* module_id;
     const char* class_name;
 } fingerprint_hal_t;
 
 static const fingerprint_hal_t kModules[] = {
-        {"fortsense"},  {"fpc"},         {"fpc_fod"}, {"goodix"}, {"goodix:gf_fingerprint"},
-        {"goodix_fod"}, {"goodix_fod6"}, {"silead"},  {"syna"},
+    {"bix.fingerprint", NULL}
 };
 
 }  // namespace
@@ -45,28 +45,15 @@ Fingerprint::Fingerprint(std::shared_ptr<FingerprintConfig> config) : mConfig(st
     if (mDevice) {
         ALOGI("fingerprint HAL already opened");
     } else {
-        for (auto& [module] : kModules) {
-            std::string class_name;
-            std::string class_module_id;
-
-            auto parts = ::android::base::Split(module, ":");
-
-            if (parts.size() == 2) {
-                class_name = parts[0];
-                class_module_id = parts[1];
-            } else {
-                class_name = module;
-                class_module_id = FINGERPRINT_HARDWARE_MODULE_ID;
-            }
-
-            mDevice = openFingerprintHal(class_name.c_str(), class_module_id.c_str());
+        for (auto module : kModules) {
+            mDevice = openFingerprintHal(module.class_name, module.module_id);
             if (!mDevice) {
-                ALOGE("Can't open HAL module, class: %s, module_id: %s", class_name.c_str(),
-                      class_module_id.c_str());
+                ALOGE("Can't open HAL module, class: %s, module_id: %s", module.class_name,
+                      module.module_id);
                 continue;
             }
-            ALOGI("Opened fingerprint HAL, class: %s, module_id: %s", class_name.c_str(),
-                  class_module_id.c_str());
+            ALOGI("Opened fingerprint HAL, class: %s, module_id: %s", module.class_name,
+                  module.module_id);
             break;
         }
         if (!mDevice) {
