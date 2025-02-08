@@ -63,7 +63,6 @@ cc_binary {
         "libandroid.hardware.biometrics.fingerprint.Props",
     ],
     vendor: true,
-    header_libs: ["sonyfingerprint_headers"],
 }
 
 sysprop_library {
