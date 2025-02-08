@@ -1,6 +1,5 @@
 android.hardware.camera.provider.ICameraProvider/external/0        u:object_r:hal_camera_service:s0
 android.hardware.vibrator.IVibrator/dual                           u:object_r:hal_vibrator_service:s0
-vendor.nxp.nxpnfc_aidl.INxpNfc/default                             u:object_r:hal_nfc_service:s0
 vendor.semc.hardware.spc.ISpc/default                              u:object_r:vendor_hal_spc_service:s0
 vendor.semc.hardware.extlight.IExtLight/default                    u:object_r:hal_light_service:s0
 vendor.semc.hardware.fingerprint.IFingerprintDiagnostic/default    u:object_r:egis_diagnostic_service:s0
