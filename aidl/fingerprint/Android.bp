@@ -6,17 +6,17 @@
 //
 
 soong_config_module_type {
-    name: "xiaomi_hardware_biometrics_config_default",
+    name: "sony_hardware_biometrics_config_default",
     module_type: "cc_defaults",
-    config_namespace: "xiaomi_hardware_biometrics",
+    config_namespace: "sony_hardware_biometrics",
     bool_variables: [
         "run_32bit",
     ],
     properties: ["compile_multilib"],
 }
 
-xiaomi_hardware_biometrics_config_default {
-    name: "xiaomi_hardware_biometrics_config_default",
+sony_hardware_biometrics_config_default {
+    name: "sony_hardware_biometrics_config_default",
 
     soong_config_variables: {
         run_32bit: {
@@ -29,11 +29,11 @@ xiaomi_hardware_biometrics_config_default {
 }
 
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint-service.xiaomi",
-    defaults: ["xiaomi_hardware_biometrics_config_default"],
+    name: "android.hardware.biometrics.fingerprint-service.sony",
+    defaults: ["sony_hardware_biometrics_config_default"],
     relative_install_path: "hw",
-    init_rc: ["android.hardware.biometrics.fingerprint-service.xiaomi.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint-service.xiaomi.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint-service.sony.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint-service.sony.xml"],
     srcs: [
         "CancellationSignal.cpp",
         "Fingerprint.cpp",
@@ -63,7 +63,7 @@ cc_binary {
         "libudfpshandlerfactory",
     ],
     vendor: true,
-    header_libs: ["xiaomifingerprint_headers"],
+    header_libs: ["sonyfingerprint_headers"],
 }
 
 sysprop_library {
