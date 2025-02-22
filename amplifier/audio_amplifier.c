@@ -39,6 +39,7 @@ typedef struct amp_device {
     struct audio_device* adev;
     struct audio_usecase* usecase_tx;
     struct pcm* cs35l41_out;
+    const struct hw_module_t *module_ahal;
     typeof(enable_snd_device)* enable_snd_device;
     typeof(enable_audio_route)* enable_audio_route;
     typeof(disable_snd_device)* disable_snd_device;
@@ -1534,14 +1535,20 @@ static int amp_module_open(const hw_module_t* module, const char* name, hw_devic
     cs35l41_dev->amp_dev.set_feedback = NULL;
     cs35l41_dev->amp_dev.calibrate = amp_calib;
 
-#define LOAD_AHAL_SYMBOL(symbol)                                          \
-    do {                                                                  \
-        cs35l41_dev->symbol = dlsym(RTLD_NEXT, #symbol);                  \
-        if (cs35l41_dev->symbol == NULL) {                                \
-            ALOGW("%s: %s not found (%s)", __func__, #symbol, dlerror()); \
-            free(cs35l41_dev);                                            \
-            return -ENODEV;                                               \
-        }                                                                 \
+    if (hw_get_module_by_class(AUDIO_HARDWARE_MODULE_ID, AUDIO_HARDWARE_MODULE_ID_PRIMARY,
+                               &cs35l41_dev->module_ahal)) {
+        ALOGW("%s: Failed to load audio.primary", __func__);
+        return -ENODEV;
+    }
+
+#define LOAD_AHAL_SYMBOL(symbol)                                             \
+    do {                                                                     \
+        cs35l41_dev->symbol = dlsym(cs35l41_dev->module_ahal->dso, #symbol); \
+        if (cs35l41_dev->symbol == NULL) {                                   \
+            ALOGW("%s: %s not found (%s)", __func__, #symbol, dlerror());    \
+            free(cs35l41_dev);                                               \
+            return -ENODEV;                                                  \
+        }                                                                    \
     } while (0)
 
     LOAD_AHAL_SYMBOL(enable_snd_device);
