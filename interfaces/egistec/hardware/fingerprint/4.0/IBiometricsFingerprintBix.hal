@@ -10,6 +10,6 @@ import vendor.egistec.hardware.fingerprint@4.0::IBiometricsFingerprintBixCallbac
 
 interface IBiometricsFingerprintBix {
     extra_api(int32_t a1, vec<uint8_t> a2) generates (vec<uint8_t> ret);
-    oneway setNotifyInline(IBiometricsFingerprintBixCallback callback);
-    oneway inlineCancel();
+    setNotifyInline(IBiometricsFingerprintBixCallback callback) generates (int32_t ret);
+    inlineCancel() generates (int32_t ret);
 };
