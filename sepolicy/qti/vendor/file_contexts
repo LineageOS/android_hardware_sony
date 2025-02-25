@@ -42,10 +42,12 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/appslog     u:object_r:appslog_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/diag        u:object_r:diag_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/LTALabel    u:object_r:ltalabel_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/oem_[ab]    u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/TA          u:object_r:tad_block_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/appslog     u:object_r:appslog_block_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/diag        u:object_r:diag_block_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/LTALabel    u:object_r:ltalabel_block_device:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/oem_[ab]    u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/TA          u:object_r:tad_block_device:s0
 /dev/p73                                                   u:object_r:secure_element_device:s0
 /dev/pn553                                                 u:object_r:nfc_device:s0
