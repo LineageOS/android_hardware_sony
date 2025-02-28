@@ -16,6 +16,24 @@
       "message": "merge when",
       "revId": "94ad63ab1ca245c55b212571ee32281b1308ec47",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60cd8819_42c0cc35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2025-02-28T14:18:17Z",
+      "side": 1,
+      "message": "when the common chain is submitted",
+      "parentUuid": "d88d024d_b626b8ff",
+      "revId": "94ad63ab1ca245c55b212571ee32281b1308ec47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
