@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">تنظیمات پیشرفته نمایشگر</string>
+    <string name="display_setting_summary">تنظیمات مقادیر مختلف نمایشگر</string>
+    <string name="cm_display_header">تنظیمات حالت سازنده</string>
+    <string name="cm_switch_title">فعال/غیرفعال کردن حالت سازنده</string>
+    <string name="cm_switch_description">وسعت رنگ BT.2020 و رنگ 10 بیتی را فعال می کند</string>
+    <string name="cm_footer_string">تنظیمات کالیبراسیون رنگ نمایشگر زنده توسط حالت سازنده لغو خواهد شد.</string>
+    <string name="cm_dialog_title">حالت سازنده</string>
+    <string name="cm_dialog_message">فعال کردن حالت سازنده، تنظیمات رنگ و تعادل رنگ سفید را بازنویسی می کند!</string>
+    <string name="cm_checkbox_show_once">این پیغام دوباره نشان داده نشود</string>
+    <string name="cm_dashboard_summary">تنظیمات حالت سازنده</string>
+</resources>
