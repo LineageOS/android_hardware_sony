@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Impostazions avanzadis dal schermi</string>
+    <string name="display_setting_summary">Regole altris impostazions dal schermi</string>
+    <string name="cm_display_header">Impostazions modalitât creadôr</string>
+    <string name="cm_switch_title">Ative/Disative modalitât creadôr</string>
+    <string name="cm_switch_description">Al abilite il spetri di colôrs BT.2020 e il colôr a 10-bit</string>
+    <string name="cm_footer_string">Lis configurazions di calibradure dal colôr LiveDisplay a saran sorescritis de modalitât creadôr.</string>
+    <string name="cm_dialog_title">Modalitât creadôr</string>
+    <string name="cm_dialog_message">La ativazion de modalitât creadôr e sorescrivarà il belançament dal blanc e lis impostazions dal colôr!</string>
+    <string name="cm_checkbox_show_once">No sta mostrâ plui chest messaç</string>
+    <string name="cm_dashboard_summary">Impostazions modalitât creadôr</string>
+</resources>
