@@ -31,3 +31,4 @@ allow idd vendor_hal_secd_hwservice:hwservice_manager find;
 dontaudit idd logdr_socket:sock_file w_file_perms;
 
 get_prop(idd, hwservicemanager_prop)
+get_prop(idd, vendor_somc_cust_prop)
