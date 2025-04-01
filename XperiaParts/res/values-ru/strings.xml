@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Расширенные настройки дисплея</string>
+    <string name="display_setting_summary">Настройка различных параметров дисплея</string>
+    <string name="cm_display_header">Настройки творческого режима</string>
+    <string name="cm_switch_title">Вкл/Выкл творческий режим</string>
+    <string name="cm_switch_description">Включает цветовую гамму BT.2020 и 10-битный цвет</string>
+    <string name="cm_footer_string">Настройки калибровки LiveDisplay будут переопределены в творческом режиме.</string>
+    <string name="cm_dialog_title">Творческий режим</string>
+    <string name="cm_dialog_message">Включение творческого режима перезапишет настройки баланса белого и цвета!</string>
+    <string name="cm_checkbox_show_once">Больше не показывать это сообщение</string>
+    <string name="cm_dashboard_summary">Настройки творческого режима</string>
+</resources>
