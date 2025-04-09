@@ -1,0 +1,26 @@
+type charge_service, domain;
+type charge_service_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(charge_service)
+
+hwbinder_use(charge_service)
+
+unix_socket_connect(charge_service, tad, tad)
+
+binder_call(charge_service, vendor_hal_idd_default)
+
+allow charge_service self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+allow charge_service vendor_hal_idd_hwservice:hwservice_manager find;
+
+allow charge_service kmsg_device:chr_file { getattr w_file_perms };
+
+r_dir_file(charge_service, sysfs_fg_device)
+r_dir_file(charge_service, sysfs_smb_device)
+rw_dir_file(charge_service, sysfs_battchg_ext)
+rw_dir_file(charge_service, sysfs_wake_lock)
+rw_dir_file(charge_service, vendor_sysfs_battery_supply)
+rw_dir_file(charge_service, vendor_sysfs_usb_supply)
+rw_dir_file(charge_service, vendor_sysfs_usbpd_device)
+
+get_prop(charge_service, hwservicemanager_prop)
