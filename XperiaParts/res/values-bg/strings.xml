@@ -2,5 +2,12 @@
 <resources>
     <string name="display_setting_header">Допълнителна настройка на дисплея</string>
     <string name="display_setting_summary">Променяне различни настройки на дисплея</string>
+    <string name="cm_display_header">Настройки на Авторски режим</string>
+    <string name="cm_switch_title">Включване/изключване Авторски режим</string>
     <string name="cm_switch_description">Активира BT.2020 цветова гама и 10 битов цвят</string>
+    <string name="cm_footer_string">Конфигурацията за цветовото калибриране на LiveDisplay ще бъде променена от Авторски режим</string>
+    <string name="cm_dialog_title">Авторски режим</string>
+    <string name="cm_dialog_message">Активирането на Авторски режим ще промени настройките за баланс на бялото и цвета!</string>
+    <string name="cm_checkbox_show_once">Не показвай това съобщение отново</string>
+    <string name="cm_dashboard_summary">Настройки на Авторски режим</string>
 </resources>

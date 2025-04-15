@@ -2,5 +2,12 @@
 <resources>
     <string name="display_setting_header">மேம்பட்ட தோற்ற அமைப்பு</string>
     <string name="display_setting_summary">பல்வேறு தோற்ற அமைப்புகளை ஒழுங்காக்குக</string>
+    <string name="cm_display_header">படைப்பாளி பயன்முறை அமைப்புகள் </string>
+    <string name="cm_switch_title">இயக்குக/முடக்குக படைப்பாளி பயன்முறையை </string>
+    <string name="cm_switch_description">BT.2020 வண்ணக்களத்தையும், 10-இரும வண்ணத்தையும் இயக்குகிறது</string>
+    <string name="cm_footer_string">நேரடிக் காட்சியின் வண்ண அளவுத்திருத்த உள்ளமைவுகள் படைப்பாளி பயன்முறையால் மேலெழுதப்படும்.</string>
+    <string name="cm_dialog_title">படைப்பாளி பயன்முறை</string>
+    <string name="cm_dialog_message">படைப்பாளி பயன்முறையை இயக்குவது வெள்ளைச் சமநிலையையும், வண்ண அமைப்புகளையும் மேலெழுதும்!</string>
     <string name="cm_checkbox_show_once">இச்செய்தியை மீண்டும் காட்டாதே</string>
+    <string name="cm_dashboard_summary">படைப்பாளி பயன்முறை அமைப்பு</string>
 </resources>
