@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">進階顯示設定</string>
+    <string name="display_setting_summary">調整各種顯示設定</string>
+    <string name="cm_display_header">導演模式設定</string>
+    <string name="cm_switch_title">啟用/停用創作者模式</string>
+    <string name="cm_switch_description">啟用 BT.2020 色域與 10 位元色彩</string>
+    <string name="cm_footer_string">LiveDisplay 的色彩校正設定會被導演模式覆寫。</string>
+    <string name="cm_dialog_title">導演模式</string>
+    <string name="cm_dialog_message">啟用導演模式將會覆寫白平衡與色彩設定！</string>
+    <string name="cm_checkbox_show_once">不要再顯示此訊息</string>
+    <string name="cm_dashboard_summary">導演模式設定</string>
+</resources>
