@@ -1,36 +1,33 @@
 /*
- * Copyright (C) 2019-2021 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2025 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 #define LOG_TAG "HighTouchPollingRateService_Sec"
 
+#include "HighTouchPollingRate.h"
+#include "Utils.h"
+
+#include <android-base/file.h>
 #include <android-base/logging.h>
 #include <android-base/properties.h>
-#include <touch/sony/Utils.h>
-#include <touch/sony/HighTouchPollingRate.h>
 #include <cstdio>
 #include <fstream>
 
-namespace vendor {
-namespace lineage {
-namespace touch {
-namespace V1_0 {
-namespace implementation {
+using ::android::base::ReadFileToString;
+using ::android::base::WriteStringToFile;
+
+namespace {
 
 constexpr const char* kPanelCmdPath = "/sys/devices/virtual/sec/tsp/cmd";
 constexpr const char* kPanelCmdResultPath = "/sys/devices/virtual/sec/tsp/cmd_result";
+
+}  // anonymous namespace
+
+namespace aidl {
+namespace vendor {
+namespace lineage {
+namespace touch {
 
 #define SET_STAMINA_CMD "stamina_enable,"
 #define GET_STAMINA_CMD "get_stamina_mode"
@@ -38,13 +35,16 @@ constexpr const char* kPanelCmdResultPath = "/sys/devices/virtual/sec/tsp/cmd_re
 #define SET_REPORT_RATE_CMD "doze_mode_change,"
 #define GET_REPORT_RATE_CMD "get_doze_mode"
 
-Return<bool> HighTouchPollingRate::isEnabled() {
+ndk::ScopedAStatus HighTouchPollingRate::getEnabled(bool* _aidl_return) {
     std::string i;
 
     auto stamina_mode = 0;
     auto ret = send_cmd_get_result(kPanelCmdPath, kPanelCmdResultPath, GET_STAMINA_CMD, i);
     auto result = sscanf(i.c_str(), GET_STAMINA_CMD ":%d", &stamina_mode);
-    if (!ret || result != 1) return false;
+    if (!ret || result != 1) {
+        LOG(ERROR) << "Failed to read current HighTouchPollingRate state";
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
 
     auto doze_mode = 0, rate_mode = 0;
     ret = send_cmd_get_result(kPanelCmdPath, kPanelCmdResultPath, GET_REPORT_RATE_CMD, i);
@@ -52,10 +52,11 @@ Return<bool> HighTouchPollingRate::isEnabled() {
 
     LOG(INFO) << "Got stamina_mode: " << stamina_mode << " doze_mode: " << doze_mode
               << " rate_mode: " << rate_mode;
-    return ret && result == 2 && stamina_mode == 0 && rate_mode > 0;
+    *_aidl_return = ret && result == 2 && stamina_mode == 0 && rate_mode > 0;
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<bool> HighTouchPollingRate::setEnabled(bool enabled) {
+ndk::ScopedAStatus HighTouchPollingRate::setEnabled(bool enabled) {
     auto is_low_rate_device =
             android::base::GetBoolProperty("ro.vendor.display.low_touch_rate", false);
     LOG(INFO) << "Current device is low_rate: " << is_low_rate_device;
@@ -75,14 +76,13 @@ Return<bool> HighTouchPollingRate::setEnabled(bool enabled) {
     }
 
     if (!result) {
-        LOG(ERROR) << "Failed to write sec_ts cmd!";
-        return false;
+        LOG(ERROR) << "Failed to write HighTouchPollingRate state";
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
-    return true;
+    return ndk::ScopedAStatus::ok();
 }
 
-}  // namespace implementation
-}  // namespace V1_0
 }  // namespace touch
 }  // namespace lineage
 }  // namespace vendor
+}  // namespace aidl

@@ -1,0 +1,26 @@
+//
+// SPDX-FileCopyrightText: 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "vendor.lineage.touch-service.sony",
+    init_rc: ["vendor.lineage.touch-service.sony.rc"],
+    vintf_fragments: ["vendor.lineage.touch-service.sony.xml"],
+    vendor: true,
+    relative_install_path: "hw",
+    srcs: [
+        "service.cpp",
+    ] + select(soong_config_variable("sony_touch", "panel"), {
+        "lxs_ts": ["HighTouchPollingRateLxs.cpp"],
+        "sec_ts": ["HighTouchPollingRateSec.cpp"],
+        default: ["HighTouchPollingRateSec.cpp"],
+    }),
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "liblog",
+        "libutils",
+        "vendor.lineage.touch-V1-ndk",
+    ],
+}
