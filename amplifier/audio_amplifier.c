@@ -171,8 +171,8 @@ struct pcm_config pcm_config_cirrus_rx = {
 static struct cirrus_playback_session handle;
 uint8_t cal_ambient[4];
 
-static void* cirrus_do_calibration();
-static void* cirrus_failure_detect_thread();
+static void* cirrus_do_calibration(UNUSED void* _handle);
+static void* cirrus_failure_detect_thread(UNUSED void* _handle);
 
 static int get_ta_array(uint32_t unit, void* arr, bool reverse) {
     uint32_t ta_sz = 0;
@@ -1142,7 +1142,7 @@ static int cirrus_do_fw_calibration_download(struct cirrus_playback_session* hdl
     return ret;
 }
 
-static void* cirrus_do_calibration() {
+static void* cirrus_do_calibration(UNUSED void* _handle) {
     struct audio_device* adev = cs35l41_dev->adev;
     int ret = 0;
 
@@ -1295,7 +1295,7 @@ success:
     return ret;
 }
 
-static void* cirrus_failure_detect_thread() {
+static void* cirrus_failure_detect_thread(UNUSED void* _handle) {
     ALOGD("%s: Entry", __func__);
 
     (void)cirrus_check_error_fatal();
