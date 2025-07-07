@@ -33,6 +33,24 @@
       "message": "hardware/sony/sepolicy/qti/vendor/genfs_contexts:58:ERROR \u0027duplicate entry for genfs entry (sysfs, /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm8150l@4:qcom,power-on@800/wakeup)\u0027 at token \u0027genfscon\u0027 on line 70954:",
       "revId": "641ef68fe893638f7f6914db8b02ff9572d8f9fe",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83324185_cf47fde3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-07-07T04:33:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e56a7892_f035de69",
+      "revId": "641ef68fe893638f7f6914db8b02ff9572d8f9fe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
