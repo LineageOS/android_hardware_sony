@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c7a4a6b_70817105",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2025-07-11T01:49:59Z",
+      "side": 1,
+      "message": "crashed",
+      "revId": "63cf939636f7f6127e1726b8b69187d6ec7137cd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "901418f9_ede83454",
+        "filename": "amplifier/audio_amplifier.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1551,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2025-07-11T01:49:59Z",
+      "side": 1,
+      "message": "Is LOAD_AHAL_SYMBOL(platform_check_and_set_codec_backend_cfg) missing?",
+      "revId": "63cf939636f7f6127e1726b8b69187d6ec7137cd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
