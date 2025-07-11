@@ -33,6 +33,24 @@
       "message": "Is LOAD_AHAL_SYMBOL(platform_check_and_set_codec_backend_cfg) missing?",
       "revId": "63cf939636f7f6127e1726b8b69187d6ec7137cd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a258a70_89dc297d",
+        "filename": "amplifier/audio_amplifier.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 1551,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2025-07-11T01:53:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "901418f9_ede83454",
+      "revId": "63cf939636f7f6127e1726b8b69187d6ec7137cd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
