@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">ئالىي ئېكران تەڭشىكى</string>
+    <string name="display_setting_summary">نۇرغۇن ئېكران تەڭشىكىنى تەڭشەيدۇ</string>
+    <string name="cm_display_header">ئىجادكار ھالەت تەڭشىكى</string>
+    <string name="cm_switch_title">ئىجادكار ھالىتىنى قوزغات/چەكلە</string>
+    <string name="cm_switch_description">BT.2020 رەڭ دائىرىسى ۋە 10-bit رەڭنى قوزغىتىدۇ</string>
+    <string name="cm_footer_string">LiveDisplay نىڭ رەڭ توغرىلاش سەپلىمىسىنى ئىجادكار ھالەت قاپلىۋېتىدۇ.</string>
+    <string name="cm_dialog_title">ئىجادكار ھالەت</string>
+    <string name="cm_dialog_message">ئىجادكار ھالەت قوزغىتىلسا ئاق تەڭپۇڭلاشتۇرۇش ۋە رەڭ تەڭشىكىنى قاپلىۋېتىدۇ!</string>
+    <string name="cm_checkbox_show_once">بۇ ئۇچۇرنى قايتا كۆرسەتمە</string>
+    <string name="cm_dashboard_summary">ئىجادكار ھالەت تەڭشىكى</string>
+</resources>
