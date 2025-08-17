@@ -16,8 +16,8 @@
 
 #define LOG_TAG "SunlightEnhancementService"
 
-#include <livedisplay/sony/SunlightEnhancement.h>
 #include <android-base/logging.h>
+#include <livedisplay/sony/SunlightEnhancement.h>
 #include <fstream>
 
 namespace vendor {
@@ -26,8 +26,7 @@ namespace livedisplay {
 namespace V2_1 {
 namespace implementation {
 
-static constexpr const char* kHbmPath =
-    "/sys/devices/dsi_panel_driver/hbm_mode";
+static constexpr const char* kHbmPath = "/sys/devices/dsi_panel_driver/hbm_mode";
 
 Return<bool> SunlightEnhancement::isEnabled() {
     std::ifstream file(kHbmPath);
