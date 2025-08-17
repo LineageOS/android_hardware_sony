@@ -1,8 +1,0 @@
-on init
-    chown system graphics /sys/devices/dsi_panel_driver/hbm_mode
-    chmod 0666 /sys/devices/dsi_panel_driver/hbm_mode
-
-service vendor.livedisplay-hal-2-1 /vendor/bin/hw/vendor.lineage.livedisplay@2.1-service.sony
-    class late_start
-    user system
-    group system
