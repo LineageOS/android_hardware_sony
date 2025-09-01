@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">הגדרות תצוגה מתקדמות</string>
+    <string name="display_setting_summary">התאמת הגדרות תצוגה שונות</string>
+    <string name="cm_display_header">הגדרות מצב יצירה</string>
+    <string name="cm_switch_title">הפעלת/השבתת מצב יצירה</string>
+    <string name="cm_switch_description">הפעלת מרחב הצבעים BT.2020 ואת צבע 10-ביט</string>
+    <string name="cm_footer_string">תצורות כיול הצבעים של תצוגה חיה יבוטלו על ידי מצב יצירה.</string>
+    <string name="cm_dialog_title">מצב יצירה</string>
+    <string name="cm_dialog_message">הפעלת מצב יצירה תדרוס את איזון הלבן והגדרות הצבע!</string>
+    <string name="cm_checkbox_show_once">אל תציג הודעה זו שנית</string>
+    <string name="cm_dashboard_summary">הגדרות מצב יצירה</string>
+</resources>
