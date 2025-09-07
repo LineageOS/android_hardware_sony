@@ -16,6 +16,23 @@
       "message": "34.0 and 202404 are required to build sm8550/lineage-23.0.",
       "revId": "1d0ffaf88d65ccdd950d71d4e1a80f926ec40afc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19b9a89a_f0adb263",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-09-07T15:17:50Z",
+      "side": 1,
+      "message": "uhhhhh, then use your other change.",
+      "revId": "1d0ffaf88d65ccdd950d71d4e1a80f926ec40afc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
