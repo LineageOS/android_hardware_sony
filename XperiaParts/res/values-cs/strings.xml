@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Pokročilé nastavení zobrazení</string>
+    <string name="display_setting_summary">Upravit různá nastavení zobrazení</string>
+    <string name="cm_display_header">Nastavení režimu tvůrce</string>
+    <string name="cm_switch_title">Povolit/zakázat režim tvůrce</string>
+    <string name="cm_switch_description">Povolit barevný gamut BT.2020 a 10bitovou barvu</string>
+    <string name="cm_footer_string">Konfigurace kalibrace barev LiveDisplaye bude přepsána režimem tvůrce.</string>
+    <string name="cm_dialog_title">Režim tvůrce</string>
+    <string name="cm_dialog_message">Zapnutím režimu tvůrce přepíšete nastavení vyvážení bílé a dalších barev.</string>
+    <string name="cm_checkbox_show_once">Tuto zprávu příště nezobrazovat</string>
+    <string name="cm_dashboard_summary">Nastavení režimu tvůrce</string>
+</resources>
