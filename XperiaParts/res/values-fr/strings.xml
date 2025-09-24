@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Paramètres d’affichage avancés</string>
+    <string name="display_setting_summary">Ajuster les différents paramètres d\'affichage</string>
+    <string name="cm_display_header">Paramètres du Mode Créateur</string>
+    <string name="cm_switch_title">Activer/Désactiver le Mode Créateur</string>
+    <string name="cm_dialog_title">Mode Créateur</string>
+    <string name="cm_dialog_message">Activer le mode créateur écrasera les réglages de balance des blancs et de couleur !</string>
+    <string name="cm_checkbox_show_once">Ne plus afficher ce message</string>
+    <string name="cm_dashboard_summary">Paramètres du Mode Créateur</string>
+</resources>
