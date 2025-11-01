@@ -32,6 +32,7 @@ genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys7/wakeup u:object_r:
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-6/6-0028/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-7/7-0040/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/890000.qcom,qup_uart/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/890000.i2c/i2c-6/6-0040/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-1/1-0040/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-3/3-0040/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-0028/wakeup u:object_r:sysfs_wakeup:s0
@@ -39,6 +40,7 @@ genfscon sysfs /devices/platform/soc/98900000.qcom,turing/subsys4/wakeup u:objec
 genfscon sysfs /devices/platform/soc/98900000.qcom,turing/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/98c000.i2c/i2c-2/2-003b/power_supply/wireless/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/98c000.i2c/i2c-2/2-003b/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0048/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-2/2-0048/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-4/4-0048/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-5/5-0048/wakeup u:object_r:sysfs_wakeup:s0
@@ -67,6 +69,7 @@ genfscon sysfs /sys/devices/platform/soc/soc:qcom,smp2p-npu/wakeup u:object_r:sy
 # Leds
 genfscon sysfs /devices/platform/soc/8804000.sdhci/leds u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-01/c42d000.qcom,spmi:qcom,pm8550@1:qcom,flash_led@ee00/leds u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-02/c42d000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm8150b@3:qcom,leds@d000/leds u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds u:object_r:sysfs_leds:s0
@@ -80,6 +83,7 @@ genfscon sysfs /devices/virtual/sec/tsp u:object_r:sysfs_tsp:s0
 
 # Vibrator
 genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0058/ u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/platform/soc/890000.i2c/i2c-6/6-0040/ u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-7/7-0040/ u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-1/1-0040/ u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-2/2-0040/ u:object_r:sysfs_vibrator:s0
