@@ -1,3 +1,8 @@
+binder_call(vendor_vppservice, vendor_hal_secd_default)
+
 hal_client_domain(vendor_vppservice, vendor_hal_qconfig)
 
 allow vendor_vppservice hal_swiqi_hwservice:hwservice_manager { find add };
+allow vendor_vppservice vendor_hal_secd_hwservice:hwservice_manager find;
+
+get_prop(vendor_vppservice, vendor_tee_listener_prop)
