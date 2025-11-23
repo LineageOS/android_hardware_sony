@@ -12,6 +12,7 @@ import android.provider.Settings
 import android.view.View
 import android.widget.CheckBox
 import androidx.preference.*
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
 
 import org.lineageos.settings.device.R
 
@@ -19,12 +20,13 @@ const val CREATOR_MODE_KEY = "switchCreatorMode"
 
 const val CREATOR_MODE_DIALOG_DISABLE_KEY = "creator_mode_dialog_disable"
 
-class DisplaySettingsFragment : PreferenceFragment(), Preference.OnPreferenceChangeListener {
+class DisplaySettingsFragment : SettingsBasePreferenceFragment(),
+    Preference.OnPreferenceChangeListener {
     private lateinit var creatorModeUtils: CreatorModeUtils
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.advanced_disp_settings)
-        creatorModeUtils = CreatorModeUtils(context)
+        creatorModeUtils = CreatorModeUtils(context!!)
 
         val creatorModePreference = findPreference<SwitchPreferenceCompat>(CREATOR_MODE_KEY)!!
         creatorModePreference.isChecked = creatorModeUtils.isEnabled
@@ -32,21 +34,21 @@ class DisplaySettingsFragment : PreferenceFragment(), Preference.OnPreferenceCha
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        val builder: AlertDialog.Builder = AlertDialog.Builder(context)
-        val checkBoxView = View.inflate(context, R.layout.cm_checkbox, null)
+        val builder: AlertDialog.Builder = AlertDialog.Builder(context!!)
+        val checkBoxView = View.inflate(context!!, R.layout.cm_checkbox, null)
         val checkbox = checkBoxView.findViewById<CheckBox>(R.id.cm_checkbox_show_once) as CheckBox
         checkbox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                Settings.Secure.putInt(context.contentResolver, CREATOR_MODE_DIALOG_DISABLE_KEY, 1)
+                Settings.Secure.putInt(context!!.contentResolver, CREATOR_MODE_DIALOG_DISABLE_KEY, 1)
             } else {
-                Settings.Secure.putInt(context.contentResolver, CREATOR_MODE_DIALOG_DISABLE_KEY, 0)
+                Settings.Secure.putInt(context!!.contentResolver, CREATOR_MODE_DIALOG_DISABLE_KEY, 0)
             }
         }
 
         when (preference.key) {
             CREATOR_MODE_KEY -> {
                 if (newValue as Boolean) {
-                    if (Settings.Secure.getInt(context.contentResolver,
+                    if (Settings.Secure.getInt(context!!.contentResolver,
                                     CREATOR_MODE_DIALOG_DISABLE_KEY, 0) == 0) {
                         builder.setTitle(R.string.cm_dialog_title)
                                 .setView(checkBoxView)
@@ -59,7 +61,7 @@ class DisplaySettingsFragment : PreferenceFragment(), Preference.OnPreferenceCha
                                     preference as SwitchPreferenceCompat
                                     preference.isChecked = !preference.isChecked
 
-                                    Settings.Secure.putInt(context.contentResolver,
+                                    Settings.Secure.putInt(context!!.contentResolver,
                                             CREATOR_MODE_DIALOG_DISABLE_KEY, 0)
                                 }
                         builder.show()
