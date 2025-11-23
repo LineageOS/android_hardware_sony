@@ -12,6 +12,7 @@ import android.provider.Settings
 import android.view.View
 import android.widget.CheckBox
 import androidx.preference.*
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
 
 import org.lineageos.settings.device.R
 
@@ -19,7 +20,8 @@ const val CREATOR_MODE_KEY = "switchCreatorMode"
 
 const val CREATOR_MODE_DIALOG_DISABLE_KEY = "creator_mode_dialog_disable"
 
-class DisplaySettingsFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener {
+class DisplaySettingsFragment : SettingsBasePreferenceFragment(),
+    Preference.OnPreferenceChangeListener {
     private lateinit var creatorModeUtils: CreatorModeUtils
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
