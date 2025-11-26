@@ -21,6 +21,7 @@ allow hal_camera_default vendor_sysfs_kgsl:file r_file_perms;
 
 rw_dir_file(hal_camera_default, sysfs_leds)
 
+get_prop(hal_camera_default, vendor_sensors_debug_prop)
 get_prop(hal_camera_default, vendor_tee_listener_prop)
 set_prop(hal_camera_default, somc_camera_prop)
 set_prop(hal_camera_default, vendor_camera_running_status_prop)
