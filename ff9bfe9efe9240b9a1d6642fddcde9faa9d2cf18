@@ -22,6 +22,30 @@
       },
       "revId": "ff9bfe9efe9240b9a1d6642fddcde9faa9d2cf18",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba0a4cab_4b65388e",
+        "filename": "XperiaParts/src/org/lineageos/settings/device/display/DisplaySettingsActivity.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-12-01T18:25:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "98b7590a_31f6754f",
+      "range": {
+        "startLine": 15,
+        "startChar": 8,
+        "endLine": 15,
+        "endChar": 30
+      },
+      "revId": "ff9bfe9efe9240b9a1d6642fddcde9faa9d2cf18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
