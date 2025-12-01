@@ -4,6 +4,8 @@
     <string name="display_setting_summary">Ajuster les différents paramètres d\'affichage</string>
     <string name="cm_display_header">Paramètres du Mode Créateur</string>
     <string name="cm_switch_title">Activer/Désactiver le Mode Créateur</string>
+    <string name="cm_switch_description">Active la gamme de couleurs BT.2020 et la couleur 10 bits</string>
+    <string name="cm_footer_string">Les configurations d\'étalonnage des couleurs de LiveDisplay seront remplacées par le Mode Créateur.</string>
     <string name="cm_dialog_title">Mode Créateur</string>
     <string name="cm_dialog_message">Activer le mode créateur écrasera les réglages de balance des blancs et de couleur !</string>
     <string name="cm_checkbox_show_once">Ne plus afficher ce message</string>
