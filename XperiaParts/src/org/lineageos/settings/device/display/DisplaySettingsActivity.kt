@@ -6,7 +6,6 @@
 package org.lineageos.settings.device.display
 
 import android.os.Bundle
-
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
 class DisplaySettingsActivity : CollapsingToolbarBaseActivity() {

@@ -11,9 +11,9 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import android.widget.CheckBox
-import androidx.preference.*
+import androidx.preference.Preference
+import androidx.preference.SwitchPreferenceCompat
 import com.android.settingslib.widget.SettingsBasePreferenceFragment
-
 import org.lineageos.settings.device.R
 
 const val CREATOR_MODE_KEY = "switchCreatorMode"
