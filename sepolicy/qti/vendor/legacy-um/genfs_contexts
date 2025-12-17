@@ -1,0 +1,3 @@
+# Wakeups
+genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys9/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys10/wakeup u:object_r:sysfs_wakeup:s0
