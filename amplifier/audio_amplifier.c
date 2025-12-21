@@ -1294,7 +1294,9 @@ success:
 }
 
 static void* cirrus_failure_detect_thread(UNUSED void* _handle) {
+#ifdef TA_DEBUG
     ALOGD("%s: Entry", __func__);
+#endif
 
     (void)cirrus_check_error_fatal();
 
@@ -1308,7 +1310,9 @@ static void* cirrus_failure_detect_thread(UNUSED void* _handle) {
 
 static void cs35l41_enable_output(UNUSED struct audio_device* adev,
                                   UNUSED snd_device_t snd_device) {
+#ifdef TA_DEBUG
     ALOGV("%s: Entry", __func__);
+#endif
 
     if (!adev) {
         return;
@@ -1350,12 +1354,16 @@ static void cs35l41_enable_output(UNUSED struct audio_device* adev,
 end:
     pthread_mutex_unlock(&handle.fb_prot_mutex);
 
+#ifdef TA_DEBUG
     ALOGV("%s: Exit", __func__);
+#endif
 }
 
 static void cs35l41_disable_output(UNUSED struct audio_device* adev,
                                    UNUSED snd_device_t snd_device) {
+#ifdef TA_DEBUG
     ALOGV("%s: Entry", __func__);
+#endif
 
     pthread_mutex_lock(&handle.fb_prot_mutex);
 
@@ -1377,13 +1385,17 @@ static void cs35l41_disable_output(UNUSED struct audio_device* adev,
 end:
     pthread_mutex_unlock(&handle.fb_prot_mutex);
 
+#ifdef TA_DEBUG
     ALOGV("%s: Exit", __func__);
+#endif
 }
 
 static int amp_enable_devices(UNUSED struct amplifier_device* device, uint32_t devices,
                               bool enable) {
     struct audio_device* adev = cs35l41_dev->adev;
+#ifdef TA_DEBUG
     ALOGV("%s: Entry", __func__);
+#endif
 
     if (!adev) {
         ALOGE("%s: Invalid params", __func__);
