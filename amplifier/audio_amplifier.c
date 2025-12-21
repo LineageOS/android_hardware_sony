@@ -97,7 +97,7 @@ struct cirrus_playback_session {
 
 /* TA Handling */
 #define LIB_MISCTA "libMiscTaWrapper.so"
-#define TA_DEBUG 1
+//#define TA_DEBUG 1
 
 /* TA functions */
 void* ta_handle = NULL;
