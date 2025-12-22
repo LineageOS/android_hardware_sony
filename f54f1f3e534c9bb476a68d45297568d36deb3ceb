@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1d47fb4_06469a75",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-12-22T21:17:59Z",
+      "side": 1,
+      "message": "i don\u0027t see the point of that, also your ifdef around `return NULL` should break build.",
+      "revId": "f54f1f3e534c9bb476a68d45297568d36deb3ceb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
