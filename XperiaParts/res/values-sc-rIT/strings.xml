@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Cunfiguratziones avantzadas de s\'ischermu</string>
+    <string name="display_setting_summary">Acontza paràmetros de visualizatzione</string>
+    <string name="cm_display_header">Cunfiguratzione de sa modalidade de creatzione</string>
+    <string name="cm_switch_title">Ativa/disativa sa modalidade de creatzione</string>
+    <string name="cm_switch_description">Ativat sa gama de colores BT.2020 e su colore de 10 bits</string>
+    <string name="cm_footer_string">Is cunfiguratziones de calibratzione de su colore de LiveDisplay ant a èssere annulladas dae sa modalidade de creatzione.</string>
+    <string name="cm_dialog_title">Modalidade de creatzione</string>
+    <string name="cm_dialog_message">Ativende sa modalidade de creatzione s\'at a subrascrìere su bilantzu de biancu e sa cunfiguratzione de colore.</string>
+    <string name="cm_checkbox_show_once">Non torres a mustrare custu messàgiu</string>
+    <string name="cm_dashboard_summary">Cunfiguratzione de sa modalidade de creatzione</string>
+</resources>
