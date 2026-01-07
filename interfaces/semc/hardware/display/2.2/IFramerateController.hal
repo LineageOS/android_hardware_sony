@@ -12,5 +12,3 @@ interface IFramerateController extends @2.1::IFramerateController {
     set_opec_mode(int32_t mode) generates (int32_t status);
     set_hmd_mode(int32_t mode) generates (int32_t status);
 };
-
-
