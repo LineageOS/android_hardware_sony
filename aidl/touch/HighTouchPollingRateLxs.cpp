@@ -36,7 +36,6 @@ ndk::ScopedAStatus HighTouchPollingRate::getEnabled(bool* _aidl_return) {
 
     int disp_mode, touch_mode;
     auto ret = android::base::ReadFileToString(kPanelFrameRatePath, &touch_str);
-    ;
     auto result = sscanf(touch_str.c_str(), "%d,%d", &disp_mode, &touch_mode);
 
     LOG(INFO) << __func__ << ": disp_mode: " << disp_mode << ", touch_mode: " << touch_mode;
