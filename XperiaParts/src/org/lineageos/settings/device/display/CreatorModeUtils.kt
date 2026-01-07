@@ -16,8 +16,8 @@ import vendor.semc.hardware.display.V2_0.PccMatrix
 
 class CreatorModeUtils(private val context: Context) : IDisplayCallback.Stub() {
     private val colorDisplayManager: ColorDisplayManager =
-            context.getSystemService(ColorDisplayManager::class.java)
-                    ?: throw Exception("Display manager is NULL")
+        context.getSystemService(ColorDisplayManager::class.java)
+            ?: throw Exception("Display manager is NULL")
     private val semcDisplayService: IDisplay by lazy {
         val service = IDisplay.getService() ?: throw Exception("SEMC Display HIDL not found")
 

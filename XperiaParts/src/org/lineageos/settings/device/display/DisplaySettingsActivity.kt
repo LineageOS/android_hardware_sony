@@ -16,7 +16,7 @@ class DisplaySettingsActivity : CollapsingToolbarBaseActivity() {
             .replace(
                 com.android.settingslib.collapsingtoolbar.R.id.content_frame,
                 DisplaySettingsFragment(),
-                TAG
+                TAG,
             )
             .commit()
     }
