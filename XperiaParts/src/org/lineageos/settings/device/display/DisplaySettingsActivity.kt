@@ -6,7 +6,6 @@
 package org.lineageos.settings.device.display
 
 import android.os.Bundle
-
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
 class DisplaySettingsActivity : CollapsingToolbarBaseActivity() {
@@ -17,7 +16,7 @@ class DisplaySettingsActivity : CollapsingToolbarBaseActivity() {
             .replace(
                 com.android.settingslib.collapsingtoolbar.R.id.content_frame,
                 DisplaySettingsFragment(),
-                TAG
+                TAG,
             )
             .commit()
     }
