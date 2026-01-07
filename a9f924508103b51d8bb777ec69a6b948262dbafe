@@ -22,6 +22,30 @@
       },
       "revId": "a9f924508103b51d8bb777ec69a6b948262dbafe",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cfdb9bef_f0e052dc",
+        "filename": "aidl/touch/HighTouchPollingRateLxs.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-01-07T12:19:29Z",
+      "side": 1,
+      "message": "will do in separate change ^^",
+      "parentUuid": "1a935259_29c01c20",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 5
+      },
+      "revId": "a9f924508103b51d8bb777ec69a6b948262dbafe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": [
