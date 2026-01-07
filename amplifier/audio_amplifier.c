@@ -39,7 +39,7 @@ typedef struct amp_device {
     struct audio_device* adev;
     struct audio_usecase* usecase_tx;
     struct pcm* cs35l41_out;
-    const struct hw_module_t *module_ahal;
+    const struct hw_module_t* module_ahal;
     typeof(enable_snd_device)* enable_snd_device;
     typeof(enable_audio_route)* enable_audio_route;
     typeof(disable_snd_device)* disable_snd_device;
