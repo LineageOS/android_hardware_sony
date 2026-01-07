@@ -19,7 +19,8 @@ using ::android::base::WriteStringToFile;
 
 namespace {
 
-static constexpr const char* kPanelFrameRatePath = "/sys/devices/virtual/input/lxs_ts_input/frame_rate_np";
+static constexpr const char* kPanelFrameRatePath =
+        "/sys/devices/virtual/input/lxs_ts_input/frame_rate_np";
 
 }  // anonymous namespace
 
@@ -34,7 +35,8 @@ ndk::ScopedAStatus HighTouchPollingRate::getEnabled(bool* _aidl_return) {
     std::string touch_str;
 
     int disp_mode, touch_mode;
-    auto ret = android::base::ReadFileToString(kPanelFrameRatePath, &touch_str);;
+    auto ret = android::base::ReadFileToString(kPanelFrameRatePath, &touch_str);
+    ;
     auto result = sscanf(touch_str.c_str(), "%d,%d", &disp_mode, &touch_mode);
 
     LOG(INFO) << __func__ << ": disp_mode: " << disp_mode << ", touch_mode: " << touch_mode;
