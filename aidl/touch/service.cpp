@@ -15,8 +15,7 @@ using aidl::vendor::lineage::touch::HighTouchPollingRate;
 
 int main() {
     ABinderProcess_setThreadPoolMaxThreadCount(0);
-    std::shared_ptr<HighTouchPollingRate> htpr =
-            ndk::SharedRefBase::make<HighTouchPollingRate>();
+    std::shared_ptr<HighTouchPollingRate> htpr = ndk::SharedRefBase::make<HighTouchPollingRate>();
 
     if (htpr) {
         const std::string instance = std::string(HighTouchPollingRate::descriptor) + "/default";
