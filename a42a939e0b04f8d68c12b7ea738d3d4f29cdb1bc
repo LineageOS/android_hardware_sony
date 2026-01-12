@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6fbdef8_611a2b45",
+        "filename": "sepolicy/qti/vendor/hal_light_default.te",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-01-12T16:18:59Z",
+      "side": 1,
+      "message": "??? why",
+      "revId": "a42a939e0b04f8d68c12b7ea738d3d4f29cdb1bc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
