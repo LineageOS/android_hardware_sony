@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2007cd77_82030c7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-01-12T17:30:53Z",
+      "side": 1,
+      "message": "I am also seeing this denial on sm8550. Should we move to a common place?",
+      "revId": "7df09c940c3f47941373a98a6cf9b03a46574c24",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
