@@ -34,6 +34,23 @@
       "parentUuid": "2007cd77_82030c7d",
       "revId": "7df09c940c3f47941373a98a6cf9b03a46574c24",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98522af9_144b53da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-01-14T22:29:26Z",
+      "side": 1,
+      "message": "https://github.com/LineageOS/android_device_qcom_sepolicy_vndr/commit/d73c2477e1cda5082d2079a10d158884e39f48fd",
+      "revId": "7df09c940c3f47941373a98a6cf9b03a46574c24",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
