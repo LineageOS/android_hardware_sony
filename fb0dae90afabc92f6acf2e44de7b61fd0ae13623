@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b58a286d_d14044f9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-01-21T19:01:11Z",
+      "side": 1,
+      "message": "I don\u0027t have Sony, but I also don\u0027t see any objections from those who do.",
+      "revId": "fb0dae90afabc92f6acf2e44de7b61fd0ae13623",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
