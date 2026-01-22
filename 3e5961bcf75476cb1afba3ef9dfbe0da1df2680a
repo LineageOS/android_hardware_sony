@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1dd887e_f5b0dce4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-01-22T18:04:30Z",
+      "side": 1,
+      "message": "YOLO merging these changes to have the clean strings on crowdin.",
+      "revId": "3e5961bcf75476cb1afba3ef9dfbe0da1df2680a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
