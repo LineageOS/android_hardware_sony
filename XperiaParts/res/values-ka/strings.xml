@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="display_setting_header">ეკრანის დამატებითი პარამეტრები</string>
     <string name="display_setting_summary">ეკრანის სხვადასხვა პარამეტრის გამართვა</string>
-    <string name="cm_display_header">ხელოვანის რეჟიმის პარამეტრები</string>
-    <string name="cm_switch_title">ხელოვანის რეჟიმის ჩართვა/გამორთვა</string>
-    <string name="cm_switch_description">ამოქმედდება ფერთა სიღრმე BT.2020 და 10-ბიტანი ფერები</string>
-    <string name="cm_footer_string">LiveDisplay მისი ფერთა დაზუსტების გამართვით ჩანაცვლდება ხელოვანის რეჟიმის მიერ.</string>
-    <string name="cm_dialog_title">ხელოვანის რეჟიმი</string>
     <string name="cm_dialog_message">ხელოვანის რეჟიმს ჩაანაცვლებინებს სითეთრის, თანაფარდობისა და ფერთა პარამეტრებს!</string>
     <string name="cm_checkbox_show_once">მომავალში ჩვენების გარეშე</string>
-    <string name="cm_dashboard_summary">ხელოვანის რეჟიმის პარამეტრები</string>
 </resources>
