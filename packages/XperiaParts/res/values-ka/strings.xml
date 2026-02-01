@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_summary">ეკრანის სხვადასხვა პარამეტრის გამართვა</string>
+    <string name="cm_dialog_message">ხელოვანის რეჟიმს ჩაანაცვლებინებს სითეთრის, თანაფარდობისა და ფერთა პარამეტრებს!</string>
+    <string name="cm_checkbox_show_once">მომავალში ჩვენების გარეშე</string>
+</resources>
