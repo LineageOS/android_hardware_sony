@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Ρυθμίσεις οθόνης για προχωρημένους</string>
+    <string name="cm_display_header">Ρυθμίσεις λειτουργίας δημιουργού</string>
+    <string name="cm_switch_title">Λειτουργία δημιουργού</string>
+    <string name="cm_switch_description">Ενεργοποίηση της χρωματικής γκάμας BT.2020 και του χρώματος 10-bit</string>
+    <string name="cm_footer_string">Οι ρυθμίσεις χρωμάτων του LiveDisplay θα αντικατασταθούν από τη λειτουργία δημιουργού.</string>
+    <string name="cm_dialog_title">Λειτουργία δημιουργού</string>
+</resources>
