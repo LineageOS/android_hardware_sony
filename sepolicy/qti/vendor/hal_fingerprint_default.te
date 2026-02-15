@@ -2,6 +2,7 @@ vndbinder_use(hal_fingerprint_default)
 
 add_hwservice(hal_fingerprint_default, hal_egis_hwservice)
 add_service(hal_fingerprint_default, egis_diagnostic_service)
+add_service(hal_fingerprint_default, hal_egis_service)
 
 binder_call(hal_fingerprint_default, vendor_hal_idd_default)
 binder_call(hal_fingerprint_default, vendor_hal_perf_default)
