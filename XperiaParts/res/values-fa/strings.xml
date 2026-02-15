@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="display_setting_header">تنظیمات پیشرفته نمایشگر</string>
     <string name="display_setting_summary">تنظیمات مقادیر مختلف نمایشگر</string>
+    <string name="cm_display_header">تنظیمات حالت خالق</string>
+    <string name="cm_switch_title">حالت خالق</string>
+    <string name="cm_switch_description">فعال کردن طیف رنگ BT.2020 و رنگ 10 بیتی</string>
+    <string name="cm_footer_string">پیکربندی‌های کالیبراسیون رنگ نمایشگر زنده توسط حالت خالق لغو می‌شوند.</string>
+    <string name="cm_dialog_title">حالت خالق</string>
     <string name="cm_dialog_message">فعال کردن حالت سازنده، تنظیمات رنگ و تعادل رنگ سفید را بازنویسی می کند!</string>
     <string name="cm_checkbox_show_once">این پیغام دوباره نشان داده نشود</string>
 </resources>

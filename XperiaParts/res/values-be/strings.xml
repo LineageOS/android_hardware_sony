@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cm_display_header">Налада рэжыму стваральніка</string>
+    <string name="cm_switch_title">Рэжым стваральніка</string>
+    <string name="cm_switch_description">Уключыць колеравую гаму BT.2020 і 10-бітны колер</string>
+    <string name="cm_footer_string">Канфігурацыі каліброўкі колераў LiveDisplay будзе перавызначана рэжымам стваральніка.</string>
+    <string name="cm_dialog_title">Рэжым стваральніка</string>
+</resources>
