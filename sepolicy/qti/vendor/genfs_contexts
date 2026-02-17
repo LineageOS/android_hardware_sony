@@ -62,6 +62,7 @@ genfscon sysfs /devices/virtual/leds u:object_r:sysfs_leds:s0
 
 # Touch
 genfscon sysfs /devices/dsi_panel_driver u:object_r:sysfs_dp:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a8c000.i2c/i2c-3/3-0038/fts_gesture_mode u:object_r:sysfs_tsp:s0
 genfscon sysfs /devices/virtual/input/lxs_ts_input u:object_r:sysfs_tsp:s0
 genfscon sysfs /devices/virtual/sec/tsp u:object_r:sysfs_tsp:s0
 
