@@ -8,6 +8,8 @@ hal_client_domain(vendor_hal_secd_default, hal_allocator)
 
 unix_socket_connect(vendor_hal_secd_default, tad, tad)
 
+binder_call(vendor_hal_secd_default, servicemanager)
+
 allow vendor_hal_secd_default hidl_memory_hwservice:hwservice_manager find;
 
 allow vendor_hal_secd_default ion_device:chr_file r_file_perms;

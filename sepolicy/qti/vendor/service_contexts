@@ -7,4 +7,5 @@ vendor.semc.hardware.fingerprint.IFingerprintDiagnostic/default    u:object_r:eg
 vendor.somc.hardware.aidlmiscta.IMisctaGlobal/default              u:object_r:vendor_hal_miscta_service:s0
 vendor.somc.hardware.aidlradio.ISomcHook/somchook0                 u:object_r:somc_aidl_radio_service:s0
 vendor.somc.hardware.aidlradio.ISomcHook/somchook1                 u:object_r:somc_aidl_radio_service:s0
+vendor.somc.hardware.security.aidlsecd.IDeviceSecurity/default     u:object_r:hal_secd_service:s0
 vendor.somc.hardware.videoeffect.IAidlSwiqi/default                u:object_r:hal_swiqi_service:s0
