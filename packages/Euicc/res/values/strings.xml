@@ -9,8 +9,10 @@
             \"sim_illustration_lottie_mappings\": [
                 {
                     \"devices\": [
+                        \"6L83425\",
                         \"SO-52C\",
                         \"SO-52D\",
+                        \"SO-52F\",
                         \"SOG07\",
                         \"SOG11\",
                         \"XQ-CC44\",
@@ -18,7 +20,8 @@
                         \"XQ-CC72\",
                         \"XQ-DC44\",
                         \"XQ-DC54\",
-                        \"XQ-DC72\"
+                        \"XQ-DC72\",
+                        \"XQ-FE\"
                     ],
                     \"illustration_lottie\": \"sim_illustration_lottie_top_left\"
                 }
@@ -35,6 +38,7 @@
                         \"2K4AN6M\",
                         \"2PD44D2\",
                         \"6JU05Y4\",
+                        \"6L83425\",
                         \"8G443Y4\",
                         \"9092D22\",
                         \"92U2932\",
@@ -68,6 +72,7 @@
                         \"SO-51D\",
                         \"SO-52C\",
                         \"SO-52D\",
+                        \"SO-52F\",
                         \"SO-54C\",
                         \"SOG06\",
                         \"SOG07\",
@@ -110,6 +115,7 @@
                         \"XQ-DQ54\",
                         \"XQ-DQ62\",
                         \"XQ-DQ72\",
+                        \"XQ-FE\",
                         \"Y5RH894\",
                         \"yodo_cdb\",
                         \"ZIF0TG3\"
