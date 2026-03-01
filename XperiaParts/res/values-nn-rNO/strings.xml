@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Avanserte skjerminnstillingar</string>
+    <string name="display_setting_summary">Juster ulike skjerminnstillingar</string>
+    <string name="cm_display_header">Innstillingar for skaparmodus</string>
+    <string name="cm_switch_title">Skaparmodus</string>
+    <string name="cm_switch_description">Bruk BT.2020-fargerom og 10-bits fargar</string>
+    <string name="cm_footer_string">Fargekalibreringa i Smidig skjermlys vert overstyrt av skaparmodus.</string>
+    <string name="cm_dialog_title">Skaparmodus</string>
+    <string name="cm_dialog_message">Viss du slår på skaparmodus, vert kvitbalansen og fargeinnstillingane overskrivne!</string>
+    <string name="cm_checkbox_show_once">Ikkje vis denne meldinga att</string>
+</resources>
