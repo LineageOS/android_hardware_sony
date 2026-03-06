@@ -7,4 +7,4 @@ binder_call(rild, vendor_hal_secd_default)
 binder_call(rild, vendor_hal_spc_default)
 
 allow rild vendor_hal_secd_hwservice:hwservice_manager find;
-allow rild vendor_hal_spc_service:service_manager find;
+allow rild hal_spc_service:service_manager find;

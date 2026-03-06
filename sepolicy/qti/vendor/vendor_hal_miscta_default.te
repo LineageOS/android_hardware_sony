@@ -6,7 +6,7 @@ init_daemon_domain(vendor_hal_miscta_default)
 
 hal_client_domain(vendor_hal_miscta_default, hal_allocator)
 
-add_service(vendor_hal_miscta_default, vendor_hal_miscta_service)
+add_service(vendor_hal_miscta_default, hal_miscta_service)
 
 binder_use(vendor_hal_miscta_default)
 
