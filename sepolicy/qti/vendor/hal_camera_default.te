@@ -10,6 +10,7 @@ allow hal_camera_default vendor_hal_idd_default:binder call;
 allow hal_camera_default vendor_hal_idd_hwservice:hwservice_manager find;
 
 allow hal_camera_default vendor_hal_secd_hwservice:hwservice_manager find;
+allow hal_camera_default hal_secd_service:service_manager find;
 
 allow hal_camera_default hal_camera_sync:chr_file rw_file_perms;
 allow hal_camera_default sony_camera_device:chr_file rw_file_perms;
