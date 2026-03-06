@@ -6,6 +6,7 @@ init_daemon_domain(taimport_vendor)
 unix_socket_connect(taimport_vendor, tad, tad)
 
 type_transition taimport_vendor vendor_data_file:file sony_bluetooth_data_file "bluetooth_bdaddr";
+type_transition taimport_vendor vendor_data_file:file sony_bluetooth_data_file "bluetooth_calibration";
 type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_macaddr0";
 type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_macaddr1";
 type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_macaddr2";
