@@ -88,6 +88,18 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+        <name>vendor.semc.hardware.aidldisplay</name>
+        <version>1-2</version>
+        <interface>
+            <name>IDisplay</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFramerateController</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.somc.hardware.aidlmiscta</name>
         <interface>
             <name>IMisctaGlobal</name>
