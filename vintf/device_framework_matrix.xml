@@ -95,6 +95,13 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+        <name>vendor.somc.hardware.aidlnfc</name>
+        <interface>
+            <name>ISomcNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.somc.hardware.aidlradio</name>
         <version>1</version>
         <interface>
