@@ -72,6 +72,7 @@ genfscon sysfs /devices/platform/soc/890000.i2c/i2c-6/6-0040/ u:object_r:sysfs_v
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-1/1-0040/ u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-2/2-0040/ u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_2_geni_se/888000.i2c/i2c-3/3-0040/ u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/984000.i2c/i2c-0/0-0040/ u:object_r:sysfs_vibrator:s0
 
 # UIM control node
 genfscon sysfs /class/sony_ext_uim_ctrl u:object_r:sysfs_uim_ctrl:s0
