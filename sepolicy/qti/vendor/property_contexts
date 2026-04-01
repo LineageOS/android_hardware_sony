@@ -19,5 +19,6 @@ vendor.enable.always_on_display                u:object_r:vendor_display_always_
 vendor.fingerprint.hwid                        u:object_r:vendor_fingerprint_hwid_prop:s0
 vendor.sdm.wakeup                              u:object_r:vendor_sdm_prop:s0
 vendor.secd.wakeup                             u:object_r:vendor_sdm_prop:s0
+vendor.sony_spatializer.suppress               u:object_r:vendor_audio_prop:s0
 vendor.smartstamina.touchreport                u:object_r:vendor_hal_superstamina_prop:s0
 vendor.splitscreen.pip.mode                    u:object_r:vendor_somc_gfx_prop:s0
