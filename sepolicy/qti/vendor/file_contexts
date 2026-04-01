@@ -25,6 +25,7 @@
 # HALs
 /vendor/bin/hw/android\.hardware\.secure_element-service\.nxp                                  u:object_r:hal_secure_element_default_exec:s0
 /vendor/bin/hw/vendor\.hardware\.biometrics\.fingerprint-service\.rbs                          u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.egis       u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|odm|vendor/odm)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-rbs    u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|odm|vendor/odm)/bin/hw/android\.hardware\.lights-service(.*)?                         u:object_r:hal_light_default_exec:s0
 /(vendor|odm|vendor/odm)/bin/hw/android\.hardware\.nfc_snxxx@1\.2-service                      u:object_r:hal_nfc_default_exec:s0
