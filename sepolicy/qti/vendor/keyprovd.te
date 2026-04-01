@@ -3,6 +3,7 @@ type keyprovd_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(keyprovd)
 
+binder_use(keyprovd)
 hwbinder_use(keyprovd)
 
 unix_socket_connect(keyprovd, tad, tad)
@@ -14,6 +15,7 @@ allow keyprovd vendor_hal_soter_hwservice:hwservice_manager find;
 
 allow keyprovd ion_device:chr_file rw_file_perms;
 allow keyprovd tee_device:chr_file rw_file_perms;
+allow keyprovd vendor_qce_device:chr_file rw_file_perms;
 
 get_prop(keyprovd, vendor_tee_listener_prop)
 get_prop(keyprovd, hwservicemanager_prop)
