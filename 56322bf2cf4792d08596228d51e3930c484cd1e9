@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5341449e_c171f9b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-04-01T16:58:58Z",
+      "side": 1,
+      "message": "pin your nodes and label just one\n\nsee: https://github.com/LineageOS/android_kernel_qcom_sm8450-devicetrees/commit/673f90bc1d5ae8fd4a9e2b92f44392a16fa03cc2",
+      "revId": "56322bf2cf4792d08596228d51e3930c484cd1e9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
