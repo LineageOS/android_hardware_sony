@@ -16,6 +16,23 @@
       "message": "See device/lineage open change.",
       "revId": "5c23522f537e1f4edbc8e1c58f6bbeb33b42bf4d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18040a3e_a5343a7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-04-01T20:31:31Z",
+      "side": 1,
+      "message": "^",
+      "revId": "5c23522f537e1f4edbc8e1c58f6bbeb33b42bf4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
