@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "678da50a_82a02a2a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36773
+      },
+      "writtenOn": "2026-04-02T19:27:37Z",
+      "side": 1,
+      "message": "Camera started succesfully, saw no additional denials when testing.",
+      "revId": "414c31287eb1b91dc30782ddfcf966ee13834905",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
