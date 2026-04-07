@@ -16,6 +16,24 @@
       "message": "No need, just amend the commit",
       "revId": "11f238f572aab1a7c9747cb2a826e22d54123418",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73e41908_068fc757",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 36773
+      },
+      "writtenOn": "2026-04-07T16:27:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1586cdc5_ff6e3b8e",
+      "revId": "11f238f572aab1a7c9747cb2a826e22d54123418",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
