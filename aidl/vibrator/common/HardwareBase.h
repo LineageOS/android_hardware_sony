@@ -36,24 +36,24 @@ using ::android::base::unique_fd;
 
 class HwApiBase {
   private:
-    using NamesMap = std::map<const std::ios *, std::string>;
+    using NamesMap = std::map<const std::ios*, std::string>;
 
     class RecordInterface {
       public:
-        virtual std::string toString(const NamesMap &names) = 0;
+        virtual std::string toString(const NamesMap& names) = 0;
         virtual ~RecordInterface() {}
     };
     template <typename T>
     class Record : public RecordInterface {
       public:
-        Record(const char *func, const T &value, const std::ios *stream)
+        Record(const char* func, const T& value, const std::ios* stream)
             : mFunc(func), mValue(value), mStream(stream) {}
-        std::string toString(const NamesMap &names) override;
+        std::string toString(const NamesMap& names) override;
 
       private:
-        const char *mFunc;
+        const char* mFunc;
         const T mValue;
-        const std::ios *mStream;
+        const std::ios* mStream;
     };
     using Records = std::list<std::unique_ptr<RecordInterface>>;
 
@@ -64,18 +64,18 @@ class HwApiBase {
     void debug(int fd);
 
   protected:
-    void saveName(const std::string &name, const std::ios *stream);
+    void saveName(const std::string& name, const std::ios* stream);
     template <typename T>
-    void open(const std::string &name, T *stream);
-    bool has(const std::ios &stream);
+    void open(const std::string& name, T* stream);
+    bool has(const std::ios& stream);
     template <typename T>
-    bool get(T *value, std::istream *stream);
+    bool get(T* value, std::istream* stream);
     template <typename T>
-    bool set(const T &value, std::ostream *stream);
+    bool set(const T& value, std::ostream* stream);
     template <typename T>
-    bool poll(const T &value, std::istream *stream, const int32_t timeout = -1);
+    bool poll(const T& value, std::istream* stream, const int32_t timeout = -1);
     template <typename T>
-    void record(const char *func, const T &value, const std::ios *stream);
+    void record(const char* func, const T& value, const std::ios* stream);
 
   private:
     std::string mPathPrefix;
@@ -88,13 +88,13 @@ class HwApiBase {
 #define HWAPI_RECORD(args...) HwApiBase::record(__FUNCTION__, ##args)
 
 template <typename T>
-void HwApiBase::open(const std::string &name, T *stream) {
+void HwApiBase::open(const std::string& name, T* stream) {
     saveName(name, stream);
     utils::openNoCreate(mPathPrefix + name, stream);
 }
 
 template <typename T>
-bool HwApiBase::get(T *value, std::istream *stream) {
+bool HwApiBase::get(T* value, std::istream* stream) {
     ATRACE_NAME("HwApi::get");
     std::scoped_lock ioLock{mIoMutex};
     bool ret;
@@ -109,7 +109,7 @@ bool HwApiBase::get(T *value, std::istream *stream) {
 }
 
 template <typename T>
-bool HwApiBase::set(const T &value, std::ostream *stream) {
+bool HwApiBase::set(const T& value, std::ostream* stream) {
     ATRACE_NAME("HwApi::set");
     using utils::operator<<;
     std::scoped_lock ioLock{mIoMutex};
@@ -124,7 +124,7 @@ bool HwApiBase::set(const T &value, std::ostream *stream) {
 }
 
 template <typename T>
-bool HwApiBase::poll(const T &value, std::istream *stream, const int32_t timeoutMs) {
+bool HwApiBase::poll(const T& value, std::istream* stream, const int32_t timeoutMs) {
     ATRACE_NAME("HwApi::poll");
     auto path = mPathPrefix + mNames[stream];
     unique_fd fileFd{::open(path.c_str(), O_RDONLY)};
@@ -159,14 +159,14 @@ bool HwApiBase::poll(const T &value, std::istream *stream, const int32_t timeout
 }
 
 template <typename T>
-void HwApiBase::record(const char *func, const T &value, const std::ios *stream) {
+void HwApiBase::record(const char* func, const T& value, const std::ios* stream) {
     std::lock_guard<std::mutex> lock(mRecordsMutex);
     mRecords.emplace_back(std::make_unique<Record<T>>(func, value, stream));
     mRecords.pop_front();
 }
 
 template <typename T>
-std::string HwApiBase::Record<T>::toString(const NamesMap &names) {
+std::string HwApiBase::Record<T>::toString(const NamesMap& names) {
     using utils::operator<<;
     std::stringstream ret;
 
@@ -182,9 +182,9 @@ class HwCalBase {
 
   protected:
     template <typename T>
-    bool getProperty(const char *key, T *value, const T defval);
+    bool getProperty(const char* key, T* value, const T defval);
     template <typename T>
-    bool getPersist(const char *key, T *value);
+    bool getPersist(const char* key, T* value);
 
   private:
     std::string mPropertyPrefix;
@@ -192,14 +192,14 @@ class HwCalBase {
 };
 
 template <typename T>
-bool HwCalBase::getProperty(const char *key, T *outval, const T defval) {
+bool HwCalBase::getProperty(const char* key, T* outval, const T defval) {
     ATRACE_NAME("HwCal::getProperty");
     *outval = utils::getProperty(mPropertyPrefix + key, defval);
     return true;
 }
 
 template <typename T>
-bool HwCalBase::getPersist(const char *key, T *value) {
+bool HwCalBase::getPersist(const char* key, T* value) {
     ATRACE_NAME("HwCal::getPersist");
     auto it = mCalData.find(key);
     if (it == mCalData.end()) {

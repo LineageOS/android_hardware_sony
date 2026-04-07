@@ -68,7 +68,7 @@ static constexpr uint32_t WAVEFORM_SONY_HEAVY_CLICK_INDEX = 13;
 
 #ifndef USE_COMPOUND_DOUBLE_CLICK_EFFECT
 static constexpr uint32_t WAVEFORM_SONY_DOUBLE_CLICK_INDEX = 19;
-#endif // USE_COMPOUND_DOUBLE_CLICK_EFFECT
+#endif  // USE_COMPOUND_DOUBLE_CLICK_EFFECT
 
 static constexpr uint32_t WAVEFORM_UNSAVED_TRIGGER_QUEUE_INDEX = 65529;
 static constexpr uint32_t WAVEFORM_TRIGGER_QUEUE_INDEX = 65534;
@@ -117,16 +117,16 @@ static constexpr float PWLE_FREQUENCY_MIN_HZ = 1.0f;
 static constexpr float RESONANT_FREQUENCY_DEFAULT = 145.0f;
 static constexpr float PWLE_FREQUENCY_MAX_HZ = 999.0f;
 static constexpr float PWLE_BW_MAP_SIZE =
-    1 + ((PWLE_FREQUENCY_MAX_HZ - PWLE_FREQUENCY_MIN_HZ) / PWLE_FREQUENCY_RESOLUTION_HZ);
+        1 + ((PWLE_FREQUENCY_MAX_HZ - PWLE_FREQUENCY_MIN_HZ) / PWLE_FREQUENCY_RESOLUTION_HZ);
 static constexpr float RAMP_DOWN_CONSTANT = 1048.576f;
 static constexpr float RAMP_DOWN_TIME_MS = 0.0f;
 
 static struct pcm_config haptic_nohost_config = {
-    .channels = 1,
-    .rate = 48000,
-    .period_size = 80,
-    .period_count = 2,
-    .format = PCM_FORMAT_S16_LE,
+        .channels = 1,
+        .rate = 48000,
+        .period_size = 80,
+        .period_count = 2,
+        .format = PCM_FORMAT_S16_LE,
 };
 
 static uint8_t amplitudeToScale(float amplitude, float maximum) {
@@ -253,10 +253,10 @@ Vibrator::Vibrator(std::unique_ptr<HwApi> hwapi, std::unique_ptr<HwCal> hwcal)
          * solve for 'f(0)' in 'v = f(i) = a + b * i' (i.e 'v0 - (v1 - v0) / ((i1 - i0) / i0)').
          */
         mClickEffectVol[0] = std::max(std::lround(volLevels[WAVEFORM_EFFECT_0_20_LEVEL] -
-                                             (volLevels[WAVEFORM_EFFECT_1_00_LEVEL] -
-                                              volLevels[WAVEFORM_EFFECT_0_20_LEVEL]) /
-                                                     4.0f),
-                                 static_cast<long>(WAVEFORM_EFFECT_LEVEL_MINIMUM));
+                                                  (volLevels[WAVEFORM_EFFECT_1_00_LEVEL] -
+                                                   volLevels[WAVEFORM_EFFECT_0_20_LEVEL]) /
+                                                          4.0f),
+                                      static_cast<long>(WAVEFORM_EFFECT_LEVEL_MINIMUM));
         mClickEffectVol[1] = volLevels[WAVEFORM_EFFECT_1_00_LEVEL];
         mTickEffectVol = mClickEffectVol;
         mLongEffectVol[0] = 0;
@@ -293,7 +293,7 @@ Vibrator::Vibrator(std::unique_ptr<HwApi> hwapi, std::unique_ptr<HwCal> hwcal)
     mIsChirpEnabled = mHwCal->isChirpEnabled();
 }
 
-ndk::ScopedAStatus Vibrator::getCapabilities(int32_t *_aidl_return) {
+ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
     ATRACE_NAME("Vibrator::getCapabilities");
     int32_t ret = IVibrator::CAP_ON_CALLBACK | IVibrator::CAP_PERFORM_CALLBACK |
                   IVibrator::CAP_COMPOSE_EFFECTS | IVibrator::CAP_ALWAYS_ON_CONTROL |
@@ -325,7 +325,7 @@ ndk::ScopedAStatus Vibrator::off() {
 }
 
 ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
-                                const std::shared_ptr<IVibratorCallback> &callback) {
+                                const std::shared_ptr<IVibratorCallback>& callback) {
     ATRACE_NAME("Vibrator::on");
     ALOGD("Vibrator::on");
     const uint32_t index = WAVEFORM_LONG_VIBRATION_EFFECT_INDEX;
@@ -338,16 +338,16 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
 }
 
 ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
-                                     const std::shared_ptr<IVibratorCallback> &callback,
-                                     int32_t *_aidl_return) {
+                                     const std::shared_ptr<IVibratorCallback>& callback,
+                                     int32_t* _aidl_return) {
     ATRACE_NAME("Vibrator::perform");
     ALOGD("Vibrator::perform");
     return performEffect(effect, strength, callback, _aidl_return);
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect> *_aidl_return) {
+ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return) {
     *_aidl_return = {Effect::TEXTURE_TICK, Effect::TICK, Effect::CLICK, Effect::HEAVY_CLICK,
-                     Effect::DOUBLE_CLICK, Effect::POP, Effect::THUD};
+                     Effect::DOUBLE_CLICK, Effect::POP,  Effect::THUD};
     return ndk::ScopedAStatus::ok();
 }
 
@@ -406,19 +406,19 @@ ndk::ScopedAStatus Vibrator::setExternalControl(bool enabled) {
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::getCompositionDelayMax(int32_t *maxDelayMs) {
+ndk::ScopedAStatus Vibrator::getCompositionDelayMax(int32_t* maxDelayMs) {
     ATRACE_NAME("Vibrator::getCompositionDelayMax");
     *maxDelayMs = COMPOSE_DELAY_MAX_MS;
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::getCompositionSizeMax(int32_t *maxSize) {
+ndk::ScopedAStatus Vibrator::getCompositionSizeMax(int32_t* maxSize) {
     ATRACE_NAME("Vibrator::getCompositionSizeMax");
     *maxSize = COMPOSE_SIZE_MAX;
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedPrimitives(std::vector<CompositePrimitive> *supported) {
+ndk::ScopedAStatus Vibrator::getSupportedPrimitives(std::vector<CompositePrimitive>* supported) {
     *supported = {
             CompositePrimitive::NOOP,       CompositePrimitive::CLICK,
             CompositePrimitive::THUD,       CompositePrimitive::SPIN,
@@ -430,7 +430,7 @@ ndk::ScopedAStatus Vibrator::getSupportedPrimitives(std::vector<CompositePrimiti
 }
 
 ndk::ScopedAStatus Vibrator::getPrimitiveDuration(CompositePrimitive primitive,
-                                                  int32_t *durationMs) {
+                                                  int32_t* durationMs) {
     ndk::ScopedAStatus status;
     uint32_t effectIndex;
 
@@ -448,8 +448,8 @@ ndk::ScopedAStatus Vibrator::getPrimitiveDuration(CompositePrimitive primitive,
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect> &composite,
-                                     const std::shared_ptr<IVibratorCallback> &callback) {
+ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& composite,
+                                     const std::shared_ptr<IVibratorCallback>& callback) {
     ATRACE_NAME("Vibrator::compose");
     ALOGD("Vibrator::compose");
     std::ostringstream effectBuilder;
@@ -465,9 +465,9 @@ ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect> &composi
         const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
         mTotalDuration = 0;
     }
-#endif // USE_EFFECT_DURATION_POLLING
+#endif  // USE_EFFECT_DURATION_POLLING
 
-    for (auto &e : composite) {
+    for (auto& e : composite) {
         if (e.scale < 0.0f || e.scale > 1.0f) {
             return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_ARGUMENT);
         }
@@ -483,7 +483,7 @@ ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect> &composi
                 const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
                 mTotalDuration += e.delayMs;
             }
-#endif // USE_EFFECT_DURATION_POLLING
+#endif  // USE_EFFECT_DURATION_POLLING
         }
         if (e.primitive != CompositePrimitive::NOOP) {
             ndk::ScopedAStatus status;
@@ -500,7 +500,7 @@ ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect> &composi
                 const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
                 mTotalDuration += mEffectDurations[effectIndex];
             }
-#endif // USE_EFFECT_DURATION_POLLING
+#endif  // USE_EFFECT_DURATION_POLLING
         }
     }
 
@@ -516,7 +516,7 @@ ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect> &composi
 }
 
 ndk::ScopedAStatus Vibrator::on(uint32_t timeoutMs, uint32_t effectIndex,
-                                const std::shared_ptr<IVibratorCallback> &callback) {
+                                const std::shared_ptr<IVibratorCallback>& callback) {
     if (isUnderExternalControl()) {
         setExternalControl(false);
         ALOGE("Device is under external control mode. Force to disable it to prevent chip hang "
@@ -541,7 +541,7 @@ ndk::ScopedAStatus Vibrator::on(uint32_t timeoutMs, uint32_t effectIndex,
         const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
         mTotalDuration = timeoutMs;
     }
-#endif // USE_EFFECT_DURATION_POLLING
+#endif  // USE_EFFECT_DURATION_POLLING
 
     mActiveId = effectIndex;
 
@@ -573,7 +573,7 @@ ndk::ScopedAStatus Vibrator::setGlobalAmplitude(bool set) {
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedAlwaysOnEffects(std::vector<Effect> *_aidl_return) {
+ndk::ScopedAStatus Vibrator::getSupportedAlwaysOnEffects(std::vector<Effect>* _aidl_return) {
     *_aidl_return = {Effect::TEXTURE_TICK, Effect::TICK, Effect::CLICK, Effect::HEAVY_CLICK};
     return ndk::ScopedAStatus::ok();
 }
@@ -618,13 +618,13 @@ ndk::ScopedAStatus Vibrator::alwaysOnDisable(int32_t id) {
     return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
 }
 
-ndk::ScopedAStatus Vibrator::getResonantFrequency(float *resonantFreqHz) {
+ndk::ScopedAStatus Vibrator::getResonantFrequency(float* resonantFreqHz) {
     *resonantFreqHz = mResonantFrequency;
 
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::getQFactor(float *qFactor) {
+ndk::ScopedAStatus Vibrator::getQFactor(float* qFactor) {
     uint32_t caldata;
     if (!mHwCal->getQ(&caldata)) {
         ALOGE("Failed to get q factor (%d): %s", errno, strerror(errno));
@@ -635,7 +635,7 @@ ndk::ScopedAStatus Vibrator::getQFactor(float *qFactor) {
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::getFrequencyResolution(float *freqResolutionHz) {
+ndk::ScopedAStatus Vibrator::getFrequencyResolution(float* freqResolutionHz) {
     int32_t capabilities;
     Vibrator::getCapabilities(&capabilities);
     if (capabilities & IVibrator::CAP_FREQUENCY_CONTROL) {
@@ -646,7 +646,7 @@ ndk::ScopedAStatus Vibrator::getFrequencyResolution(float *freqResolutionHz) {
     }
 }
 
-ndk::ScopedAStatus Vibrator::getFrequencyMinimum(float *freqMinimumHz) {
+ndk::ScopedAStatus Vibrator::getFrequencyMinimum(float* freqMinimumHz) {
     int32_t capabilities;
     Vibrator::getCapabilities(&capabilities);
     if (capabilities & IVibrator::CAP_FREQUENCY_CONTROL) {
@@ -706,8 +706,7 @@ std::vector<float> Vibrator::generateBandwidthAmplitudeMap() {
         float amplitudeSys = (vSys * blSys * locCoeff / rSys / deviceMass) *
                              pow(frequencyRadians, 2) / psysAbs / gravity;
         // Record the maximum acceleration for the next for loop
-        if (amplitudeSys > maxAsys)
-            maxAsys = amplitudeSys;
+        if (amplitudeSys > maxAsys) maxAsys = amplitudeSys;
 
         bandwidthAmplitudeMap[i] = amplitudeSys;
         frequencyHz += PWLE_FREQUENCY_RESOLUTION_HZ;
@@ -725,7 +724,7 @@ std::vector<float> Vibrator::generateBandwidthAmplitudeMap() {
     return bandwidthAmplitudeMap;
 }
 
-ndk::ScopedAStatus Vibrator::getBandwidthAmplitudeMap(std::vector<float> *_aidl_return) {
+ndk::ScopedAStatus Vibrator::getBandwidthAmplitudeMap(std::vector<float>* _aidl_return) {
     int32_t capabilities;
     Vibrator::getCapabilities(&capabilities);
     if (capabilities & IVibrator::CAP_FREQUENCY_CONTROL) {
@@ -741,7 +740,7 @@ ndk::ScopedAStatus Vibrator::getBandwidthAmplitudeMap(std::vector<float> *_aidl_
     }
 }
 
-ndk::ScopedAStatus Vibrator::getPwlePrimitiveDurationMax(int32_t *durationMs) {
+ndk::ScopedAStatus Vibrator::getPwlePrimitiveDurationMax(int32_t* durationMs) {
     int32_t capabilities;
     Vibrator::getCapabilities(&capabilities);
     if (capabilities & IVibrator::CAP_COMPOSE_PWLE_EFFECTS) {
@@ -752,7 +751,7 @@ ndk::ScopedAStatus Vibrator::getPwlePrimitiveDurationMax(int32_t *durationMs) {
     }
 }
 
-ndk::ScopedAStatus Vibrator::getPwleCompositionSizeMax(int32_t *maxSize) {
+ndk::ScopedAStatus Vibrator::getPwleCompositionSizeMax(int32_t* maxSize) {
     int32_t capabilities;
     Vibrator::getCapabilities(&capabilities);
     if (capabilities & IVibrator::CAP_COMPOSE_PWLE_EFFECTS) {
@@ -769,13 +768,13 @@ ndk::ScopedAStatus Vibrator::getPwleCompositionSizeMax(int32_t *maxSize) {
     }
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedBraking(std::vector<Braking> *supported) {
+ndk::ScopedAStatus Vibrator::getSupportedBraking(std::vector<Braking>* supported) {
     int32_t capabilities;
     Vibrator::getCapabilities(&capabilities);
     if (capabilities & IVibrator::CAP_COMPOSE_PWLE_EFFECTS) {
         *supported = {
-            Braking::NONE,
-            Braking::CLAB,
+                Braking::NONE,
+                Braking::CLAB,
         };
         return ndk::ScopedAStatus::ok();
     } else {
@@ -783,7 +782,7 @@ ndk::ScopedAStatus Vibrator::getSupportedBraking(std::vector<Braking> *supported
     }
 }
 
-ndk::ScopedAStatus Vibrator::setPwle(const std::string &pwleQueue) {
+ndk::ScopedAStatus Vibrator::setPwle(const std::string& pwleQueue) {
     if (!mHwApi->setPwle(pwleQueue)) {
         ALOGE("Failed to write \"%s\" to pwle (%d): %s", pwleQueue.c_str(), errno, strerror(errno));
         return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
@@ -792,18 +791,18 @@ ndk::ScopedAStatus Vibrator::setPwle(const std::string &pwleQueue) {
     return ndk::ScopedAStatus::ok();
 }
 
-static void incrementIndex(int *index) {
+static void incrementIndex(int* index) {
     *index += 1;
 }
 
-static void constructActiveDefaults(std::ostringstream &pwleBuilder, const int &segmentIdx) {
+static void constructActiveDefaults(std::ostringstream& pwleBuilder, const int& segmentIdx) {
     pwleBuilder << ",C" << segmentIdx << ":1";
     pwleBuilder << ",B" << segmentIdx << ":0";
     pwleBuilder << ",AR" << segmentIdx << ":0";
     pwleBuilder << ",V" << segmentIdx << ":0";
 }
 
-static void constructActiveSegment(std::ostringstream &pwleBuilder, const int &segmentIdx,
+static void constructActiveSegment(std::ostringstream& pwleBuilder, const int& segmentIdx,
                                    int duration, float amplitude, float frequency) {
     pwleBuilder << ",T" << segmentIdx << ":" << duration;
     pwleBuilder << ",L" << segmentIdx << ":" << std::setprecision(1) << amplitude;
@@ -811,7 +810,7 @@ static void constructActiveSegment(std::ostringstream &pwleBuilder, const int &s
     constructActiveDefaults(pwleBuilder, segmentIdx);
 }
 
-static void constructBrakingSegment(std::ostringstream &pwleBuilder, const int &segmentIdx,
+static void constructBrakingSegment(std::ostringstream& pwleBuilder, const int& segmentIdx,
                                     int duration, Braking brakingType, float frequency) {
     pwleBuilder << ",T" << segmentIdx << ":" << duration;
     pwleBuilder << ",L" << segmentIdx << ":" << 0;
@@ -823,8 +822,8 @@ static void constructBrakingSegment(std::ostringstream &pwleBuilder, const int &
     pwleBuilder << ",V" << segmentIdx << ":0";
 }
 
-ndk::ScopedAStatus Vibrator::composePwle(const std::vector<PrimitivePwle> &composite,
-                                         const std::shared_ptr<IVibratorCallback> &callback) {
+ndk::ScopedAStatus Vibrator::composePwle(const std::vector<PrimitivePwle>& composite,
+                                         const std::shared_ptr<IVibratorCallback>& callback) {
     ATRACE_NAME("Vibrator::composePwle");
     std::ostringstream pwleBuilder;
     std::string pwleQueue;
@@ -845,7 +844,7 @@ ndk::ScopedAStatus Vibrator::composePwle(const std::vector<PrimitivePwle> &compo
 
     pwleBuilder << "S:0,WF:4,RP:0,WT:0";
 
-    for (auto &e : composite) {
+    for (auto& e : composite) {
         switch (e.getTag()) {
             case PrimitivePwle::active: {
                 auto active = e.get<PrimitivePwle::active>();
@@ -874,12 +873,14 @@ ndk::ScopedAStatus Vibrator::composePwle(const std::vector<PrimitivePwle> &compo
 
                 // clip to the hard limit on input level from pwleMaxLevelLimitMap
                 float maxLevelLimit =
-                    pwleMaxLevelLimitMap[active.startFrequency / PWLE_FREQUENCY_RESOLUTION_HZ - 1];
+                        pwleMaxLevelLimitMap[active.startFrequency / PWLE_FREQUENCY_RESOLUTION_HZ -
+                                             1];
                 if (active.startAmplitude > maxLevelLimit) {
                     active.startAmplitude = maxLevelLimit;
                 }
                 maxLevelLimit =
-                    pwleMaxLevelLimitMap[active.endFrequency / PWLE_FREQUENCY_RESOLUTION_HZ - 1];
+                        pwleMaxLevelLimitMap[active.endFrequency / PWLE_FREQUENCY_RESOLUTION_HZ -
+                                             1];
                 if (active.endAmplitude > maxLevelLimit) {
                     active.endAmplitude = maxLevelLimit;
                 }
@@ -945,7 +946,7 @@ ndk::ScopedAStatus Vibrator::composePwle(const std::vector<PrimitivePwle> &compo
         const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
         mTotalDuration = totalDuration;
     }
-#endif // USE_EFFECT_DURATION_POLLING
+#endif  // USE_EFFECT_DURATION_POLLING
 
     mHwApi->setActivate(1);
 
@@ -958,7 +959,7 @@ bool Vibrator::isUnderExternalControl() {
     return mIsUnderExternalControl;
 }
 
-binder_status_t Vibrator::dump(int fd, const char **args, uint32_t numArgs) {
+binder_status_t Vibrator::dump(int fd, const char** args, uint32_t numArgs) {
     if (fd < 0) {
         ALOGE("Called debug() with invalid fd.");
         return STATUS_OK;
@@ -972,12 +973,12 @@ binder_status_t Vibrator::dump(int fd, const char **args, uint32_t numArgs) {
     dprintf(fd, "  F0 Offset: %" PRIu32 "\n", mF0Offset);
 
     dprintf(fd, "  Voltage Levels:\n");
-    dprintf(fd, "    Tick Effect Min: %" PRIu32 " Max: %" PRIu32 "\n",
-            mTickEffectVol[0], mTickEffectVol[1]);
-    dprintf(fd, "    Click Effect Min: %" PRIu32 " Max: %" PRIu32 "\n",
-            mClickEffectVol[0], mClickEffectVol[1]);
-    dprintf(fd, "    Long Effect Min: %" PRIu32 " Max: %" PRIu32 "\n",
-            mLongEffectVol[0], mLongEffectVol[1]);
+    dprintf(fd, "    Tick Effect Min: %" PRIu32 " Max: %" PRIu32 "\n", mTickEffectVol[0],
+            mTickEffectVol[1]);
+    dprintf(fd, "    Click Effect Min: %" PRIu32 " Max: %" PRIu32 "\n", mClickEffectVol[0],
+            mClickEffectVol[1]);
+    dprintf(fd, "    Long Effect Min: %" PRIu32 " Max: %" PRIu32 "\n", mLongEffectVol[0],
+            mLongEffectVol[1]);
 
     dprintf(fd, "  Effect Durations:");
     for (auto d : mEffectDurations) {
@@ -998,8 +999,8 @@ binder_status_t Vibrator::dump(int fd, const char **args, uint32_t numArgs) {
 }
 
 ndk::ScopedAStatus Vibrator::getSimpleDetails(Effect effect, EffectStrength strength,
-                                              uint32_t *outEffectIndex, uint32_t *outTimeMs,
-                                              uint32_t *outVolLevel) {
+                                              uint32_t* outEffectIndex, uint32_t* outTimeMs,
+                                              uint32_t* outVolLevel) {
     uint32_t effectIndex;
     uint32_t timeMs;
     float intensity;
@@ -1042,7 +1043,7 @@ ndk::ScopedAStatus Vibrator::getSimpleDetails(Effect effect, EffectStrength stre
         case Effect::DOUBLE_CLICK:
             effectIndex = WAVEFORM_SONY_DOUBLE_CLICK_INDEX;
             break;
-#endif // USE_COMPOUND_DOUBLE_CLICK_EFFECT
+#endif  // USE_COMPOUND_DOUBLE_CLICK_EFFECT
         default:
             return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
@@ -1055,7 +1056,7 @@ ndk::ScopedAStatus Vibrator::getSimpleDetails(Effect effect, EffectStrength stre
         const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
         mTotalDuration = timeMs;
     }
-#endif // USE_EFFECT_DURATION_POLLING
+#endif  // USE_EFFECT_DURATION_POLLING
 
     *outEffectIndex = effectIndex;
     *outTimeMs = timeMs;
@@ -1065,8 +1066,8 @@ ndk::ScopedAStatus Vibrator::getSimpleDetails(Effect effect, EffectStrength stre
 }
 
 ndk::ScopedAStatus Vibrator::getCompoundDetails(Effect effect, EffectStrength strength,
-                                                uint32_t *outTimeMs, uint32_t * /*outVolLevel*/,
-                                                std::string *outEffectQueue) {
+                                                uint32_t* outTimeMs, uint32_t* /*outVolLevel*/,
+                                                std::string* outEffectQueue) {
     ndk::ScopedAStatus status;
     uint32_t timeMs;
     std::ostringstream effectBuilder;
@@ -1106,7 +1107,7 @@ ndk::ScopedAStatus Vibrator::getCompoundDetails(Effect effect, EffectStrength st
                 const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
                 mTotalDuration = timeMs;
             }
-#endif // USE_EFFECT_DURATION_POLLING
+#endif  // USE_EFFECT_DURATION_POLLING
 
             break;
         default:
@@ -1120,7 +1121,7 @@ ndk::ScopedAStatus Vibrator::getCompoundDetails(Effect effect, EffectStrength st
 }
 
 ndk::ScopedAStatus Vibrator::getPrimitiveDetails(CompositePrimitive primitive,
-                                                 uint32_t *outEffectIndex) {
+                                                 uint32_t* outEffectIndex) {
     uint32_t effectIndex;
 
     switch (primitive) {
@@ -1159,7 +1160,7 @@ ndk::ScopedAStatus Vibrator::getPrimitiveDetails(CompositePrimitive primitive,
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::setEffectQueue(const std::string &effectQueue) {
+ndk::ScopedAStatus Vibrator::setEffectQueue(const std::string& effectQueue) {
     if (!mHwApi->setEffectQueue(effectQueue)) {
         ALOGE("Failed to write \"%s\" to effect queue (%d): %s", effectQueue.c_str(), errno,
               strerror(errno));
@@ -1170,8 +1171,8 @@ ndk::ScopedAStatus Vibrator::setEffectQueue(const std::string &effectQueue) {
 }
 
 ndk::ScopedAStatus Vibrator::performEffect(Effect effect, EffectStrength strength,
-                                           const std::shared_ptr<IVibratorCallback> &callback,
-                                           int32_t *outTimeMs) {
+                                           const std::shared_ptr<IVibratorCallback>& callback,
+                                           int32_t* outTimeMs) {
     ndk::ScopedAStatus status;
     uint32_t effectIndex;
     uint32_t timeMs = 0;
@@ -1203,7 +1204,7 @@ ndk::ScopedAStatus Vibrator::performEffect(Effect effect, EffectStrength strengt
             // fall-through
             status = getSimpleDetails(effect, strength, &effectIndex, &timeMs, &volLevel);
             break;
-#endif // USE_COMPOUND_DOUBLE_CLICK_EFFECT
+#endif  // USE_COMPOUND_DOUBLE_CLICK_EFFECT
         default:
             status = ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
             break;
@@ -1221,8 +1222,8 @@ exit:
 }
 
 ndk::ScopedAStatus Vibrator::performEffect(uint32_t effectIndex, uint32_t volLevel,
-                                           const std::string *effectQueue,
-                                           const std::shared_ptr<IVibratorCallback> &callback) {
+                                           const std::string* effectQueue,
+                                           const std::shared_ptr<IVibratorCallback>& callback) {
     if (effectQueue && !effectQueue->empty()) {
         ndk::ScopedAStatus status = setEffectQueue(*effectQueue);
         if (!status.isOk()) {
@@ -1237,7 +1238,7 @@ ndk::ScopedAStatus Vibrator::performEffect(uint32_t effectIndex, uint32_t volLev
     return on(MAX_TIME_MS, effectIndex, callback);
 }
 
-void Vibrator::waitForComplete(std::shared_ptr<IVibratorCallback> &&callback) {
+void Vibrator::waitForComplete(std::shared_ptr<IVibratorCallback>&& callback) {
     ALOGD("Vibrator::waitForComplete");
 
 #ifdef USE_EFFECT_DURATION_POLLING
@@ -1257,7 +1258,7 @@ void Vibrator::waitForComplete(std::shared_ptr<IVibratorCallback> &&callback) {
 #else
     mHwApi->pollVibeState(false);
     mHwApi->setActivate(false);
-#endif // USE_EFFECT_DURATION_POLLING
+#endif  // USE_EFFECT_DURATION_POLLING
 
     if (callback) {
         auto ret = callback->onComplete();
@@ -1270,7 +1271,8 @@ void Vibrator::waitForComplete(std::shared_ptr<IVibratorCallback> &&callback) {
 uint32_t Vibrator::intensityToVolLevel(float intensity, uint32_t effectIndex) {
     uint32_t volLevel;
     auto calc = [](float intst, std::array<uint32_t, 2> v) -> uint32_t {
-                return std::lround(intst * (v[1] - v[0])) + v[0]; };
+        return std::lround(intst * (v[1] - v[0])) + v[0];
+    };
 
     switch (effectIndex) {
         case WAVEFORM_LIGHT_TICK_INDEX:
@@ -1297,7 +1299,7 @@ uint32_t Vibrator::intensityToVolLevel(float intensity, uint32_t effectIndex) {
     return volLevel;
 }
 
-bool Vibrator::findHapticAlsaDevice(int *card, int *device) {
+bool Vibrator::findHapticAlsaDevice(int* card, int* device) {
     std::string line;
     std::ifstream myfile(PROC_SND_PCM);
     if (myfile.is_open()) {
@@ -1333,7 +1335,7 @@ bool Vibrator::hasHapticAlsaDevice() {
     return mHasHapticAlsaDevice;
 }
 
-bool Vibrator::enableHapticPcmAmp(struct pcm **haptic_pcm, bool enable, int card, int device) {
+bool Vibrator::enableHapticPcmAmp(struct pcm** haptic_pcm, bool enable, int card, int device) {
     int ret = 0;
 
     if (enable) {

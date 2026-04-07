@@ -34,10 +34,10 @@ template <typename T>
 class Is_Iterable {
   private:
     template <typename U>
-    static std::true_type test(typename U::iterator *u);
+    static std::true_type test(typename U::iterator* u);
 
     template <typename U>
-    static std::false_type test(U *u);
+    static std::false_type test(U* u);
 
   public:
     static const bool value = decltype(test<T>(0))::value;
@@ -53,11 +53,11 @@ template <typename T, typename U = void>
 using Enable_If_Unsigned = std::enable_if_t<std::is_unsigned_v<T>, U>;
 
 // override for default behavior of printing as a character
-inline std::ostream &operator<<(std::ostream &stream, const int8_t value) {
+inline std::ostream& operator<<(std::ostream& stream, const int8_t value) {
     return stream << +value;
 }
 // override for default behavior of printing as a character
-inline std::ostream &operator<<(std::ostream &stream, const uint8_t value) {
+inline std::ostream& operator<<(std::ostream& stream, const uint8_t value) {
     return stream << +value;
 }
 
@@ -67,25 +67,25 @@ inline auto toUnderlying(const T value) {
 }
 
 template <typename T>
-inline Enable_If_Iterable<T, true> unpack(std::istream &stream, T *value) {
-    for (auto &entry : *value) {
+inline Enable_If_Iterable<T, true> unpack(std::istream& stream, T* value) {
+    for (auto& entry : *value) {
         stream >> entry;
     }
 }
 
 template <typename T>
-inline Enable_If_Iterable<T, false> unpack(std::istream &stream, T *value) {
+inline Enable_If_Iterable<T, false> unpack(std::istream& stream, T* value) {
     stream >> *value;
 }
 
 template <>
-inline void unpack<std::string>(std::istream &stream, std::string *value) {
+inline void unpack<std::string>(std::istream& stream, std::string* value) {
     *value = std::string(std::istreambuf_iterator(stream), {});
     stream.setstate(std::istream::eofbit);
 }
 
 template <typename T>
-inline Enable_If_Signed<T, T> getProperty(const std::string &key, const T def) {
+inline Enable_If_Signed<T, T> getProperty(const std::string& key, const T def) {
     if (std::is_floating_point_v<T>) {
         float result;
         std::string value = ::android::base::GetProperty(key, "");
@@ -99,17 +99,17 @@ inline Enable_If_Signed<T, T> getProperty(const std::string &key, const T def) {
 }
 
 template <typename T>
-inline Enable_If_Unsigned<T, T> getProperty(const std::string &key, const T def) {
+inline Enable_If_Unsigned<T, T> getProperty(const std::string& key, const T def) {
     return ::android::base::GetUintProperty(key, def);
 }
 
 template <>
-inline bool getProperty<bool>(const std::string &key, const bool def) {
+inline bool getProperty<bool>(const std::string& key, const bool def) {
     return ::android::base::GetBoolProperty(key, def);
 }
 
 template <typename T>
-static void openNoCreate(const std::string &file, T *outStream) {
+static void openNoCreate(const std::string& file, T* outStream) {
     auto mode = std::is_base_of_v<std::ostream, T> ? std::ios_base::out : std::ios_base::in;
 
     // Force 'in' mode to prevent file creation
@@ -120,7 +120,7 @@ static void openNoCreate(const std::string &file, T *outStream) {
 }
 
 template <typename T>
-static void fileFromEnv(const char *env, T *outStream, std::string *outName = nullptr) {
+static void fileFromEnv(const char* env, T* outStream, std::string* outName = nullptr) {
     auto file = std::getenv(env);
 
     if (file == nullptr) {
@@ -135,7 +135,7 @@ static void fileFromEnv(const char *env, T *outStream, std::string *outName = nu
     openNoCreate(file, outStream);
 }
 
-static ATTRIBUTE_UNUSED auto pathsFromEnv(const char *env, const std::string &prefix = "") {
+static ATTRIBUTE_UNUSED auto pathsFromEnv(const char* env, const std::string& prefix = "") {
     std::map<std::string, std::ifstream> ret;
     auto value = std::getenv(env);
 
@@ -153,8 +153,8 @@ static ATTRIBUTE_UNUSED auto pathsFromEnv(const char *env, const std::string &pr
     return ret;
 }
 
-static ATTRIBUTE_UNUSED std::string trim(const std::string &str,
-                                         const std::string &whitespace = " \t") {
+static ATTRIBUTE_UNUSED std::string trim(const std::string& str,
+                                         const std::string& whitespace = " \t") {
     const auto str_begin = str.find_first_not_of(whitespace);
     if (str_begin == std::string::npos) {
         return "";

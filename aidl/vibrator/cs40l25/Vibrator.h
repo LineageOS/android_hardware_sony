@@ -50,10 +50,10 @@ class Vibrator : public BnVibrator {
         // Specifies the vibration duration in milliseconds.
         virtual bool setDuration(uint32_t value) = 0;
         // Reports the number of effect waveforms loaded in firmware.
-        virtual bool getEffectCount(uint32_t *value) = 0;
+        virtual bool getEffectCount(uint32_t* value) = 0;
         // Reports the duration of the waveform selected by
         // setEffectIndex(), measured in 48-kHz periods.
-        virtual bool getEffectDuration(uint32_t *value) = 0;
+        virtual bool getEffectDuration(uint32_t* value) = 0;
         // Selects the waveform associated with vibration calls from
         // the Android vibrator HAL.
         virtual bool setEffectIndex(uint32_t value) = 0;
@@ -76,7 +76,7 @@ class Vibrator : public BnVibrator {
         // Reports whether getAspEnable()/setAspEnable() is supported.
         virtual bool hasAspEnable() = 0;
         // Enables/disables ASP playback.
-        virtual bool getAspEnable(bool *value) = 0;
+        virtual bool getAspEnable(bool* value) = 0;
         // Reports enabled/disabled state of ASP playback.
         virtual bool setAspEnable(bool value) = 0;
         // Selects the waveform associated with a GPIO1 falling edge.
@@ -101,7 +101,7 @@ class Vibrator : public BnVibrator {
         // Enables/disables closed-loop active braking.
         virtual bool setClabEnable(bool value) = 0;
         // Reports the number of available PWLE segments.
-        virtual bool getAvailablePwleSegments(uint32_t *value) = 0;
+        virtual bool getAvailablePwleSegments(uint32_t* value) = 0;
         // Reports whether piecewise-linear envelope for waveforms is supported.
         virtual bool hasPwle() = 0;
         // Specifies piecewise-linear specifications to generate complex
@@ -119,30 +119,30 @@ class Vibrator : public BnVibrator {
       public:
         virtual ~HwCal() = default;
         // Obtain the calibration version
-        virtual bool getVersion(uint32_t *value) = 0;
+        virtual bool getVersion(uint32_t* value) = 0;
         // Obtains the LRA resonant frequency to be used for PWLE playback
         // and click compensation.
-        virtual bool getF0(uint32_t *value) = 0;
+        virtual bool getF0(uint32_t* value) = 0;
         // Obtains the LRA series resistance to be used for click
         // compensation.
-        virtual bool getRedc(uint32_t *value) = 0;
+        virtual bool getRedc(uint32_t* value) = 0;
         // Obtains the LRA Q factor to be used for Q-dependent waveform
         // selection.
-        virtual bool getQ(uint32_t *value) = 0;
+        virtual bool getQ(uint32_t* value) = 0;
         // Obtains frequency shift for long vibrations.
-        virtual bool getLongFrequencyShift(int32_t *value) = 0;
+        virtual bool getLongFrequencyShift(int32_t* value) = 0;
         // Obtains device mass for calculating the bandwidth amplitude map
-        virtual bool getDeviceMass(float *value) = 0;
+        virtual bool getDeviceMass(float* value) = 0;
         // Obtains loc coeff for calculating the bandwidth amplitude map
-        virtual bool getLocCoeff(float *value) = 0;
+        virtual bool getLocCoeff(float* value) = 0;
         // Obtains the discreet voltage levels to be applied for the various
         // waveforms, in units of 1%.
-        virtual bool getVolLevels(std::array<uint32_t, 6> *value) = 0;
+        virtual bool getVolLevels(std::array<uint32_t, 6>* value) = 0;
         // Obtains the v0/v1(min/max) voltage levels to be applied for
         // tick/click/long in units of 1%.
-        virtual bool getTickVolLevels(std::array<uint32_t, 2> *value) = 0;
-        virtual bool getClickVolLevels(std::array<uint32_t, 2> *value) = 0;
-        virtual bool getLongVolLevels(std::array<uint32_t, 2> *value) = 0;
+        virtual bool getTickVolLevels(std::array<uint32_t, 2>* value) = 0;
+        virtual bool getClickVolLevels(std::array<uint32_t, 2>* value) = 0;
+        virtual bool getLongVolLevels(std::array<uint32_t, 2>* value) = 0;
         // Checks if the chirp feature is enabled.
         virtual bool isChirpEnabled() = 0;
         // Emit diagnostic information to the given file.
@@ -152,68 +152,68 @@ class Vibrator : public BnVibrator {
   public:
     Vibrator(std::unique_ptr<HwApi> hwapi, std::unique_ptr<HwCal> hwcal);
 
-    ndk::ScopedAStatus getCapabilities(int32_t *_aidl_return) override;
+    ndk::ScopedAStatus getCapabilities(int32_t* _aidl_return) override;
     ndk::ScopedAStatus off() override;
     ndk::ScopedAStatus on(int32_t timeoutMs,
-                          const std::shared_ptr<IVibratorCallback> &callback) override;
+                          const std::shared_ptr<IVibratorCallback>& callback) override;
     ndk::ScopedAStatus perform(Effect effect, EffectStrength strength,
-                               const std::shared_ptr<IVibratorCallback> &callback,
-                               int32_t *_aidl_return) override;
-    ndk::ScopedAStatus getSupportedEffects(std::vector<Effect> *_aidl_return) override;
+                               const std::shared_ptr<IVibratorCallback>& callback,
+                               int32_t* _aidl_return) override;
+    ndk::ScopedAStatus getSupportedEffects(std::vector<Effect>* _aidl_return) override;
     ndk::ScopedAStatus setAmplitude(float amplitude) override;
     ndk::ScopedAStatus setExternalControl(bool enabled) override;
-    ndk::ScopedAStatus getCompositionDelayMax(int32_t *maxDelayMs);
-    ndk::ScopedAStatus getCompositionSizeMax(int32_t *maxSize);
-    ndk::ScopedAStatus getSupportedPrimitives(std::vector<CompositePrimitive> *supported) override;
+    ndk::ScopedAStatus getCompositionDelayMax(int32_t* maxDelayMs);
+    ndk::ScopedAStatus getCompositionSizeMax(int32_t* maxSize);
+    ndk::ScopedAStatus getSupportedPrimitives(std::vector<CompositePrimitive>* supported) override;
     ndk::ScopedAStatus getPrimitiveDuration(CompositePrimitive primitive,
-                                            int32_t *durationMs) override;
-    ndk::ScopedAStatus compose(const std::vector<CompositeEffect> &composite,
-                               const std::shared_ptr<IVibratorCallback> &callback) override;
-    ndk::ScopedAStatus getSupportedAlwaysOnEffects(std::vector<Effect> *_aidl_return) override;
+                                            int32_t* durationMs) override;
+    ndk::ScopedAStatus compose(const std::vector<CompositeEffect>& composite,
+                               const std::shared_ptr<IVibratorCallback>& callback) override;
+    ndk::ScopedAStatus getSupportedAlwaysOnEffects(std::vector<Effect>* _aidl_return) override;
     ndk::ScopedAStatus alwaysOnEnable(int32_t id, Effect effect, EffectStrength strength) override;
     ndk::ScopedAStatus alwaysOnDisable(int32_t id) override;
-    ndk::ScopedAStatus getResonantFrequency(float *resonantFreqHz) override;
-    ndk::ScopedAStatus getQFactor(float *qFactor) override;
-    ndk::ScopedAStatus getFrequencyResolution(float *freqResolutionHz) override;
-    ndk::ScopedAStatus getFrequencyMinimum(float *freqMinimumHz) override;
-    ndk::ScopedAStatus getBandwidthAmplitudeMap(std::vector<float> *_aidl_return) override;
-    ndk::ScopedAStatus getPwlePrimitiveDurationMax(int32_t *durationMs) override;
-    ndk::ScopedAStatus getPwleCompositionSizeMax(int32_t *maxSize) override;
-    ndk::ScopedAStatus getSupportedBraking(std::vector<Braking> *supported) override;
-    ndk::ScopedAStatus composePwle(const std::vector<PrimitivePwle> &composite,
-                                   const std::shared_ptr<IVibratorCallback> &callback) override;
+    ndk::ScopedAStatus getResonantFrequency(float* resonantFreqHz) override;
+    ndk::ScopedAStatus getQFactor(float* qFactor) override;
+    ndk::ScopedAStatus getFrequencyResolution(float* freqResolutionHz) override;
+    ndk::ScopedAStatus getFrequencyMinimum(float* freqMinimumHz) override;
+    ndk::ScopedAStatus getBandwidthAmplitudeMap(std::vector<float>* _aidl_return) override;
+    ndk::ScopedAStatus getPwlePrimitiveDurationMax(int32_t* durationMs) override;
+    ndk::ScopedAStatus getPwleCompositionSizeMax(int32_t* maxSize) override;
+    ndk::ScopedAStatus getSupportedBraking(std::vector<Braking>* supported) override;
+    ndk::ScopedAStatus composePwle(const std::vector<PrimitivePwle>& composite,
+                                   const std::shared_ptr<IVibratorCallback>& callback) override;
 
-    binder_status_t dump(int fd, const char **args, uint32_t numArgs) override;
+    binder_status_t dump(int fd, const char** args, uint32_t numArgs) override;
 
   private:
     ndk::ScopedAStatus on(uint32_t timeoutMs, uint32_t effectIndex,
-                          const std::shared_ptr<IVibratorCallback> &callback);
+                          const std::shared_ptr<IVibratorCallback>& callback);
     // set 'amplitude' based on an arbitrary scale determined by 'maximum'
     ndk::ScopedAStatus setEffectAmplitude(float amplitude, float maximum);
     ndk::ScopedAStatus setGlobalAmplitude(bool set);
     // 'simple' effects are those precompiled and loaded into the controller
     ndk::ScopedAStatus getSimpleDetails(Effect effect, EffectStrength strength,
-                                        uint32_t *outEffectIndex, uint32_t *outTimeMs,
-                                        uint32_t *outVolLevel);
+                                        uint32_t* outEffectIndex, uint32_t* outTimeMs,
+                                        uint32_t* outVolLevel);
     // 'compound' effects are those composed by stringing multiple 'simple' effects
     ndk::ScopedAStatus getCompoundDetails(Effect effect, EffectStrength strength,
-                                          uint32_t *outTimeMs, uint32_t *outVolLevel,
-                                          std::string *outEffectQueue);
-    ndk::ScopedAStatus getPrimitiveDetails(CompositePrimitive primitive, uint32_t *outEffectIndex);
-    ndk::ScopedAStatus setEffectQueue(const std::string &effectQueue);
+                                          uint32_t* outTimeMs, uint32_t* outVolLevel,
+                                          std::string* outEffectQueue);
+    ndk::ScopedAStatus getPrimitiveDetails(CompositePrimitive primitive, uint32_t* outEffectIndex);
+    ndk::ScopedAStatus setEffectQueue(const std::string& effectQueue);
     ndk::ScopedAStatus performEffect(Effect effect, EffectStrength strength,
-                                     const std::shared_ptr<IVibratorCallback> &callback,
-                                     int32_t *outTimeMs);
+                                     const std::shared_ptr<IVibratorCallback>& callback,
+                                     int32_t* outTimeMs);
     ndk::ScopedAStatus performEffect(uint32_t effectIndex, uint32_t volLevel,
-                                     const std::string *effectQueue,
-                                     const std::shared_ptr<IVibratorCallback> &callback);
-    ndk::ScopedAStatus setPwle(const std::string &pwleQueue);
+                                     const std::string* effectQueue,
+                                     const std::shared_ptr<IVibratorCallback>& callback);
+    ndk::ScopedAStatus setPwle(const std::string& pwleQueue);
     bool isUnderExternalControl();
-    void waitForComplete(std::shared_ptr<IVibratorCallback> &&callback);
+    void waitForComplete(std::shared_ptr<IVibratorCallback>&& callback);
     uint32_t intensityToVolLevel(float intensity, uint32_t effectIndex);
-    bool findHapticAlsaDevice(int *card, int *device);
+    bool findHapticAlsaDevice(int* card, int* device);
     bool hasHapticAlsaDevice();
-    bool enableHapticPcmAmp(struct pcm **haptic_pcm, bool enable, int card, int device);
+    bool enableHapticPcmAmp(struct pcm** haptic_pcm, bool enable, int card, int device);
     void createPwleMaxLevelLimitMap();
     void setPwleRampDown();
     std::vector<float> generateBandwidthAmplitudeMap();
@@ -227,7 +227,7 @@ class Vibrator : public BnVibrator {
     std::vector<uint32_t> mEffectDurations;
     std::future<void> mAsyncHandle;
     int32_t mCompositionSizeMax;
-    struct pcm *mHapticPcm;
+    struct pcm* mHapticPcm;
     int mCard;
     int mDevice;
     bool mHasHapticAlsaDevice;

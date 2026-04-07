@@ -57,8 +57,8 @@ class HwApi : public Vibrator::HwApi, private HwApiBase {
     bool setQ(uint32_t value) override { return set(value, &mQ); }
     bool setActivate(bool value) override { return set(value, &mActivate); }
     bool setDuration(uint32_t value) override { return set(value, &mDuration); }
-    bool getEffectCount(uint32_t *value) override { return get(value, &mEffectCount); }
-    bool getEffectDuration(uint32_t *value) override { return get(value, &mEffectDuration); }
+    bool getEffectCount(uint32_t* value) override { return get(value, &mEffectCount); }
+    bool getEffectDuration(uint32_t* value) override { return get(value, &mEffectDuration); }
     bool setEffectIndex(uint32_t value) override { return set(value, &mEffectIndex); }
     bool setEffectQueue(std::string value) override { return set(value, &mEffectQueue); }
     bool hasEffectScale() override { return has(mEffectScale); }
@@ -66,7 +66,7 @@ class HwApi : public Vibrator::HwApi, private HwApiBase {
     bool setGlobalScale(uint32_t value) override { return set(value, &mGlobalScale); }
     bool setState(bool value) override { return set(value, &mState); }
     bool hasAspEnable() override { return has(mAspEnable); }
-    bool getAspEnable(bool *value) override { return get(value, &mAspEnable); }
+    bool getAspEnable(bool* value) override { return get(value, &mAspEnable); }
     bool setAspEnable(bool value) override { return set(value, &mAspEnable); }
     bool setGpioFallIndex(uint32_t value) override { return set(value, &mGpioFallIndex); }
     bool setGpioFallScale(uint32_t value) override { return set(value, &mGpioFallScale); }
@@ -82,7 +82,7 @@ class HwApi : public Vibrator::HwApi, private HwApiBase {
 #endif
 
     bool setClabEnable(bool value) override { return set(value, &mClabEnable); }
-    bool getAvailablePwleSegments(uint32_t *value) override {
+    bool getAvailablePwleSegments(uint32_t* value) override {
         return get(value, &mAvailablePwleSegments);
     }
     bool hasPwle() override { return has(mPwle); }
@@ -146,25 +146,25 @@ class HwCal : public Vibrator::HwCal, private HwCalBase {
   public:
     HwCal() {}
 
-    bool getVersion(uint32_t *value) override {
+    bool getVersion(uint32_t* value) override {
         if (getPersist(VERSION, value)) {
             return true;
         }
         *value = VERSION_DEFAULT;
         return true;
     }
-    bool getLongFrequencyShift(int32_t *value) override {
+    bool getLongFrequencyShift(int32_t* value) override {
         return getProperty("long.frequency.shift", value, DEFAULT_FREQUENCY_SHIFT);
     }
-    bool getDeviceMass(float *value) override {
+    bool getDeviceMass(float* value) override {
         return getProperty("device.mass", value, DEFAULT_DEVICE_MASS);
     }
-    bool getLocCoeff(float *value) override {
+    bool getLocCoeff(float* value) override {
         return getProperty("loc.coeff", value, DEFAULT_LOC_COEFF);
     }
-    bool getF0(uint32_t *value) override { return getPersist(F0_CONFIG, value); }
-    bool getRedc(uint32_t *value) override { return getPersist(REDC_CONFIG, value); }
-    bool getQ(uint32_t *value) override {
+    bool getF0(uint32_t* value) override { return getPersist(F0_CONFIG, value); }
+    bool getRedc(uint32_t* value) override { return getPersist(REDC_CONFIG, value); }
+    bool getQ(uint32_t* value) override {
         if (getPersist(Q_CONFIG, value)) {
             return true;
         }
@@ -175,28 +175,28 @@ class HwCal : public Vibrator::HwCal, private HwCalBase {
         *value = Q_DEFAULT;
         return true;
     }
-    bool getVolLevels(std::array<uint32_t, 6> *value) override {
+    bool getVolLevels(std::array<uint32_t, 6>* value) override {
         if (getPersist(VOLTAGES_CONFIG, value)) {
             return true;
         }
         *value = V_LEVELS_DEFAULT;
         return true;
     }
-    bool getTickVolLevels(std::array<uint32_t, 2> *value) override {
+    bool getTickVolLevels(std::array<uint32_t, 2>* value) override {
         if (getPersist(TICK_VOLTAGES_CONFIG, value)) {
             return true;
         }
         *value = V_TICK_DEFAULT;
         return true;
     }
-    bool getClickVolLevels(std::array<uint32_t, 2> *value) override {
+    bool getClickVolLevels(std::array<uint32_t, 2>* value) override {
         if (getPersist(CLICK_VOLTAGES_CONFIG, value)) {
             return true;
         }
         *value = V_CTICK_DEFAULT;
         return true;
     }
-    bool getLongVolLevels(std::array<uint32_t, 2> *value) override {
+    bool getLongVolLevels(std::array<uint32_t, 2>* value) override {
         if (getPersist(LONG_VOLTAGES_CONFIG, value)) {
             return true;
         }
