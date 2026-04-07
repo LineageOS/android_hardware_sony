@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a438d328_9819432e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36773
+      },
+      "writtenOn": "2026-04-07T15:20:34Z",
+      "side": 1,
+      "message": "Tested on SM8650 platform. Would appreciate a test outside of my tree as well as a test on SM8350 platform.",
+      "revId": "da207c4cd0390df166efc9f6a18ce72e509ad826",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
