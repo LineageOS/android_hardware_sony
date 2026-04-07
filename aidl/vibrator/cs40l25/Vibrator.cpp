@@ -65,7 +65,10 @@ static constexpr uint32_t WAVEFORM_LOW_TICK_INDEX = 10;
 static constexpr uint32_t WAVEFORM_SONY_THUD_INDEX = 11;
 static constexpr uint32_t WAVEFORM_SONY_POP_INDEX = 12;
 static constexpr uint32_t WAVEFORM_SONY_HEAVY_CLICK_INDEX = 13;
+
+#ifndef USE_COMPOUND_DOUBLE_CLICK_EFFECT
 static constexpr uint32_t WAVEFORM_SONY_DOUBLE_CLICK_INDEX = 19;
+#endif  // USE_COMPOUND_DOUBLE_CLICK_EFFECT
 
 static constexpr uint32_t WAVEFORM_UNSAVED_TRIGGER_QUEUE_INDEX = 65529;
 static constexpr uint32_t WAVEFORM_TRIGGER_QUEUE_INDEX = 65534;
@@ -456,11 +459,14 @@ ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& composi
         return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_ARGUMENT);
     }
 
+#ifdef USE_EFFECT_DURATION_POLLING
     // Reset the mTotalDuration
     {
         const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
         mTotalDuration = 0;
     }
+#endif  // USE_EFFECT_DURATION_POLLING
+
     for (auto& e : composite) {
         if (e.scale < 0.0f || e.scale > 1.0f) {
             return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_ARGUMENT);
@@ -471,10 +477,13 @@ ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& composi
                 return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_ARGUMENT);
             }
             effectBuilder << e.delayMs << ",";
+
+#ifdef USE_EFFECT_DURATION_POLLING
             {
                 const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
                 mTotalDuration += e.delayMs;
             }
+#endif  // USE_EFFECT_DURATION_POLLING
         }
         if (e.primitive != CompositePrimitive::NOOP) {
             ndk::ScopedAStatus status;
@@ -485,11 +494,13 @@ ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& composi
                 return status;
             }
 
+#ifdef USE_EFFECT_DURATION_POLLING
             effectBuilder << effectIndex << "." << intensityToVolLevel(e.scale, effectIndex) << ",";
             {
                 const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
                 mTotalDuration += mEffectDurations[effectIndex];
             }
+#endif  // USE_EFFECT_DURATION_POLLING
         }
     }
 
@@ -520,6 +531,8 @@ ndk::ScopedAStatus Vibrator::on(uint32_t timeoutMs, uint32_t effectIndex,
     mHwApi->setEffectIndex(effectIndex);
     mHwApi->setDuration(timeoutMs);
     mHwApi->setActivate(1);
+
+#ifdef USE_EFFECT_DURATION_POLLING
     usleep(10000);
     // Using the mToalDuration for composed effect.
     // For composed effect, we set the UINT32_MAX to the duration sysfs node,
@@ -528,6 +541,7 @@ ndk::ScopedAStatus Vibrator::on(uint32_t timeoutMs, uint32_t effectIndex,
         const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
         mTotalDuration = timeoutMs;
     }
+#endif  // USE_EFFECT_DURATION_POLLING
 
     mActiveId = effectIndex;
 
@@ -926,10 +940,14 @@ ndk::ScopedAStatus Vibrator::composePwle(const std::vector<PrimitivePwle>& compo
 
     totalDuration += MAX_COLD_START_LATENCY_MS;
     mHwApi->setDuration(totalDuration);
+
+#ifdef USE_EFFECT_DURATION_POLLING
     {
         const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
         mTotalDuration = totalDuration;
     }
+#endif  // USE_EFFECT_DURATION_POLLING
+
     mHwApi->setActivate(1);
 
     mAsyncHandle = std::async(&Vibrator::waitForComplete, this, callback);
@@ -1015,25 +1033,30 @@ ndk::ScopedAStatus Vibrator::getSimpleDetails(Effect effect, EffectStrength stre
         case Effect::HEAVY_CLICK:
             effectIndex = WAVEFORM_SONY_HEAVY_CLICK_INDEX;
             break;
-        case Effect::DOUBLE_CLICK:
-            effectIndex = WAVEFORM_SONY_DOUBLE_CLICK_INDEX;
-            break;
         case Effect::THUD:
             effectIndex = WAVEFORM_SONY_THUD_INDEX;
             break;
         case Effect::POP:
             effectIndex = WAVEFORM_SONY_POP_INDEX;
             break;
+#ifndef USE_COMPOUND_DOUBLE_CLICK_EFFECT
+        case Effect::DOUBLE_CLICK:
+            effectIndex = WAVEFORM_SONY_DOUBLE_CLICK_INDEX;
+            break;
+#endif  // USE_COMPOUND_DOUBLE_CLICK_EFFECT
         default:
             return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     }
 
     volLevel = intensityToVolLevel(intensity, effectIndex);
     timeMs = mEffectDurations[effectIndex] + MAX_COLD_START_LATENCY_MS;
+
+#ifdef USE_EFFECT_DURATION_POLLING
     {
         const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
         mTotalDuration = timeMs;
     }
+#endif  // USE_EFFECT_DURATION_POLLING
 
     *outEffectIndex = effectIndex;
     *outTimeMs = timeMs;
@@ -1078,10 +1101,13 @@ ndk::ScopedAStatus Vibrator::getCompoundDetails(Effect effect, EffectStrength st
             }
             effectBuilder << thisEffectIndex << "." << thisVolLevel;
             timeMs += thisTimeMs;
+
+#ifdef USE_EFFECT_DURATION_POLLING
             {
                 const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
                 mTotalDuration = timeMs;
             }
+#endif  // USE_EFFECT_DURATION_POLLING
 
             break;
         default:
@@ -1164,12 +1190,21 @@ ndk::ScopedAStatus Vibrator::performEffect(Effect effect, EffectStrength strengt
             // fall-through
         case Effect::THUD:
             // fall-through
+#ifdef USE_COMPOUND_DOUBLE_CLICK_EFFECT
+        case Effect::POP:
+            status = getSimpleDetails(effect, strength, &effectIndex, &timeMs, &volLevel);
+            break;
+        case Effect::DOUBLE_CLICK:
+            status = getCompoundDetails(effect, strength, &timeMs, &volLevel, &effectQueue);
+            break;
+#else
         case Effect::POP:
             // fall-through
         case Effect::DOUBLE_CLICK:
             // fall-through
             status = getSimpleDetails(effect, strength, &effectIndex, &timeMs, &volLevel);
             break;
+#endif  // USE_COMPOUND_DOUBLE_CLICK_EFFECT
         default:
             status = ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
             break;
@@ -1205,6 +1240,8 @@ ndk::ScopedAStatus Vibrator::performEffect(uint32_t effectIndex, uint32_t volLev
 
 void Vibrator::waitForComplete(std::shared_ptr<IVibratorCallback>&& callback) {
     ALOGD("Vibrator::waitForComplete");
+
+#ifdef USE_EFFECT_DURATION_POLLING
     uint32_t duration;
     {
         const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
@@ -1218,6 +1255,10 @@ void Vibrator::waitForComplete(std::shared_ptr<IVibratorCallback>&& callback) {
         ALOGD("Vibrator::waitForComplete: Get STOP! Set active to 0.");
     }
     mHwApi->setActivate(false);
+#else
+    mHwApi->pollVibeState(false);
+    mHwApi->setActivate(false);
+#endif  // USE_EFFECT_DURATION_POLLING
 
     if (callback) {
         auto ret = callback->onComplete();
