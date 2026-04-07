@@ -31,6 +31,10 @@ cc_defaults {
         "liblog",
         "libutils",
     ],
+    cflags: select(soong_config_variable("SonyVibratorVars", "use_compound_double_click_effect"), {
+        true: ["-DUSE_COMPOUND_DOUBLE_CLICK_EFFECT"],
+        default: ["-DUSE_EFFECT_DURATION_POLLING"],
+    }),
 }
 
 cc_defaults {
