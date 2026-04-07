@@ -17,7 +17,21 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-cc_defaults {
+soong_config_module_type {
+    name: "SonyVibrator",
+    module_type: "cc_defaults",
+    config_namespace: "SonyVibratorVars",
+    bool_variables: [
+        "use_compound_double_click_effect",
+    ],
+    properties: [
+        "cflags",
+        "shared_libs",
+        "srcs",
+    ],
+}
+
+SonyVibrator {
     name: "SonyVibratorDefaults",
     relative_install_path: "hw",
     static_libs: [
@@ -31,6 +45,14 @@ cc_defaults {
         "liblog",
         "libutils",
     ],
+    soong_config_variables: {
+        use_compound_double_click_effect: {
+            cflags: ["-DUSE_COMPOUND_DOUBLE_CLICK_EFFECT"],
+        },
+        conditions_default: {
+            cflags: ["-DUSE_EFFECT_DURATION_POLLING"],
+        },
+    },
 }
 
 cc_defaults {
