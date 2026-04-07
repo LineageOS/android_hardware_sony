@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54219c27_de9702d2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 32674
+      },
+      "writtenOn": "2026-04-07T16:14:47Z",
+      "side": 1,
+      "message": "There was never QTI vibrator service in hardware/sony btw",
+      "revId": "91f84fcc42fb8457f75338ae996ffdd3025488b7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
