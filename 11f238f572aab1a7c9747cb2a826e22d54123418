@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1586cdc5_ff6e3b8e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 32674
+      },
+      "writtenOn": "2026-04-07T16:17:21Z",
+      "side": 1,
+      "message": "No need, just amend the commit",
+      "revId": "11f238f572aab1a7c9747cb2a826e22d54123418",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
