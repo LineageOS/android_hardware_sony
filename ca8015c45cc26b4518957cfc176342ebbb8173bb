@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "196148e5_fe08e23a",
+        "filename": "aidl/vibrator/common/HardwareBase.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-04-08T06:00:48Z",
+      "side": 1,
+      "message": "typeof(miscta_get_unit_size) + reinterpret_cast",
+      "revId": "ca8015c45cc26b4518957cfc176342ebbb8173bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e07768e_0a777a9c",
+        "filename": "aidl/vibrator/common/HardwareBase.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-04-08T06:00:48Z",
+      "side": 1,
+      "message": "std::string -\u003e auto",
+      "revId": "ca8015c45cc26b4518957cfc176342ebbb8173bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
