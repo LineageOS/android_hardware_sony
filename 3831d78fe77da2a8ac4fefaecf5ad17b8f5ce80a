@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb218a2c_e98ab377",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20370
+      },
+      "writtenOn": "2026-04-13T21:18:30Z",
+      "side": 1,
+      "message": "runtime-tested chain on pdx257",
+      "revId": "3831d78fe77da2a8ac4fefaecf5ad17b8f5ce80a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
