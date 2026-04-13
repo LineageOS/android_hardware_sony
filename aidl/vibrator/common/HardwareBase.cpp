@@ -26,12 +26,38 @@
 
 #include "utils.h"
 
-#define LIB_MISCTA "libmiscta.so"
+namespace {
 
 // TA functions
 static void* ta_handle = nullptr;
 static int (*miscta_get_unit_size)(uint32_t unit, uint32_t* size) = nullptr;
 static int (*miscta_read_unit)(uint32_t id, void* buf, uint32_t* size) = nullptr;
+
+template <typename T>
+static bool ta_read_unit(T& out, uint32_t unit) {
+    uint32_t size;
+
+    int ret = miscta_get_unit_size(unit, &size);
+    if (ret) {
+        ALOGE("%s: Cannot retrieve TA unit %d size error %d", __func__, unit, ret);
+        return false;
+    }
+
+    if (size != sizeof(T)) {
+        ALOGE("%s: Unexpected TA unit size %d != %lu", __func__, size, sizeof(T));
+        return false;
+    }
+
+    ret = miscta_read_unit(unit, &out, &size);
+    if (ret) {
+        ALOGE("%s: Cannot read TA unit %d of size %u: error %d", __func__, unit, size, ret);
+        return false;
+    }
+
+    return true;
+}
+
+};  // namespace
 
 namespace aidl {
 namespace android {
@@ -78,51 +104,6 @@ void HwApiBase::debug(int fd) {
     mRecordsMutex.unlock();
 }
 
-int ta_read_unit(int32_t* arr, int offset, uint32_t unit) {
-    uint32_t ta_sz;
-
-    int ret = miscta_get_unit_size(unit, &ta_sz);
-    if (ret) {
-        ALOGE("%s: Cannot retrieve TA unit %d size error %d", __func__, unit, ret);
-        return -1;
-    }
-
-    ret = miscta_read_unit(unit, arr + offset, &ta_sz);
-    if (ret) {
-        ALOGE("%s: Cannot read TA unit %d of size %u: error %d", __func__, unit, ta_sz, ret);
-        return -1;
-    }
-
-    return ta_sz;
-}
-
-int cirrusMiscTaRead(int32_t* a1) {
-    uint32_t ta_sz;
-    uint32_t unit = 0;
-
-    if ((ta_sz = ta_read_unit(a1, 0, 4730)) < 0) {
-        return 1;
-    }
-    ALOGI("%s: unit = %d, size = %d, val = %d", __func__, unit, ta_sz, a1[0]);
-
-    if ((ta_sz = ta_read_unit(a1, 2, 4731)) < 0) {
-        return 1;
-    }
-    ALOGI("%s: unit = %d, size = %d, val = %ld", __func__, unit, ta_sz, *(uint64_t*)(a1 + 2));
-
-    if ((ta_sz = ta_read_unit(a1, 4, 4732)) < 0) {
-        return 1;
-    }
-    ALOGI("%s: unit = %d, size = %d, val = 0x%x", __func__, unit, ta_sz, a1[4]);
-
-    if ((ta_sz = ta_read_unit(a1, 5, 4733)) < 0) {
-        return 1;
-    }
-    ALOGI("%s: unit = %d, size = %d, val = 0x%x", __func__, unit, ta_sz, a1[5]);
-
-    return 0;
-}
-
 HwCalBase::HwCalBase() {
     std::ifstream calfile;
     auto propertyPrefix = std::getenv("PROPERTY_PREFIX");
@@ -134,9 +115,9 @@ HwCalBase::HwCalBase() {
     }
 
     ALOGI("%s: Starting getting vibrator calibration data from TA partition", __func__);
-    ta_handle = dlopen(LIB_MISCTA, RTLD_NOW);
+    ta_handle = dlopen("libmiscta.so", RTLD_NOW);
     if (ta_handle) {
-        // Load related symbol
+        // Load related symbols
         miscta_get_unit_size = reinterpret_cast<typeof(miscta_get_unit_size)>(
                 dlsym(ta_handle, "miscta_get_unit_size"));
         if (!miscta_get_unit_size) {
@@ -151,13 +132,15 @@ HwCalBase::HwCalBase() {
             return;
         }
 
-        int32_t dat[6];
-        if (cirrusMiscTaRead(dat) == 0) {
-            auto f0_measured = std::to_string(dat[5]);
-            auto redc_measured = std::to_string(dat[4]);
+        char unk1 = 0;
+        char unk2[8] = {0};
+        int redc_measured = 0;
+        int f0_measured = 0;
 
-            mCalData[utils::trim("f0_measured")] = utils::trim(f0_measured);
-            mCalData[utils::trim("redc_measured")] = utils::trim(redc_measured);
+        if (ta_read_unit(unk1, 4730) && ta_read_unit(unk2, 4731) &&
+            ta_read_unit(redc_measured, 4732) && ta_read_unit(f0_measured, 4733)) {
+            mCalData["f0_measured"] = std::to_string(f0_measured);
+            mCalData["redc_measured"] = std::to_string(redc_measured);
         }
     }
 }
