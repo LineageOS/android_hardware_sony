@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "916f6f29_d5bae657",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36773
+      },
+      "writtenOn": "2026-04-14T20:25:50Z",
+      "side": 1,
+      "message": "not sure whether other devices also have this issue and it was not being reported for some reason? seems like at least 8450/8550 use this path and it is not labeled",
+      "revId": "a6b25cf4bf6527d728a75522aa184d5d96f8ba8c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
