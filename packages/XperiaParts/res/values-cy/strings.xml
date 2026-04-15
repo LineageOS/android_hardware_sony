@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Gosodiadau dangosydd uwch</string>
+    <string name="display_setting_summary">Addasu amryw osodiad dangosydd</string>
+    <string name="cm_display_header">Gosodiadau modd creawdwr</string>
+    <string name="cm_switch_title">Modd creawdwr</string>
+    <string name="cm_switch_description">Galluogi gamwt lliw BT.2020 a lliw 10-did</string>
+    <string name="cm_footer_string">Caiff ffurfweddiadau calibradu lliw LiveDisplay eu trechu gan y modd creawdwr.</string>
+    <string name="cm_dialog_title">Modd creawdwr</string>
+    <string name="cm_dialog_message">Bydd galluogi modd crëwr yn trechu gosodiadau lliw a balans gwyn!</string>
+    <string name="cm_checkbox_show_once">Peidio dangos y neges hon eto</string>
+</resources>

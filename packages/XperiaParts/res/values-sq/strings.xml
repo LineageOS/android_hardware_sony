@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="display_setting_header">Cilësimet e avancuara të ekranit</string>
     <string name="display_setting_summary">Rregulloni cilësimet e ndryshme të ekranit</string>
+    <string name="cm_display_header">Cilësimet e modalitetit krijues</string>
+    <string name="cm_switch_title">Modaliteti i krijuesit</string>
+    <string name="cm_switch_description">Aktivizo gamën e ngjyrave BT.2020 dhe ngjyrën 10-bit</string>
+    <string name="cm_footer_string">Konfigurimet e kalibrimit të ngjyrave të LiveDisplay do të mbivendosen nga modaliteti i krijuesit</string>
+    <string name="cm_dialog_title">Modaliteti i krijuesit</string>
     <string name="cm_dialog_message">Aktivizimi i modalitetit të krijuesit do të mbishkruajë cilësimet e balancës së bardhë dhe të ngjyrave!</string>
     <string name="cm_checkbox_show_once">Mos trego këtë mesazh përsëri</string>
 </resources>
