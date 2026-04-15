@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">Gosodiadau dangosydd uwch</string>
+    <string name="display_setting_summary">Addasu amryw osodiad dangosydd</string>
+    <string name="cm_checkbox_show_once">Peidio â dangos y neges hon eto</string>
+</resources>
