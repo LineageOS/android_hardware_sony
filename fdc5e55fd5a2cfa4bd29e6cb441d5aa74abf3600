@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c684686f_bacfd733",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-04-17T20:03:54Z",
+      "side": 1,
+      "message": "odd, but ok `odm_sepolicy.cil:(allow hal_camera_somc vendor_camera_data_file (fifo_file (ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads)))`",
+      "revId": "fdc5e55fd5a2cfa4bd29e6cb441d5aa74abf3600",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
