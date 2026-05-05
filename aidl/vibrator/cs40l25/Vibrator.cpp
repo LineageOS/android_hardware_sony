@@ -494,8 +494,9 @@ ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& composi
                 return status;
             }
 
-#ifdef USE_EFFECT_DURATION_POLLING
             effectBuilder << effectIndex << "." << intensityToVolLevel(e.scale, effectIndex) << ",";
+
+#ifdef USE_EFFECT_DURATION_POLLING
             {
                 const std::scoped_lock<std::mutex> lock(mTotalDurationMutex);
                 mTotalDuration += mEffectDurations[effectIndex];
