@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="display_setting_header">Pengaturan tampilan lanjutan</string>
+    <string name="display_setting_summary">Sesuaikan berbagai pengaturan tampilan</string>
+    <string name="cm_display_header">Pengaturan mode kreator</string>
+    <string name="cm_switch_title">Mode kreator</string>
+    <string name="cm_switch_description">Aktifkan gamut warna BT.2020 dan warna 10-bit</string>
+    <string name="cm_footer_string">Konfigurasi kalibrasi warna LiveDisplay akan ditimpa oleh mode kreator.</string>
+    <string name="cm_dialog_title">Mode kreator</string>
     <string name="cm_checkbox_show_once">Jangan tampilkan pesan ini lagi</string>
 </resources>

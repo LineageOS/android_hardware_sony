@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="display_setting_header">ڕێکخستنە پێشکەوتووەکانی ڕوونما</string>
+    <string name="display_setting_summary">ڕێکخستنی جۆراوجۆری ڕوونما</string>
+    <string name="cm_display_header">ڕێکخستنی دۆخی دروستکەر</string>
+    <string name="cm_switch_title">دۆخی دروستکەر (Creator)</string>
+    <string name="cm_switch_description">چالاککردنی مەودای ڕەنگی BT.2020 و ڕەنگی ١٠-بیت</string>
+    <string name="cm_footer_string">ڕێکخستنەکانی وردیی ڕەنگی LiveDisplay پشتگوێ دەخرێن لە دۆخی دروستکەردا.</string>
+    <string name="cm_dialog_title">دۆخی دروستکەر</string>
+    <string name="cm_dialog_message">چالاککردنی دۆخی دروستکەر ڕێکخستنەکانی هاوسەنگیی سپی و ڕەنگ دەگۆڕێت!</string>
+    <string name="cm_checkbox_show_once">ئەم نامەیە دووبارە پیشان مەدەرەوە</string>
+</resources>
