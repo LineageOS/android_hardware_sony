@@ -4,7 +4,7 @@
     <string name="display_setting_summary">ڕێکخستنی جۆراوجۆری ڕوونما دەستکاری بکە</string>
     <string name="cm_display_header">ڕێکخستنەکانی دۆخی داهێنەر</string>
     <string name="cm_switch_title">دۆخی داهێنەر</string>
-    <string name="cm_switch_description">مەودای ڕەنگی BT.2020 و ڕەنگی ١٠-بیت چالاک بکە</string>
+    <string name="cm_switch_description">مەودای ڕەنگی BT.2020 و ڕەنگی 10-بیت چالاک بکە</string>
     <string name="cm_footer_string">ڕێکخستنەکانی کالیبرەکردنی ڕەنگی LiveDisplay لەلایەن دۆخی داهێنەرەوە لادەبرێن.</string>
     <string name="cm_dialog_title">دۆخی داهێنەر</string>
     <string name="cm_dialog_message">چالاککردنی دۆخی داهێنەر ڕێکخستنەکانی هاوسەنگیی سپی و ڕەنگەکان لادەبات و دەگۆڕێت!</string>
