@@ -7,6 +7,7 @@
     <string name="cm_switch_description">הפעלת מרחב הצבעים BT.2020 ואת צבע 10-ביט</string>
     <string name="cm_footer_string">תצורות כיול הצבעים של תצוגה חיה יבוטלו על ידי מצב יצירה.</string>
     <string name="cm_dialog_title">מצב יצירה</string>
-    <string name="cm_dialog_message">הפעלת מצב יצירה תדרוס את איזון הלבן והגדרות הצבע!</string>
+    <string name="cm_dialog_message">הפעלת מצב יצירה תדרוס את איזון הלבן והגדרות הצבע!
+</string>
     <string name="cm_checkbox_show_once">אל תציג הודעה זו שנית</string>
 </resources>
