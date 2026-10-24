@@ -4,6 +4,8 @@ vendor.hardware.biometrics.fingerprintRbs.IFingerprintRbs/Rbs      u:object_r:ha
 vendor.semc.hardware.spc.ISpc/default                              u:object_r:hal_spc_service:s0
 vendor.semc.hardware.extlight.IExtLight/default                    u:object_r:hal_light_service:s0
 vendor.semc.hardware.fingerprint.IFingerprintDiagnostic/default    u:object_r:egis_diagnostic_service:s0
+vendor.semc.hardware.aidldisplay.IDisplay/default                  u:object_r:hal_disp_service:s0
+vendor.semc.hardware.aidldisplay.IFramerateController/default      u:object_r:hal_disp_service:s0
 vendor.somc.hardware.aidlmiscta.IMisctaGlobal/default              u:object_r:hal_miscta_service:s0
 vendor.somc.hardware.aidlradio.ISomcHook/somchook0                 u:object_r:somc_aidl_radio_service:s0
 vendor.somc.hardware.aidlradio.ISomcHook/somchook1                 u:object_r:somc_aidl_radio_service:s0
