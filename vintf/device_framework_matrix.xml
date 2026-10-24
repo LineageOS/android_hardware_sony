@@ -28,6 +28,18 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl">
+        <name>vendor.semc.hardware.aidldisplay</name>
+        <version>1-2</version>
+        <interface>
+            <name>IDisplay</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFramerateController</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.semc.hardware.charger</name>
         <version>1.0-1</version>
