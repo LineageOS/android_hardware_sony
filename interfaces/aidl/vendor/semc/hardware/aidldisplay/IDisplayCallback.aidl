@@ -7,8 +7,10 @@
 package vendor.semc.hardware.aidldisplay;
 
 import vendor.semc.hardware.aidldisplay.PccMatrix;
+import vendor.semc.hardware.aidldisplay.PccMatrix3x3;
 
 @VintfStability
 interface IDisplayCallback {
     void onWhiteBalanceMatrixChanged(in PccMatrix matrix);
+    void onColorMatrixChanged(in PccMatrix3x3 matrix);
 }

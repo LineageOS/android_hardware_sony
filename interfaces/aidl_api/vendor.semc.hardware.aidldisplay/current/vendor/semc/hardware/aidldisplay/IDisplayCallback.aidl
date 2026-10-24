@@ -25,4 +25,5 @@ package vendor.semc.hardware.aidldisplay;
 @VintfStability
 interface IDisplayCallback {
   void onWhiteBalanceMatrixChanged(in vendor.semc.hardware.aidldisplay.PccMatrix matrix);
+  void onColorMatrixChanged(in vendor.semc.hardware.aidldisplay.PccMatrix3x3 matrix);
 }

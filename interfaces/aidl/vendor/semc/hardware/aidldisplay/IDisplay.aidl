@@ -27,4 +27,7 @@ interface IDisplay {
     DispStatus set_primary_pcc_matrix(in PccMatrix cc_matrix);
     DispStatus set_sspp_color_mode(SsppColorMode mode_id);
     DispStatus setup();
+    DispStatus notify_ambientlight_values(in float[] values);
+    int get_interface_version();
+    DispStatus notify_adaptive_color_mode_status(boolean enable);
 }

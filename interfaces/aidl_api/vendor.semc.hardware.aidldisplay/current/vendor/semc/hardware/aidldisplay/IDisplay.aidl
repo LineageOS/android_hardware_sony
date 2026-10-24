@@ -36,4 +36,7 @@ interface IDisplay {
   vendor.semc.hardware.aidldisplay.DispStatus set_primary_pcc_matrix(in vendor.semc.hardware.aidldisplay.PccMatrix cc_matrix);
   vendor.semc.hardware.aidldisplay.DispStatus set_sspp_color_mode(vendor.semc.hardware.aidldisplay.SsppColorMode mode_id);
   vendor.semc.hardware.aidldisplay.DispStatus setup();
+  vendor.semc.hardware.aidldisplay.DispStatus notify_ambientlight_values(in float[] values);
+  int get_interface_version();
+  vendor.semc.hardware.aidldisplay.DispStatus notify_adaptive_color_mode_status(boolean enable);
 }
