@@ -13,6 +13,7 @@ android_app {
         "androidx.core_core",
         "androidx.preference_preference",
         "org.lineageos.platform.internal",
+        "vendor.semc.hardware.aidldisplay-V1-java",
         "vendor.semc.hardware.display-V2.0-java",
         "vendor.semc.hardware.display-V2.1-java",
         "vendor.semc.hardware.display-V2.2-java",
