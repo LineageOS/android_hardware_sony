@@ -1,1 +1,2 @@
 system_public_prop(display_brightness_prop)
+system_public_prop(proximity_sensor_prop)
