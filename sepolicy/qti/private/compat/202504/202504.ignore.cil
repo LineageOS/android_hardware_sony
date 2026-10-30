@@ -6,4 +6,5 @@
 (typeattributeset new_objects
   ( new_objects
     devicesetting_app
-    display_brightness_prop))
+    display_brightness_prop
+    proximity_sensor_prop))

@@ -1,1 +1,2 @@
 sony.screen_brightness    u:object_r:display_brightness_prop:s0
+ro.sony.proximity_sensor  u:object_r:proximity_sensor_prop:s0
